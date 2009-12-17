@@ -1,0 +1,65 @@
+// Copyright (c) 2008-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+PRJ_EXPORTS
+../inc/wbxmlparsererrors.h					SYMBIAN_OS_LAYER_PLATFORM_EXPORT_PATH(xml/wbxmlparsererrors.h)
+
+wbxmlparser.iby										/epoc32/rom/include/wbxmlparser.iby
+
+PRJ_MMPFILES
+wbxmlparser.mmp
+
+si1_0stringdict00.mmp
+syncml1_1opaquestringdictionary00.mmp
+syncml1_1stringdictionary00.mmp
+syncml1_1stringdictionary01.mmp
+syncml1_2opaquestringdictionary00.mmp
+syncml1_2stringdictionary00.mmp
+syncml1_2stringdictionary01.mmp
+wml1_1stringdictionary00.mmp
+emn1_0stringdict00.mmp
+
+PRJ_TESTEXPORTS
+../test/rtest/group/wbxmlparsertests.bat			/epoc32/data/z/system/test/wbxmlparsertests.bat
+../test/rtest/group/wbxmlparsertests.iby			/epoc32/rom/include/wbxmlparsertests.iby
+../test/rtest/data/defects/00000036.emnc			z:/system/xmltest/defects/00000036.emnc
+../test/rtest/data/defects/00000036b.emnc			z:/system/xmltest/defects/00000036b.emnc
+../test/rtest/data/defects/00000060.emnc			z:/system/xmltest/defects/00000060.emnc
+../test/rtest/data/defects/00000104.emnc			z:/system/xmltest/defects/00000104.emnc
+
+
+PRJ_TESTEXTENSIONS
+start extension syslibs/test/xml_syncmltestfiledist
+end
+start extension syslibs/test/xml_wmltestfiledist
+end
+start extension syslibs/test/xml_sitestfiledist
+end
+
+PRJ_TESTMMPFILES
+../test/rtest/group/t_wbxmlbehaviourparsertests.mmp
+../test/rtest/group/t_wbxmlcorruptparsertests.mmp
+../test/rtest/group/t_wbxmldefects.mmp
+../test/rtest/group/t_wbxmloomparsertests.mmp
+../test/rtest/group/t_wbxmloomsiparserstabilitytests.mmp
+../test/rtest/group/t_wbxmloomsyncmlparserstabilitytests.mmp
+../test/rtest/group/t_wbxmloomwmlparserstabilitytests.mmp
+../test/rtest/group/t_wbxmlparsertests.mmp
+../test/rtest/group/t_wbxmlparserucs4testspartone.mmp
+../test/rtest/group/t_wbxmlsiparserstabilitytests.mmp
+../test/rtest/group/t_wbxmlsyncmlparserstabilitytests.mmp
+../test/rtest/group/t_wbxmlunknownparsertests.mmp
+../test/rtest/group/t_wbxmlwmlparserstabilitytests.mmp
+../test/rtest/group/wml1_1stringdictionary255.mmp				support

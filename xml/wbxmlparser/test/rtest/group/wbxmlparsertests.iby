@@ -1,0 +1,270 @@
+// Copyright (c) 2003-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+//
+
+#ifndef __WBXMLPARSERTESTS_IBY__
+#define __WBXMLPARSERTESTS_IBY__
+
+// Need to include CharConv's charset plugins so we can parse certain documents.
+// May not use all of these but good to have anyway.
+// Note: CharConv tests normally include these so they will be available for system tests
+// but not for our standalone tests.
+#include <charconv_all_plugins.iby>
+
+#include <xmlframework.iby>
+#include <wbxmlparser.iby>
+
+// batch file that runs all automatic WBxml parser tests
+data=ZSYSTEM\test\wbxmlparsertests.bat                                          test\wbxmlparsertests.bat
+
+// WBXML test parser exe
+file=ABI_DIR\BUILD_DIR\t_wbxmlsyncmlparserstabilitytests.exe                    test\t_wbxmlsyncmlparserstabilitytests.exe
+file=ABI_DIR\BUILD_DIR\t_wbxmlwmlparserstabilitytests.exe                       test\t_wbxmlwmlparserstabilitytests.exe
+file=ABI_DIR\BUILD_DIR\t_wbxmlsiparserstabilitytests.exe                        test\t_wbxmlsiparserstabilitytests.exe
+file=ABI_DIR\BUILD_DIR\t_wbxmloomsyncmlparserstabilitytests.exe                 test\t_wbxmloomsyncmlparserstabilitytests.exe
+file=ABI_DIR\BUILD_DIR\t_wbxmloomwmlparserstabilitytests.exe                    test\t_wbxmloomwmlparserstabilitytests.exe
+file=ABI_DIR\BUILD_DIR\t_wbxmloomsiparserstabilitytests.exe                     test\t_wbxmloomsiparserstabilitytests.exe
+file=ABI_DIR\BUILD_DIR\t_wbxmlparsertests.exe                                   test\t_wbxmlparsertests.exe
+file=ABI_DIR\BUILD_DIR\t_wbxmloomparsertests.exe                                test\t_wbxmloomparsertests.exe
+file=ABI_DIR\BUILD_DIR\t_wbxmlcorruptparsertests.exe                            test\t_wbxmlcorruptparsertests.exe
+file=ABI_DIR\BUILD_DIR\t_wbxmlunknownparsertests.exe                            test\t_wbxmlunknownparsertests.exe
+file=ABI_DIR\BUILD_DIR\t_wbxmlbehaviourparsertests.exe                          test\t_wbxmlbehaviourparsertests.exe
+file=ABI_DIR\BUILD_DIR\t_wbxmlparserucs4testspartone.exe                        test\t_wbxmlparserucs4testspartone.exe
+file=ABI_DIR\BUILD_DIR\t_wbxmldefects.exe                                       test\t_wbxmldefects.exe
+
+// Test String Dictionary plugin DLLs
+
+// Test String Dictionary Resource files
+ECOM_PLUGIN(wml1_1stringdictionary255.dll,101fd308.rsc)
+
+// Test data
+data=ZSYSTEM\xmltest\syncml\1.1\add-to-client\FromServer0.wbxml					System\XmlTest\SyncML\1.1\add-to-client\FromServer0.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\add-to-client\FromServer1.wbxml					System\XmlTest\SyncML\1.1\add-to-client\FromServer1.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\add-to-client\FromServer2.wbxml					System\XmlTest\SyncML\1.1\add-to-client\FromServer2.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\add-to-client\FromServer3.wbxml					System\XmlTest\SyncML\1.1\add-to-client\FromServer3.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\add-to-server\FromServer1.wbxml					System\XmlTest\SyncML\1.1\add-to-server\FromServer1.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\add-to-server\FromServer2.wbxml					System\XmlTest\SyncML\1.1\add-to-server\FromServer2.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\add-to-server\FromServer3.wbxml					System\XmlTest\SyncML\1.1\add-to-server\FromServer3.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\atomic\FromServer1.wbxml						System\XmlTest\SyncML\1.1\Atomic\FromServer1.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\atomic\FromServer2.wbxml						System\XmlTest\SyncML\1.1\Atomic\FromServer2.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\atomic\FromServer3.wbxml						System\XmlTest\SyncML\1.1\Atomic\FromServer3.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\authbasicfail\FromServer1.wbxml					System\XmlTest\SyncML\1.1\AuthBasicFail\FromServer1.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\authbasicfail\FromServer2.wbxml					System\XmlTest\SyncML\1.1\AuthBasicFail\FromServer2.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\authbasicfail\FromServer3.wbxml					System\XmlTest\SyncML\1.1\AuthBasicFail\FromServer3.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\authbasicfailfirst\FromServer1.wbxml			System\XmlTest\SyncML\1.1\AuthBasicFailFirst\FromServer1.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\authbasicfailfirst\FromServer2.wbxml			System\XmlTest\SyncML\1.1\AuthBasicFailFirst\FromServer2.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\authbasicfailfirst\FromServer3.wbxml			System\XmlTest\SyncML\1.1\AuthBasicFailFirst\FromServer3.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\authmd5fail\FromServer1.wbxml					System\XmlTest\SyncML\1.1\AuthMD5Fail\FromServer1.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\authmd5fail\FromServer2.wbxml					System\XmlTest\SyncML\1.1\AuthMD5Fail\FromServer2.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\authmd5fail\FromServer3.wbxml					System\XmlTest\SyncML\1.1\AuthMD5Fail\FromServer3.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\authmd5failfirst\FromServer1.wbxml				System\XmlTest\SyncML\1.1\AuthMD5FailFirst\FromServer1.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\authmd5failfirst\FromServer2.wbxml				System\XmlTest\SyncML\1.1\AuthMD5FailFirst\FromServer2.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\authmd5failfirst\FromServer3.wbxml				System\XmlTest\SyncML\1.1\AuthMD5FailFirst\FromServer3.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\client-large\FromServer1.wbxml					System\XmlTest\SyncML\1.1\client-large\FromServer1.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\client-large\FromServer2.wbxml					System\XmlTest\SyncML\1.1\client-large\FromServer2.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\client-large\FromServer3.wbxml					System\XmlTest\SyncML\1.1\client-large\FromServer3.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\client-large\FromServer4.wbxml					System\XmlTest\SyncML\1.1\client-large\FromServer4.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\client-large-multiple\FromServer1.wbxml			System\XmlTest\SyncML\1.1\client-large-multiple\FromServer1.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\client-large-multiple\FromServer2.wbxml			System\XmlTest\SyncML\1.1\client-large-multiple\FromServer2.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\client-large-multiple\FromServer3.wbxml			System\XmlTest\SyncML\1.1\client-large-multiple\FromServer3.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\client-large-multiple\FromServer4.wbxml			System\XmlTest\SyncML\1.1\client-large-multiple\FromServer4.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\devmanadd\FromServer1.wbxml						System\XmlTest\SyncML\1.1\DevManAdd\FromServer1.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\devmanadd\FromServer2.wbxml						System\XmlTest\SyncML\1.1\DevManAdd\FromServer2.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\devmanalertdisplay\FromServer1.wbxml			System\XmlTest\SyncML\1.1\DevManAlertDisplay\FromServer1.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\devmanalertdisplay\FromServer2.wbxml			System\XmlTest\SyncML\1.1\DevManAlertDisplay\FromServer2.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\devmanalertmultichoice\FromServer1.wbxml		System\XmlTest\SyncML\1.1\DevManAlertMultiChoice\FromServer1.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\devmanalertmultichoice\FromServer2.wbxml		System\XmlTest\SyncML\1.1\DevManAlertMultiChoice\FromServer2.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\devmanalertsinglechoice\FromServer1.wbxml		System\XmlTest\SyncML\1.1\DevManAlertSingleChoice\FromServer1.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\devmanalertsinglechoice\FromServer2.wbxml		System\XmlTest\SyncML\1.1\DevManAlertSingleChoice\FromServer2.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\devmanalerttextinput\FromServer1.wbxml			System\XmlTest\SyncML\1.1\DevManAlertTextInput\FromServer1.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\devmanalerttextinput\FromServer2.wbxml			System\XmlTest\SyncML\1.1\DevManAlertTextInput\FromServer2.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\devmanalertuseraccept\FromServer1.wbxml			System\XmlTest\SyncML\1.1\DevManAlertUserAccept\FromServer1.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\devmanalertuseraccept\FromServer2.wbxml			System\XmlTest\SyncML\1.1\DevManAlertUserAccept\FromServer2.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\devmanalertuserreject\FromServer1.wbxml			System\XmlTest\SyncML\1.1\DevManAlertUserReject\FromServer1.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\devmanalertuserreject\FromServer2.wbxml			System\XmlTest\SyncML\1.1\DevManAlertUserReject\FromServer2.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\devmanatomic\FromServer1.wbxml					System\XmlTest\SyncML\1.1\DevManAtomic\FromServer1.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\devmanatomic\FromServer2.wbxml					System\XmlTest\SyncML\1.1\DevManAtomic\FromServer2.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\devmanatomicAlertUserAccept\FromServer1.wbxml	System\XmlTest\SyncML\1.1\DevManAtomicAlertUserAccept\FromServer1.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\devmanatomicAlertUserAccept\FromServer2.wbxml	System\XmlTest\SyncML\1.1\DevManAtomicAlertUserAccept\FromServer2.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\devmanatomicAlertUserReject\FromServer1.wbxml	System\XmlTest\SyncML\1.1\DevManAtomicAlertUserReject\FromServer1.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\devmanatomicAlertUserReject\FromServer2.wbxml	System\XmlTest\SyncML\1.1\DevManAtomicAlertUserReject\FromServer2.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\devmanatomicFail\FromServer1.wbxml				System\XmlTest\SyncML\1.1\DevManAtomicFail\FromServer1.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\devmanatomicFail\FromServer2.wbxml				System\XmlTest\SyncML\1.1\DevManAtomicFail\FromServer2.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\devmandelete\FromServer1.wbxml					System\XmlTest\SyncML\1.1\DevManDelete\FromServer1.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\devmandelete\FromServer2.wbxml					System\XmlTest\SyncML\1.1\DevManDelete\FromServer2.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\devmanget\FromServer1.wbxml						System\XmlTest\SyncML\1.1\DevManGet\FromServer1.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\devmanget\FromServer2.wbxml						System\XmlTest\SyncML\1.1\DevManGet\FromServer2.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\devmanlargeobjectadd\FromServer1.wbxml			System\XmlTest\SyncML\1.1\DevManLargeObjectAdd\FromServer1.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\devmanlargeobjectadd\FromServer2.wbxml			System\XmlTest\SyncML\1.1\DevManLargeObjectAdd\FromServer2.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\devmanlargeobjectadd\FromServer3.wbxml			System\XmlTest\SyncML\1.1\DevManLargeObjectAdd\FromServer3.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\devmanlargeobjectadd\FromServer4.wbxml			System\XmlTest\SyncML\1.1\DevManLargeObjectAdd\FromServer4.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\devmanlargeobjectget\FromServer1.wbxml			System\XmlTest\SyncML\1.1\DevManLargeObjectGet\FromServer1.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\devmanlargeobjectget\FromServer2.wbxml			System\XmlTest\SyncML\1.1\DevManLargeObjectGet\FromServer2.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\devmanlargeobjectget\FromServer3.wbxml			System\XmlTest\SyncML\1.1\DevManLargeObjectGet\FromServer3.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\devmanlargeobjectget\FromServer4.wbxml			System\XmlTest\SyncML\1.1\DevManLargeObjectGet\FromServer4.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\devmanlargeobjectget\FromServer5.wbxml			System\XmlTest\SyncML\1.1\DevManLargeObjectGet\FromServer5.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\devmanreplace\FromServer1.wbxml					System\XmlTest\SyncML\1.1\DevManReplace\FromServer1.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\devmanreplace\FromServer2.wbxml					System\XmlTest\SyncML\1.1\DevManReplace\FromServer2.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\devmansequence\FromServer1.wbxml				System\XmlTest\SyncML\1.1\DevManSequence\FromServer1.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\devmansequence\FromServer2.wbxml				System\XmlTest\SyncML\1.1\DevManSequence\FromServer2.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\devmansequencealertuseraccept\FromServer1.wbxml	System\XmlTest\SyncML\1.1\DevManSequenceAlertUserAccept\FromServer1.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\devmansequencealertuseraccept\FromServer2.wbxml	System\XmlTest\SyncML\1.1\DevManSequenceAlertUserAccept\FromServer2.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\devmansequencealertuserreject\FromServer1.wbxml	System\XmlTest\SyncML\1.1\DevManSequenceAlertUserReject\FromServer1.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\devmansequencealertuserreject\FromServer2.wbxml	System\XmlTest\SyncML\1.1\DevManSequenceAlertUserReject\FromServer2.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\devmansequencefail\FromServer1.wbxml			System\XmlTest\SyncML\1.1\DevManSequenceFail\FromServer1.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\devmansequencefail\FromServer2.wbxml			System\XmlTest\SyncML\1.1\DevManSequenceFail\FromServer2.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\devmansimple\FromServer1.wbxml					System\XmlTest\SyncML\1.1\DevManSimple\FromServer1.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\large-object-from-client\FromServer1.wbxml		System\XmlTest\SyncML\1.1\Large-object-from-client\FromServer1.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\large-object-from-client\FromServer2.wbxml		System\XmlTest\SyncML\1.1\Large-object-from-client\FromServer2.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\large-object-from-client\FromServer3.wbxml		System\XmlTest\SyncML\1.1\Large-object-from-client\FromServer3.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\large-object-from-client\FromServer4.wbxml		System\XmlTest\SyncML\1.1\Large-object-from-client\FromServer4.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\large-object-from-server\FromServer1.wbxml		System\XmlTest\SyncML\1.1\Large-object-from-server\FromServer1.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\large-object-from-server\FromServer2.wbxml		System\XmlTest\SyncML\1.1\Large-object-from-server\FromServer2.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\large-object-from-server\FromServer3.wbxml		System\XmlTest\SyncML\1.1\Large-object-from-server\FromServer3.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\large-object-from-server\FromServer4.wbxml		System\XmlTest\SyncML\1.1\Large-object-from-server\FromServer4.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\large-object-from-server2\FromServer1.wbxml		System\XmlTest\SyncML\1.1\Large-object-from-server2\FromServer1.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\large-object-from-server2\FromServer2.wbxml		System\XmlTest\SyncML\1.1\Large-object-from-server2\FromServer2.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\large-object-from-server2\FromServer3.wbxml		System\XmlTest\SyncML\1.1\Large-object-from-server2\FromServer3.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\large-object-from-server2\FromServer4.wbxml		System\XmlTest\SyncML\1.1\Large-object-from-server2\FromServer4.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\multiple-db-sync\FromServer1.wbxml				System\XmlTest\SyncML\1.1\Multiple-Db-Sync\FromServer1.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\multiple-db-sync\FromServer2.wbxml				System\XmlTest\SyncML\1.1\Multiple-Db-Sync\FromServer2.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\multiple-db-sync\FromServer3.wbxml				System\XmlTest\SyncML\1.1\Multiple-Db-Sync\FromServer3.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\one-way-client-refresh-sync\FromServer1.wbxml	System\XmlTest\SyncML\1.1\One-way-client-refresh-sync\FromServer1.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\one-way-client-refresh-sync\FromServer2.wbxml	System\XmlTest\SyncML\1.1\One-way-client-refresh-sync\FromServer2.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\one-way-client-refresh-sync\FromServer3.wbxml	System\XmlTest\SyncML\1.1\One-way-client-refresh-sync\FromServer3.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\one-way-client-sync\FromServer1.wbxml			System\XmlTest\SyncML\1.1\One-way-client-sync\FromServer1.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\one-way-client-sync\FromServer2.wbxml			System\XmlTest\SyncML\1.1\One-way-client-sync\FromServer2.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\one-way-client-sync\FromServer3.wbxml			System\XmlTest\SyncML\1.1\One-way-client-sync\FromServer3.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\one-way-server-refresh-sync\FromServer1.wbxml	System\XmlTest\SyncML\1.1\One-way-server-refresh-sync\FromServer1.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\one-way-server-refresh-sync\FromServer2.wbxml	System\XmlTest\SyncML\1.1\One-way-server-refresh-sync\FromServer2.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\one-way-server-refresh-sync\FromServer3.wbxml	System\XmlTest\SyncML\1.1\One-way-server-refresh-sync\FromServer3.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\one-way-server-sync\FromServer1.wbxml			System\XmlTest\SyncML\1.1\One-way-server-sync\FromServer1.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\one-way-server-sync\FromServer2.wbxml			System\XmlTest\SyncML\1.1\One-way-server-sync\FromServer2.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\one-way-server-sync\FromServer3.wbxml			System\XmlTest\SyncML\1.1\One-way-server-sync\FromServer3.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\pref-tx-rx\FromServer1.wbxml					System\XmlTest\SyncML\1.1\Pref-Tx-Rx\FromServer1.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\pref-tx-rx\FromServer2.wbxml					System\XmlTest\SyncML\1.1\Pref-Tx-Rx\FromServer2.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\pref-tx-rx\FromServer3.wbxml					System\XmlTest\SyncML\1.1\Pref-Tx-Rx\FromServer3.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\server-busy\FromServer1.wbxml					System\XmlTest\SyncML\1.1\server-busy\FromServer1.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\server-large\FromServer1.wbxml					System\XmlTest\SyncML\1.1\server-large\FromServer1.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\server-large\FromServer2.wbxml					System\XmlTest\SyncML\1.1\server-large\FromServer2.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\server-large\FromServer3.wbxml					System\XmlTest\SyncML\1.1\server-large\FromServer3.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\server-large\FromServer4.wbxml					System\XmlTest\SyncML\1.1\server-large\FromServer4.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\server-large-multiple\FromServer1.wbxml			System\XmlTest\SyncML\1.1\server-large-multiple\FromServer1.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\server-large-multiple\FromServer2.wbxml			System\XmlTest\SyncML\1.1\server-large-multiple\FromServer2.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\server-large-multiple\FromServer3.wbxml			System\XmlTest\SyncML\1.1\server-large-multiple\FromServer3.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\server-large-multiple\FromServer4.wbxml			System\XmlTest\SyncML\1.1\server-large-multiple\FromServer4.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\server-large-multiple\FromServer5.wbxml			System\XmlTest\SyncML\1.1\server-large-multiple\FromServer5.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\slow-sync\FromServer1.wbxml						System\XmlTest\SyncML\1.1\slow-sync\FromServer1.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\slow-sync\FromServer2.wbxml						System\XmlTest\SyncML\1.1\slow-sync\FromServer2.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\slow-sync\FromServer3.wbxml						System\XmlTest\SyncML\1.1\slow-sync\FromServer3.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\two-way-add\FromServer1.wbxml					System\XmlTest\SyncML\1.1\two-way-add\FromServer1.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\two-way-add\FromServer2.wbxml					System\XmlTest\SyncML\1.1\two-way-add\FromServer2.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\two-way-add\FromServer3.wbxml					System\XmlTest\SyncML\1.1\two-way-add\FromServer3.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\two-way-delete\FromServer1.wbxml				System\XmlTest\SyncML\1.1\two-way-delete\FromServer1.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\two-way-delete\FromServer2.wbxml				System\XmlTest\SyncML\1.1\two-way-delete\FromServer2.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\two-way-delete\FromServer3.wbxml				System\XmlTest\SyncML\1.1\two-way-delete\FromServer3.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\two-way-replace\FromServer1.wbxml				System\XmlTest\SyncML\1.1\two-way-replace\FromServer1.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\two-way-replace\FromServer2.wbxml				System\XmlTest\SyncML\1.1\two-way-replace\FromServer2.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\two-way-replace\FromServer3.wbxml				System\XmlTest\SyncML\1.1\two-way-replace\FromServer3.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\two-way-sync\FromServer1.wbxml					System\XmlTest\SyncML\1.1\two-way-sync\FromServer1.wbxml
+data=ZSYSTEM\xmltest\syncml\1.1\two-way-sync\FromServer2.wbxml					System\XmlTest\SyncML\1.1\two-way-sync\FromServer2.wbxml
+
+data=ZSYSTEM\xmltest\syncml\1.2\defects\DEF063979.wbxml							System\XmlTest\SyncML\1.2\Defects\DEF063979.wbxml
+data=ZSYSTEM\xmltest\syncml\1.2\defects\DEF066185.wbxml							System\XmlTest\SyncML\1.2\Defects\DEF066185.wbxml
+data=ZSYSTEM\xmltest\syncml\1.2\defects\DEF078987_1.wbxml						System\XmlTest\SyncML\1.2\Defects\DEF078987_1.wbxml
+data=ZSYSTEM\xmltest\syncml\1.2\defects\DEF078987_2.wbxml						System\XmlTest\SyncML\1.2\Defects\DEF078987_2.wbxml
+data=ZSYSTEM\xmltest\syncml\1.2\defects\DEF078668.wbxml							System\XmlTest\SyncML\1.2\Defects\DEF078668.wbxml
+
+data=ZSYSTEM\xmltest\syncml\unknown\DEF078987_3.wbxml							System\XmlTest\SyncML\Unknown\DEF078987_3.wbxml
+
+data=ZSYSTEM\xmltest\wml\1.1\AllElements.wmlc									System\XmlTest\Wml\1.1\AllElements.wmlc
+data=ZSYSTEM\xmltest\wml\1.1\CharEntities.wmlc									System\XmlTest\Wml\1.1\CharEntities.wmlc
+data=ZSYSTEM\xmltest\wml\1.1\data.wmlc											System\XmlTest\Wml\1.1\data.wmlc
+data=ZSYSTEM\xmltest\wml\1.1\http___www.bbc.co.uk_mobile_sportheads1.wmlc		System\XmlTest\Wml\1.1\http___www.bbc.co.uk_mobile_sportheads1.wmlc
+data=ZSYSTEM\xmltest\wml\1.1\mob.wmlc											System\XmlTest\Wml\1.1\mob.wmlc
+data=ZSYSTEM\xmltest\wml\1.1\Variables.wmlc										System\XmlTest\Wml\1.1\Variables.wmlc
+data=ZSYSTEM\xmltest\wml\1.1\wireless_char.wmlc									System\XmlTest\Wml\1.1\wireless_char.wmlc
+
+data=ZSYSTEM\xmltest\wml\corrupt\CorruptAttr_mob.wmlc							System\XmlTest\Wml\Corrupt\CorruptAttr_mob.wmlc
+data=ZSYSTEM\xmltest\wml\corrupt\CorruptAttrVal_mob.wmlc						System\XmlTest\Wml\Corrupt\CorruptAttrVal_mob.wmlc
+data=ZSYSTEM\xmltest\wml\corrupt\CorruptTag_AllElements.wmlc					System\XmlTest\Wml\Corrupt\CorruptTag_AllElements.wmlc
+data=ZSYSTEM\xmltest\wml\corrupt\NonNullTermInlineStr.wmlc						System\XmlTest\Wml\Corrupt\NonNullTermInlineStr.wmlc
+
+data=ZSYSTEM\xmltest\wml\unknown\UnknownPubId_AllElements.wmlc					System\XmlTest\Wml\Unknown\UnknownPubId_AllElements.wmlc
+
+data=ZSYSTEM\xmltest\wml\codepage\wml_data_attr_copepage_255.wmlc				System\XmlTest\Wml\Codepage\wml_data_attr_copepage_255.wmlc
+
+data=ZSYSTEM\xmltest\serviceindication\corrupt\si_inv_act_undf.bdy				System\XmlTest\ServiceIndication\Corrupt\si_inv_act_undf.bdy
+data=ZSYSTEM\xmltest\serviceindication\corrupt\si_inv_cd_token.bdy				System\XmlTest\ServiceIndication\Corrupt\si_inv_cd_token.bdy
+data=ZSYSTEM\xmltest\serviceindication\corrupt\si_inv_cd_type.bdy				System\XmlTest\ServiceIndication\Corrupt\si_inv_cd_type.bdy
+data=ZSYSTEM\xmltest\serviceindication\corrupt\si_inv_char.bdy					System\XmlTest\ServiceIndication\Corrupt\si_inv_char.bdy
+data=ZSYSTEM\xmltest\serviceindication\corrupt\si_inv_hrf_ter.bdy				System\XmlTest\ServiceIndication\Corrupt\si_inv_hrf_ter.bdy
+data=ZSYSTEM\xmltest\serviceindication\corrupt\si_inv_msg_ter.bdy				System\XmlTest\ServiceIndication\Corrupt\si_inv_msg_ter.bdy
+data=ZSYSTEM\xmltest\serviceindication\corrupt\si_inv_msg_ter2.bdy				System\XmlTest\ServiceIndication\Corrupt\si_inv_msg_ter2.bdy
+data=ZSYSTEM\xmltest\serviceindication\corrupt\si_val_wbx_ver_14.bdy			System\XmlTest\ServiceIndication\Corrupt\si_val_wbx_ver_14.bdy
+data=ZSYSTEM\xmltest\serviceindication\corrupt\si_val_wbx_ver_30.bdy			System\XmlTest\ServiceIndication\Corrupt\si_val_wbx_ver_30.bdy
+data=ZSYSTEM\xmltest\serviceindication\corrupt\si_val_wbx_ver_FF.bdy			System\XmlTest\ServiceIndication\Corrupt\si_val_wbx_ver_FF.bdy
+data=ZSYSTEM\xmltest\serviceindication\corrupt\si_inv_msg_emp2.bdy				System\XmlTest\ServiceIndication\Corrupt\si_inv_msg_emp2.bdy
+
+data=ZSYSTEM\xmltest\serviceindication\1.0\si_inv_act_multiple.bdy				System\XmlTest\ServiceIndication\1.0\si_inv_act_multiple.bdy
+data=ZSYSTEM\xmltest\serviceindication\1.0\si_inv_act_multiple2.bdy				System\XmlTest\ServiceIndication\1.0\si_inv_act_multiple2.bdy
+data=ZSYSTEM\xmltest\serviceindication\1.0\si_inv_cd_day.bdy					System\XmlTest\ServiceIndication\1.0\si_inv_cd_day.bdy
+data=ZSYSTEM\xmltest\serviceindication\1.0\si_inv_cd_hour.bdy					System\XmlTest\ServiceIndication\1.0\si_inv_cd_hour.bdy
+data=ZSYSTEM\xmltest\serviceindication\1.0\si_inv_cd_len.bdy					System\XmlTest\ServiceIndication\1.0\si_inv_cd_len.bdy
+data=ZSYSTEM\xmltest\serviceindication\1.0\si_inv_cd_min.bdy					System\XmlTest\ServiceIndication\1.0\si_inv_cd_min.bdy
+data=ZSYSTEM\xmltest\serviceindication\1.0\si_inv_cd_sec.bdy					System\XmlTest\ServiceIndication\1.0\si_inv_cd_sec.bdy
+data=ZSYSTEM\xmltest\serviceindication\1.0\si_inv_cd_year.bdy					System\XmlTest\ServiceIndication\1.0\si_inv_cd_year.bdy
+data=ZSYSTEM\xmltest\serviceindication\1.0\si_inv_ind.bdy						System\XmlTest\ServiceIndication\1.0\si_inv_ind.bdy
+data=ZSYSTEM\xmltest\serviceindication\1.0\si_inv_msg_emp.bdy					System\XmlTest\ServiceIndication\1.0\si_inv_msg_emp.bdy
+data=ZSYSTEM\xmltest\serviceindication\1.0\si_invalid_cdate.bdy					System\XmlTest\ServiceIndication\1.0\si_invalid_cdate.bdy	
+data=ZSYSTEM\xmltest\serviceindication\1.0\si_val_act_de.bdy					System\XmlTest\ServiceIndication\1.0\si_val_act_de.bdy
+data=ZSYSTEM\xmltest\serviceindication\1.0\si_val_act_no.bdy					System\XmlTest\ServiceIndication\1.0\si_val_act_no.bdy
+data=ZSYSTEM\xmltest\serviceindication\1.0\si_val_act_sh.bdy					System\XmlTest\ServiceIndication\1.0\si_val_act_sh.bdy
+data=ZSYSTEM\xmltest\serviceindication\1.0\si_val_act_sl.bdy					System\XmlTest\ServiceIndication\1.0\si_val_act_sl.bdy
+data=ZSYSTEM\xmltest\serviceindication\1.0\si_val_act_sm.bdy					System\XmlTest\ServiceIndication\1.0\si_val_act_sm.bdy
+data=ZSYSTEM\xmltest\serviceindication\1.0\si_val_act_sn.bdy					System\XmlTest\ServiceIndication\1.0\si_val_act_sn.bdy
+data=ZSYSTEM\xmltest\serviceindication\1.0\si_val_char_iso_8859_1.bdy			System\XmlTest\ServiceIndication\1.0\si_val_char_iso_8859_1.bdy
+data=ZSYSTEM\xmltest\serviceindication\1.0\si_val_char_iso_8859_2.bdy			System\XmlTest\ServiceIndication\1.0\si_val_char_iso_8859_2.bdy
+data=ZSYSTEM\xmltest\serviceindication\1.0\si_val_char_iso_8859_3.bdy			System\XmlTest\ServiceIndication\1.0\si_val_char_iso_8859_3.bdy
+data=ZSYSTEM\xmltest\serviceindication\1.0\si_val_char_iso_8859_4.bdy			System\XmlTest\ServiceIndication\1.0\si_val_char_iso_8859_4.bdy
+data=ZSYSTEM\xmltest\serviceindication\1.0\si_val_char_iso_8859_5.bdy			System\XmlTest\ServiceIndication\1.0\si_val_char_iso_8859_5.bdy
+data=ZSYSTEM\xmltest\serviceindication\1.0\si_val_char_iso_8859_6.bdy			System\XmlTest\ServiceIndication\1.0\si_val_char_iso_8859_6.bdy
+data=ZSYSTEM\xmltest\serviceindication\1.0\si_val_char_iso_8859_7.bdy			System\XmlTest\ServiceIndication\1.0\si_val_char_iso_8859_7.bdy
+data=ZSYSTEM\xmltest\serviceindication\1.0\si_val_char_iso_8859_8.bdy			System\XmlTest\ServiceIndication\1.0\si_val_char_iso_8859_8.bdy
+data=ZSYSTEM\xmltest\serviceindication\1.0\si_val_char_iso_8859_9.bdy			System\XmlTest\ServiceIndication\1.0\si_val_char_iso_8859_9.bdy
+data=ZSYSTEM\xmltest\serviceindication\1.0\si_val_char_shift_JIS.bdy			System\XmlTest\ServiceIndication\1.0\si_val_char_shift_JIS.bdy
+data=ZSYSTEM\xmltest\serviceindication\1.0\si_val_char_us_ascii.bdy				System\XmlTest\ServiceIndication\1.0\si_val_char_us_ascii.bdy
+data=ZSYSTEM\xmltest\serviceindication\1.0\si_val_char_utf_8.bdy				System\XmlTest\ServiceIndication\1.0\si_val_char_utf_8.bdy	
+data=ZSYSTEM\xmltest\serviceindication\1.0\si_val_exp_null.bdy					System\XmlTest\ServiceIndication\1.0\si_val_exp_null.bdy
+data=ZSYSTEM\xmltest\serviceindication\1.0\si_val_expired.bdy					System\XmlTest\ServiceIndication\1.0\si_val_expired.bdy
+data=ZSYSTEM\xmltest\serviceindication\1.0\si_val_ind_opq.bdy					System\XmlTest\ServiceIndication\1.0\si_val_ind_opq.bdy
+data=ZSYSTEM\xmltest\serviceindication\1.0\si_val_msg_emp_indatt.bdy			System\XmlTest\ServiceIndication\1.0\si_val_msg_emp_indatt.bdy
+data=ZSYSTEM\xmltest\serviceindication\1.0\si_val_no_cd.bdy						System\XmlTest\ServiceIndication\1.0\si_val_no_cd.bdy
+data=ZSYSTEM\xmltest\serviceindication\1.0\si_val_no_exp.bdy					System\XmlTest\ServiceIndication\1.0\si_val_no_exp.bdy
+data=ZSYSTEM\xmltest\serviceindication\1.0\si_val_only_href.bdy					System\XmlTest\ServiceIndication\1.0\si_val_only_href.bdy
+data=ZSYSTEM\xmltest\serviceindication\1.0\si_val_sender_encoding.bdy			System\XmlTest\ServiceIndication\1.0\si_val_sender_encoding.bdy
+data=ZSYSTEM\xmltest\serviceindication\1.0\si_val_wbx_ver_10.bdy				System\XmlTest\ServiceIndication\1.0\si_val_wbx_ver_10.bdy	
+data=ZSYSTEM\xmltest\serviceindication\1.0\si_val_wbx_ver_11.bdy				System\XmlTest\ServiceIndication\1.0\si_val_wbx_ver_11.bdy	
+data=ZSYSTEM\xmltest\serviceindication\1.0\si_val_wbx_ver_12.bdy				System\XmlTest\ServiceIndication\1.0\si_val_wbx_ver_12.bdy		
+data=ZSYSTEM\xmltest\serviceindication\1.0\si_val_wbx_ver_13.bdy				System\XmlTest\ServiceIndication\1.0\si_val_wbx_ver_13.bdy
+data=ZSYSTEM\xmltest\serviceindication\1.0\si_valid.bdy							System\XmlTest\ServiceIndication\1.0\si_valid.bdy
+data=ZSYSTEM\xmltest\serviceindication\1.0\si_valid_chi.bdy						System\XmlTest\ServiceIndication\1.0\si_valid_chi.bdy
+
+//Export of testdata to test Incident_INC127127L()
+data=EPOCROOT##Epoc32\data\z\system\xmltest\defects\00000036.emnc               \system\xmltest\defects\00000036.emnc
+data=EPOCROOT##Epoc32\data\z\system\xmltest\defects\00000036b.emnc              \system\xmltest\defects\00000036b.emnc
+data=EPOCROOT##Epoc32\data\z\system\xmltest\defects\00000060.emnc               \system\xmltest\defects\00000060.emnc
+data=EPOCROOT##Epoc32\data\z\system\xmltest\defects\00000104.emnc               \system\xmltest\defects\00000104.emnc
+
+#endif

@@ -1,0 +1,49 @@
+// Copyright (c) 2003-2009 Nokia Corporation and/or its subsidiary(-ies).
+// All rights reserved.
+// This component and the accompanying materials are made available
+// under the terms of "Eclipse Public License v1.0"
+// which accompanies this distribution, and is available
+// at the URL "http://www.eclipse.org/legal/epl-v10.html".
+//
+// Initial Contributors:
+// Nokia Corporation - initial contribution.
+//
+// Contributors:
+//
+// Description:
+// xmldom.dll XML DOM support
+// 
+//
+
+/**
+ @file
+*/
+
+TARGET			xmldom.dll
+TARGETTYPE			dll
+
+CAPABILITY All -TCB
+UID				0x1000008d 0x101F9117
+VENDORID 0x70000001
+
+SOURCEPATH		../SRC
+SOURCE			GMXMLCDATASection.cpp
+SOURCE			GMXMLCharacterData.cpp
+SOURCE			GMXMLComment.cpp
+SOURCE			GMXMLDocument.cpp
+SOURCE			GMXMLDocumentElement.cpp
+SOURCE			GMXMLElement.cpp
+SOURCE			GMXMLNode.cpp
+SOURCE			GMXMLProcessingInstruction.cpp
+SOURCE			GMXMLText.cpp
+
+
+
+USERINCLUDE		../INC
+OS_LAYER_SYSTEMINCLUDE_SYMBIAN
+LIBRARY				euser.lib
+LIBRARY         	bafl.lib 
+
+DEFFILE			V2_XMLDOM.DEF
+
+SMPSAFE
