@@ -88,7 +88,12 @@ BIO* BIO_new_file(const char *aFilename, const char *aMode, const char *name)
 	    }
 	fseek(fp, 0, SEEK_END);
 	fileLen = ftell(fp);
-    fseek ( fp , 0L , SEEK_SET );
+	if(fileLen < 0)
+		{
+			xmlSecSetErrorFlag( KErrGeneral );
+			return(NULL);
+		}
+	fseek ( fp , 0L , SEEK_SET );
 	
 	buf = (char *)malloc(sizeof(char)*(fileLen+1));
     if(!buf) {	   
