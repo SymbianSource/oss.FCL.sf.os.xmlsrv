@@ -50,3 +50,4 @@ LIBRARY                 XmlSecWrapper.lib
 
 nostrictdef
 epocallowdlldata
+SMPSAFE
