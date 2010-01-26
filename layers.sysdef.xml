@@ -5,7 +5,7 @@
 
 <SystemDefinition name="xmlsrv" schema="1.4.0">
   <systemModel>
-    <layer name="os_layer">
+    <layer name="mw_layer">
       <module name="xmlsrv">
         <unit unitID="WSDo.xmlsrv" mrp="" bldFile="&layer_real_source_path;/group" name="xmlsrv" />
       </module>
