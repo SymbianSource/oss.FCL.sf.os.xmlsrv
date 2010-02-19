@@ -51,7 +51,7 @@ static TInt
 md_open (sc_md_hd_t *h, int algo, int secure, int hmac)
 {
   TInt err = KErrNone;
-  int bufsize = secure ? 512 : 1024;
+  //int bufsize = secure ? 512 : 1024;
   sc_md_hd_t hd;
   hd = (sc_md_hd_t)malloc (sizeof (struct sc_md_handle));
   if (! hd)

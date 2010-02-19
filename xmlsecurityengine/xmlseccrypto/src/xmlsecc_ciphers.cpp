@@ -259,7 +259,7 @@ xmlSecSymbianCryptoBlockCipherCtxFinal(xmlSecSymbianCryptoBlockCipherCtxPtr ctx,
 				 xmlSecTransformCtxPtr transformCtx) {
     xmlSecSize inSize, outSize;
     int blockLen, outLen = 0;
-    xmlSecByte* inBuf;
+    //xmlSecByte* inBuf;
     xmlSecByte* outBuf;
     int ret;
     
@@ -290,7 +290,7 @@ xmlSecSymbianCryptoBlockCipherCtxFinal(xmlSecSymbianCryptoBlockCipherCtxPtr ctx,
 			"size=%d", blockLen);
 	    return(-1);
 	}
-	inBuf = xmlSecBufferGetData(in);
+	//inBuf = xmlSecBufferGetData(in);
 
     } else {
 	if(inSize != (xmlSecSize)blockLen) {
