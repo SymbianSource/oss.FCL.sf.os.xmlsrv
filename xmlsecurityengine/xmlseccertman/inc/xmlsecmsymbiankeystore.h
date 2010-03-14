@@ -53,7 +53,7 @@ public:
      *
      * @since  S60 v3.2
      */
-    void CreateUnifiedKeyStoreL();
+    IMPORT_C void CreateUnifiedKeyStoreL();
 
     /**
      * Find a key in the Unified Key Store

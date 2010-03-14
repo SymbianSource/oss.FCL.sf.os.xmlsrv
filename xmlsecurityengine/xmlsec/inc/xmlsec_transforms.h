@@ -504,7 +504,7 @@ XMLSEC_EXPORT void			xmlSecTransformDebugXmlDump(xmlSecTransformPtr transform,
  */
 #define xmlSecTransformCheckId(transform, i) \
  	(xmlSecTransformIsValid(( transform )) && \
-	((((const xmlSecTransformId) (( transform )->id))) == ( i )))
+	(((( xmlSecTransformId) (( transform )->id))) == ( i )))
 
 /**
  * xmlSecTransformCheckSize:

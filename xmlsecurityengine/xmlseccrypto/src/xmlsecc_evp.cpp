@@ -100,7 +100,7 @@ xmlSecSymbianCryptoEvpKeyDataGetEvp(xmlSecKeyDataPtr data) {
 
     return(ctx->pKey);
 
-	return NULL;    
+	//return NULL;    
 }
 
 static int
@@ -327,7 +327,7 @@ xmlSecSymbianCryptoAppKeyLoadSks(char* keyname) {
 EXPORT_C
 EVP_PKEY* 
 xmlSecSymbianCryptoEvpKeyDup(EVP_PKEY* pKey) {
-    int ret;
+    
     EVP_PKEY* pKeyNew;
 
     xmlSecAssert2(pKey, NULL);
@@ -1312,7 +1312,7 @@ xmlSecSymbianCryptoKeyDataRsaAdoptRsa(xmlSecKeyDataPtr data, RSA* rsa) {
  */
 RSA* 
 xmlSecSymbianCryptoKeyDataRsaGetRsa(xmlSecKeyDataPtr data) {
-    EVP_PKEY* pKey;
+   
     
     xmlSecAssert2(xmlSecKeyDataCheckId(data, xmlSecSymbianCryptoKeyDataRsaId), NULL);
 /*    
@@ -1528,7 +1528,7 @@ xmlSecSymbianCryptoKeyDataRsaXmlWrite(xmlSecKeyDataId id, xmlSecKeyPtr key,
 			    xmlNodePtr node, xmlSecKeyInfoCtxPtr keyInfoCtx) {
     xmlNodePtr cur;
     RSA* rsa;
-    int ret;
+   
     
     xmlSecAssert2(id == xmlSecSymbianCryptoKeyDataRsaId, -1);
     xmlSecAssert2(key, -1);
@@ -1625,7 +1625,7 @@ static int
 xmlSecSymbianCryptoKeyDataRsaGenerate(xmlSecKeyDataPtr data, 
                             xmlSecSize sizeBits, 
                             xmlSecKeyDataType type ATTRIBUTE_UNUSED) {
-    RSA* rsa;
+   
     int ret;
     EVP_PKEY *pKey;
     

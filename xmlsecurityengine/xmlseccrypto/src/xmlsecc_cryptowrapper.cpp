@@ -149,7 +149,7 @@ sc_cipher_setiv( sc_cipher_hd_t c, const byte *iv, unsigned int ivlen )
 		if (ivlen > c->blocksize)
 		  ivlen = c->blocksize;
 
-		TInt len = ivlen;
+		
 	 	TRAP( error, c->iv = HBufC8::NewL(ivlen) );
         if ( error )    //!= KErrNone
             {
