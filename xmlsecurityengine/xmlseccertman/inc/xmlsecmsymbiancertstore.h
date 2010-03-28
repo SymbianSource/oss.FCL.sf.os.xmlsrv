@@ -87,7 +87,7 @@ public:
      * @return KErrNone if the cert is found
      * @return KErrNotFound if the cert is not found
      */     
-    IMPORT_C TInt CSymbianCertStore::hasCert();
+    IMPORT_C TInt hasCert();
          
     /**
      * Sets iCert
@@ -149,7 +149,7 @@ public:
      * @since S60 v3.2
      * @return error code
      */           
-    IMPORT_C TInt CSymbianCertStore::GetError();
+    IMPORT_C TInt GetError();
 
 protected:
     /**

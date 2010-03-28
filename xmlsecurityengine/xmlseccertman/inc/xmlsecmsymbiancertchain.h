@@ -47,15 +47,15 @@ public:  // Constructors and destructor
      * @param aEncodedCertsLen Length of the DER encoded X.509 certificates
      * @param aRootCerts An array of certificates which the chain will treat as candidate root certificates
      */        
-    IMPORT_C void CSymbianCertChain::InitializeL(TUint8 *aEncodedCerts, 
-                                            TUint aEncodedCertsLen, 
-                                            const RPointerArray< CX509Certificate > &aRootCerts);
+    IMPORT_C void InitializeL(TUint8 *aEncodedCerts, 
+                              TUint aEncodedCertsLen, 
+                              const RPointerArray< CX509Certificate > &aRootCerts);
  
     /**
      * Call ValidateL() of the iCertChain
      * @since S60 v3.2 
      */         
-    IMPORT_C void CSymbianCertChain::ValidateL();
+    IMPORT_C void ValidateL();
  		
     /**
      * Get the validation result
@@ -65,7 +65,7 @@ public:  // Constructors and destructor
      * @return -1 if no result can be fetched
      * @return enum TValidationError if validation fails
      */     		
-    IMPORT_C TInt CSymbianCertChain::GetValidateResult();
+    IMPORT_C TInt GetValidateResult();
     
     /**
      * Get the error flag
@@ -73,7 +73,7 @@ public:  // Constructors and destructor
      * @since S60 v3.2
      * @return error code
      */    		
-    IMPORT_C TInt CSymbianCertChain::GetError();
+    IMPORT_C TInt GetError();
         
 protected:
     /**

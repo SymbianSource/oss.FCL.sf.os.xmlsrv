@@ -186,7 +186,7 @@ public:
 	/** Gets a reference to the MXMLDtd object to use for DTD validation checking.
 	
 	@return DTD */
-	const MXMLDtd& CMDXMLDocument::DtdRepresentation() const;
+	const MXMLDtd& DtdRepresentation() const;
 
 
 private:  

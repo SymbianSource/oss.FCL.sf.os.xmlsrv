@@ -572,7 +572,7 @@ private:
      *            If sets to FALSE then key manager will be used.
      * @return TElement with signed node.
      */
-    TXmlEngElement CXmlSecSign::SignXmlNodeL(TXmlEngElement aNode, TBool aUseCurrentKey);
+    TXmlEngElement SignXmlNodeL(TXmlEngElement aNode, TBool aUseCurrentKey);
 
 private:   
     /** 

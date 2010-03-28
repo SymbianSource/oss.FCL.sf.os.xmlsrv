@@ -171,7 +171,7 @@ public:
      * @since S60 v3.2
      * @return error code
      */         
-    IMPORT_C TInt CSymbianKeyStore::GetError();
+    IMPORT_C TInt GetError();
     
     /**
      * Perform RSA sign operation
