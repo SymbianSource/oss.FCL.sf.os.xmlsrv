@@ -53,7 +53,7 @@
       <component id="libxml2libs" name="Libxml2 Libraries" introduced="^3" purpose="optional">
         <unit bldFile="xml/libxml2libs/group" mrp="xml/libxml2libs/group/syslibs_libxml2.mrp"/>
       </component>
-       <component id="legacyminidomparser" name="legacyminidomparser" introduced="7.0s" purpose="optional">
+       <component id="legacyminidomparser" name="Legacy Mini-DOM Parser" introduced="7.0s" purpose="optional">
      <unit bldFile="xml/legacyminidomparser/GROUP" mrp="xml/legacyminidomparser/GROUP/syslibs_legacyminidomparser.mrp" /> 
       </component>
       <component id="xmldomandxpath" name="XML DOM and XPath" introduced="^3" purpose="optional">
