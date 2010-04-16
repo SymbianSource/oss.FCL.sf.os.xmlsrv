@@ -89,7 +89,7 @@ static X509_CRL*	xmlSecSymbianCryptoX509CrlDerRead		(xmlSecByte* buf,
 static X509_CRL*	xmlSecSymbianCryptoX509CrlBase64DerRead	(xmlChar* buf);
 static xmlChar*		xmlSecSymbianCryptoX509CrlBase64DerWrite	(X509_CRL* crl, 
 								 int base64LineWrap);
-static xmlChar*		xmlSecSymbianCryptoX509NameWrite		(X509_NAME* nm);
+//static xmlChar*		xmlSecSymbianCryptoX509NameWrite		(X509_NAME* nm);
 #ifdef XMLSEC_FUTURE_SUPPORT
 static xmlChar*		xmlSecSymbianCryptoASN1IntegerWrite		(ASN1_INTEGER *asni);
 #endif //XMLSEC_FUTURE_SUPPORT
@@ -378,7 +378,7 @@ EXPORT_C
 int 
 xmlSecSymbianCryptoKeyDataX509AdoptCert(xmlSecKeyDataPtr data, X509* cert) {
     xmlSecSymbianCryptoX509DataCtxPtr ctx;
-    int ret;
+    
     
     xmlSecAssert2(xmlSecKeyDataCheckId(data, xmlSecSymbianCryptoKeyDataX509Id), -1);
     xmlSecAssert2(cert, -1);
@@ -469,7 +469,7 @@ EXPORT_C
 int 
 xmlSecSymbianCryptoKeyDataX509AdoptCrl(xmlSecKeyDataPtr data, X509_CRL* crl) {
     xmlSecSymbianCryptoX509DataCtxPtr ctx;
-    int ret;
+   
     
     xmlSecAssert2(xmlSecKeyDataCheckId(data, xmlSecSymbianCryptoKeyDataX509Id), -1);
     xmlSecAssert2(crl, -1);
@@ -1681,7 +1681,7 @@ xmlSecSymbianCryptoKeyDataX509VerifyAndExtractKey(xmlSecKeyDataPtr data, xmlSecK
 	// do not use list first
     //if((ctx->keyCert == NULL) && (ctx->certsList != NULL) && (xmlSecKeyGetValue(key) == NULL)) {
     if((ctx->keyCert) && (!xmlSecKeyGetValue(key)) ) {
-	X509* cert;
+	
 	
 	ret = xmlSecSymbianCryptoX509StoreKeyCertVerify(x509Store, ctx->keyCert);	
 	if(ret == 0) {
@@ -1799,6 +1799,7 @@ extern time_t timegm (struct tm *tm);
  * If you system has a native struct tm --> GMT time_t conversion function
  * (like timegm) use it instead.
  */
+ /*
 static time_t 
 my_timegm(struct tm *t) {  
     time_t tl, tb;  
@@ -1828,6 +1829,7 @@ my_timegm(struct tm *t) {
 }
 
 #define timegm(tm) my_timegm(tm)
+*/
 #endif /* WIN32 */
 #endif /* HAVE_TIMEGM */
 
@@ -2016,8 +2018,8 @@ xmlSecSymbianCryptoX509CertDerRead(const xmlSecByte* buf, xmlSecSize size) {
 static xmlChar*
 xmlSecSymbianCryptoX509CertBase64DerWrite(X509* cert, int base64LineWrap) {
     xmlChar *res = NULL;
-    xmlSecByte *p = NULL;
-    long size;
+    
+   
 
     xmlSecAssert2(cert, NULL);
     
@@ -2067,8 +2069,8 @@ xmlSecSymbianCryptoX509CrlDerRead(xmlSecByte* buf, xmlSecSize size) {
 static xmlChar*
 xmlSecSymbianCryptoX509CrlBase64DerWrite(X509_CRL* crl, int base64LineWrap) {
     xmlChar *res = NULL;
-    xmlSecByte *p = NULL;
-    long size;
+    
+    
 
     xmlSecAssert2(crl, NULL);
 #ifdef XMLSEC_FUTURE_SUPPORT	
@@ -2112,7 +2114,7 @@ xmlSecSymbianCryptoX509CrlBase64DerWrite(X509_CRL* crl, int base64LineWrap) {
 #endif    
     return(res);
 }
-
+/*
 static xmlChar*
 xmlSecSymbianCryptoX509NameWrite(X509_NAME* nm) {
     xmlChar *res = NULL;
@@ -2161,7 +2163,7 @@ xmlSecSymbianCryptoX509NameWrite(X509_NAME* nm) {
 #endif    
     return(res);
 }
-
+*/
 #ifdef XMLSEC_FUTURE_SUPPORT
 static xmlChar*
 xmlSecSymbianCryptoASN1IntegerWrite(ASN1_INTEGER *asni) {
@@ -2216,7 +2218,7 @@ xmlSecSymbianCryptoASN1IntegerWrite(ASN1_INTEGER *asni) {
 static xmlChar*
 xmlSecSymbianCryptoX509SKIWrite(X509* cert) {
     xmlChar *res = NULL;
-    int index;
+   
 #ifdef XMLSEC_FUTURE_SUPPORT    
     X509_EXTENSION *ext;
     ASN1_OCTET_STRING *keyId;
@@ -2271,7 +2273,7 @@ xmlSecSymbianCryptoX509SKIWrite(X509* cert) {
 
 static void 
 xmlSecSymbianCryptoX509CertDebugDump(X509* cert, FILE* output) {
-    char buf[1024];
+    
 #ifdef XMLSEC_FUTURE_SUPPORT    
     BIGNUM *bn = NULL;
 
@@ -2297,7 +2299,7 @@ xmlSecSymbianCryptoX509CertDebugDump(X509* cert, FILE* output) {
 
 static void 
 xmlSecSymbianCryptoX509CertDebugXmlDump(X509* cert, FILE* output) {
-    char buf[1024];
+  
 #ifdef XMLSEC_FUTURE_SUPPORT    
     BIGNUM *bn = NULL;
 

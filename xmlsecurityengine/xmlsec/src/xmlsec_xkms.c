@@ -159,7 +159,7 @@ static const xmlSecQName2BitMaskInfo gXmlSecXkmsKeyUsageInfo[] =
   { NULL, NULL, 0 }	/* MUST be last in the list */
 };
 
-static const xmlSecQName2BitMaskInfo gXmlSecXkmsKeyBindingReasonInfo[] = 
+/*static const xmlSecQName2BitMaskInfo gXmlSecXkmsKeyBindingReasonInfo[] = 
 {
     { xmlSecXkmsNs, xmlSecKeyBindingReasonIssuerTrust,
       XMLSEC_XKMS_KEY_BINDING_REASON_MASK_ISSUER_TRAST },
@@ -169,8 +169,9 @@ static const xmlSecQName2BitMaskInfo gXmlSecXkmsKeyBindingReasonInfo[] =
       XMLSEC_XKMS_KEY_BINDING_REASON_MASK_VALIDITY_INTERVAL },
     { xmlSecXkmsNs, xmlSecKeyBindingReasonSignature,
       XMLSEC_XKMS_KEY_BINDING_REASON_MASK_SIGNATURE },
-    { NULL, NULL, 0 }	/* MUST be last in the list */
+    { NULL, NULL, 0 }	 MUST be last in the list 
 };
+*/
 
 static const xmlSecQName2BitMaskInfo gXmlSecXkmsResponseMechanismInfo[] = 
 {

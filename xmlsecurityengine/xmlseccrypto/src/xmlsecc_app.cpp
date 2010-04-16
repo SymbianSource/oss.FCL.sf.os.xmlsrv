@@ -88,9 +88,9 @@ xmlSecSymbianCryptoAppKeyLoadWithName(const char* filename, xmlSecKeyDataFormat 
 			void* pwdCallback,
 			void* pwdCallbackCtx) {			
     xmlSecKeyPtr key = NULL;
-    EVP_PKEY* pKey = NULL; 
+    
     BIO* bio;
-    xmlSecKeyDataPtr data;  
+    
     			
     xmlSecAssert2(filename, NULL);
     xmlSecAssert2(format != xmlSecKeyDataFormatUnknown, NULL);
@@ -146,7 +146,7 @@ xmlSecSymbianCryptoAppKeyLoadMemoryWithName(const xmlSecByte* data, xmlSecSize d
 			void* pwdCallback, void* pwdCallbackCtx) {
     
     xmlSecKeyPtr key = NULL;
-    EVP_PKEY* pKey = NULL; 
+    
     BIO* bio;
     
     bio = BIO_new_buffer((const char*)data,dataSize,keyname);

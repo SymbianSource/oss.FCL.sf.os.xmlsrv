@@ -23,7 +23,7 @@ PRJ_EXPORTS
 ../inc/libxml2/libxml2_sax2.h     SYMBIAN_OS_LAYER_PUBLIC_EXPORT_PATH(stdapis/libxml2/libxml2_sax2.h)
 ../inc/libxml2/libxml2_parserinternals.h     SYMBIAN_OS_LAYER_PUBLIC_EXPORT_PATH(stdapis/libxml2/libxml2_parserinternals.h)
 ../inc/libxml2/xmlengxeconfig.h     SYMBIAN_OS_LAYER_PUBLIC_EXPORT_PATH(stdapis/libxml2/xmlengxeconfig.h)
-../inc/libxml2/xmlengtriodef.h     SYMBIAN_OS_LAYER_PLATFORM_EXPORT_PATH(stdapis/libxml2/xmlengtriodef.h)
+../inc/libxml2/xmlengtriodef.h     SYMBIAN_OS_LAYER_PUBLIC_EXPORT_PATH(stdapis/libxml2/xmlengtriodef.h)
 ../inc/libxml2/xmlengconfig.h     SYMBIAN_OS_LAYER_PUBLIC_EXPORT_PATH(stdapis/libxml2/xmlengconfig.h)
 ../inc/libxml2/libxml2_xmlstring.h     SYMBIAN_OS_LAYER_PUBLIC_EXPORT_PATH(stdapis/libxml2/libxml2_xmlstring.h)
 ../inc/libxml2/libxml2_list.h     SYMBIAN_OS_LAYER_PUBLIC_EXPORT_PATH(stdapis/libxml2/libxml2_list.h)
@@ -33,7 +33,7 @@ PRJ_EXPORTS
 ../inc/libxml2/libxml2_xmlmemory.h     SYMBIAN_OS_LAYER_PUBLIC_EXPORT_PATH(stdapis/libxml2/libxml2_xmlmemory.h)
 ../inc/libxml2/libxml2_globals.h     SYMBIAN_OS_LAYER_PUBLIC_EXPORT_PATH(stdapis/libxml2/libxml2_globals.h)
 ../inc/libxml2/libxml2_xmlexports.h     SYMBIAN_OS_LAYER_PUBLIC_EXPORT_PATH(stdapis/libxml2/libxml2_xmlexports.h)
-../inc/libxml2/xmlengtrionan.h     SYMBIAN_OS_LAYER_PLATFORM_EXPORT_PATH(stdapis/libxml2/xmlengtrionan.h)
+../inc/libxml2/xmlengtrionan.h     SYMBIAN_OS_LAYER_PUBLIC_EXPORT_PATH(stdapis/libxml2/xmlengtrionan.h)
 ../inc/libxml2/libxml2_xmlerror.h     SYMBIAN_OS_LAYER_PUBLIC_EXPORT_PATH(stdapis/libxml2/libxml2_xmlerror.h)
 ../inc/libxml2/libxml2_chvalid.h     SYMBIAN_OS_LAYER_PUBLIC_EXPORT_PATH(stdapis/libxml2/libxml2_chvalid.h)
 ../inc/libxml2/libxml2_modules.h     SYMBIAN_OS_LAYER_PUBLIC_EXPORT_PATH(stdapis/libxml2/libxml2_modules.h)
@@ -59,11 +59,11 @@ PRJ_EXPORTS
 
 xmlengineutils.iby        /epoc32/rom/include/xmlengineutils.iby
 xmlengine.iby				/epoc32/rom/include/xmlengine.iby
-../inc/xmlengineutils/xmlengxestd.h     SYMBIAN_OS_LAYER_PLATFORM_EXPORT_PATH(xml/utils/xmlengxestd.h)
-../inc/xmlengineutils/xmlengxestrings.h     SYMBIAN_OS_LAYER_PLATFORM_EXPORT_PATH(xml/utils/xmlengxestrings.h)
-../inc/xmlengineutils/xmlengmem.h     SYMBIAN_OS_LAYER_PLATFORM_EXPORT_PATH(xml/utils/xmlengmem.h)
-../inc/xmlengineutils/xmlengutils.h     SYMBIAN_OS_LAYER_PLATFORM_EXPORT_PATH(xml/utils/xmlengutils.h)
-../inc/xmlengineutils/xmlengxestrings.inl     SYMBIAN_OS_LAYER_PLATFORM_EXPORT_PATH(xml/utils/xmlengxestrings.inl)
+../inc/xmlengineutils/xmlengxestd.h     SYMBIAN_OS_LAYER_PUBLIC_EXPORT_PATH(xml/utils/xmlengxestd.h)
+../inc/xmlengineutils/xmlengxestrings.h     SYMBIAN_OS_LAYER_PUBLIC_EXPORT_PATH(xml/utils/xmlengxestrings.h)
+../inc/xmlengineutils/xmlengmem.h     SYMBIAN_OS_LAYER_PUBLIC_EXPORT_PATH(xml/utils/xmlengmem.h)
+../inc/xmlengineutils/xmlengutils.h     SYMBIAN_OS_LAYER_PUBLIC_EXPORT_PATH(xml/utils/xmlengutils.h)
+../inc/xmlengineutils/xmlengxestrings.inl     SYMBIAN_OS_LAYER_PUBLIC_EXPORT_PATH(xml/utils/xmlengxestrings.inl)
 
 #ifndef GCCXML
 PRJ_MMPFILES

@@ -54,7 +54,7 @@ public:
      *
      * @since  S60 v3.2
      */
-    void CreateUnifiedCertStoreL();
+    IMPORT_C void CreateUnifiedCertStoreL();
             
     /**
      * Find a cert in the Unified Cert Store

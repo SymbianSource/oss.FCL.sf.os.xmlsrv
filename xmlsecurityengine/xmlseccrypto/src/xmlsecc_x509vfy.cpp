@@ -86,14 +86,14 @@ static xmlSecKeyDataStoreKlass xmlSecSymbianCryptoX509StoreKlass = {
     NULL,					/* void* reserved1; */
 };
 
-static int		xmlSecSymbianCryptoX509VerifyCrl			(X509_STORE* xst, 
-									 X509_CRL *crl );
+/*static int		xmlSecSymbianCryptoX509VerifyCrl			(X509_STORE* xst, 
+									 X509_CRL *crl );*/
 static X509*		xmlSecSymbianCryptoX509FindCert			(STACK_OF(X509) *certs,
 									 xmlChar *subjectName,
 									 xmlChar *issuerName, 
 									 xmlChar *issuerSerial,
 									 xmlChar *ski);
-static X509*		xmlSecSymbianCryptoX509FindNextChainCert		(STACK_OF(X509) *chain, 
+/*static X509*		xmlSecSymbianCryptoX509FindNextChainCert		(STACK_OF(X509) *chain, 
 		    							 X509 *cert);
 static int		xmlSecSymbianCryptoX509VerifyCertAgainstCrls		(STACK_OF(X509_CRL) *crls, 
 								         X509* cert);
@@ -109,7 +109,7 @@ static int		xmlSecSymbianCryptoX509NamesCompare			(X509_NAME *a,
 									 X509_NAME *b);
 static int 		xmlSecSymbianCryptoX509_NAME_cmp			(const X509_NAME *a, 
 									 const X509_NAME *b);
-/*
+
 static int 		xmlSecSymbianCryptoX509_NAME_ENTRY_cmp		(const X509_NAME_ENTRY **a, 
 									 const X509_NAME_ENTRY **b);
 */
@@ -178,12 +178,12 @@ EXPORT_C
 int 	
 xmlSecSymbianCryptoX509StoreKeyCertVerify(xmlSecKeyDataStorePtr store, X509* cert) {
     xmlSecSymbianCryptoX509StoreCtxPtr ctx;
-    X509* res = NULL;
-    X509 *err_cert = NULL;
-    char buf[256];
-    int err = 0, depth;
-    int i;
-    int ret;
+    
+    
+    
+    int err = 0;
+    
+    
 
     xmlSecAssert2(xmlSecKeyDataStoreCheckId(store, xmlSecSymbianCryptoX509StoreId), NULL);
     xmlSecAssert2(cert, NULL);
@@ -259,13 +259,13 @@ X509*
 xmlSecSymbianCryptoX509StoreVerify(xmlSecKeyDataStorePtr store, XMLSEC_STACK_OF_X509* certs,
 			     XMLSEC_STACK_OF_X509_CRL* crls, xmlSecKeyInfoCtx* keyInfoCtx) {
     xmlSecSymbianCryptoX509StoreCtxPtr ctx;
-    STACK_OF(X509)* certs2 = NULL;	
+    
     X509* res = NULL;
     X509* cert = NULL;
-    X509 *err_cert = NULL;
-    char buf[256];
-    int err = 0, depth;
-    int i;
+   
+    
+    int err = 0;
+
     int ret;
 
     xmlSecAssert2(xmlSecKeyDataStoreCheckId(store, xmlSecSymbianCryptoX509StoreId), NULL);
@@ -636,7 +636,7 @@ xmlSecSymbianCryptoX509StoreAddCertsPath(xmlSecKeyDataStorePtr store, const char
 
 static int
 xmlSecSymbianCryptoX509StoreInitialize(xmlSecKeyDataStorePtr store) {
-    const xmlChar* path;
+    
     
     xmlSecSymbianCryptoX509StoreCtxPtr ctx;
     xmlSecAssert2(xmlSecKeyDataStoreCheckId(store, xmlSecSymbianCryptoX509StoreId), -1);
@@ -751,7 +751,7 @@ xmlSecSymbianCryptoX509StoreFinalize(xmlSecKeyDataStorePtr store) {
  * Low-level x509 functions
  *
  *****************************************************************************/
-static int
+/*static int
 xmlSecSymbianCryptoX509VerifyCrl(X509_STORE* xst, X509_CRL *crl ) {
 
     EVP_PKEY *pkey;
@@ -794,6 +794,7 @@ xmlSecSymbianCryptoX509VerifyCrl(X509_STORE* xst, X509_CRL *crl ) {
 #endif		//XMLSEC_FUTURE_SUPPORT    
     return((ret == 1) ? 1 : 0);
 }
+*/
 
 /**
  * xmlSecSymbianCryptoX509FindCert:
@@ -802,8 +803,8 @@ static X509*
 xmlSecSymbianCryptoX509FindCert(STACK_OF(X509) *certs, xmlChar *subjectName,
 			xmlChar *issuerName, xmlChar *issuerSerial,
 			xmlChar *ski) {
-    X509 *cert = NULL;
-    int i;
+
+    
 
     xmlSecAssert2(certs, NULL);
 #ifdef XMLSEC_FUTURE_SUPPORT    
@@ -940,14 +941,15 @@ xmlSecSymbianCryptoX509FindCert(STACK_OF(X509) *certs, xmlChar *subjectName,
 /** 
  * xmlSecSymbianCryptoX509FindNextChainCert:
  */
+ /*
 static X509*
 xmlSecSymbianCryptoX509FindNextChainCert(STACK_OF(X509) *chain, X509 *cert) {
-    unsigned long certSubjHash;
-    int i;
+ 
+  
 
     xmlSecAssert2(chain, NULL);
     xmlSecAssert2(cert, NULL);
-/*    
+ 
     certSubjHash = X509_subject_name_hash(cert);
     for(i = 0; i < sk_X509_num(chain); ++i) {
 	if((sk_X509_value(chain, i) != cert) && 
@@ -956,17 +958,18 @@ xmlSecSymbianCryptoX509FindNextChainCert(STACK_OF(X509) *chain, X509 *cert) {
 	    return(sk_X509_value(chain, i));
 	}
     }
-*/    
+  
     return(NULL);
 }
-
+*/
 /**
  * xmlSecSymbianCryptoX509VerifyCertAgainstCrls:
  */
+ /*
 static int
 xmlSecSymbianCryptoX509VerifyCertAgainstCrls(STACK_OF(X509_CRL) *crls, X509* cert) {
-    X509_NAME *issuer;
-    X509_CRL *crl = NULL;
+   
+   
 #ifdef XMLSEC_FUTURE_SUPPORT    
     X509_REVOKED *revoked;
     int i, n;
@@ -975,10 +978,10 @@ xmlSecSymbianCryptoX509VerifyCertAgainstCrls(STACK_OF(X509_CRL) *crls, X509* cer
     xmlSecAssert2(crls, -1);
     xmlSecAssert2(cert, -1);
     
-    /*
+    
      * Try to retrieve a CRL corresponding to the issuer of
      * the current certificate 
-     */    
+      
     n = sk_X509_CRL_num(crls);
     for(i = 0; i < n; i++) {
 	crl = sk_X509_CRL_value(crls, i);     
@@ -988,22 +991,22 @@ xmlSecSymbianCryptoX509VerifyCertAgainstCrls(STACK_OF(X509_CRL) *crls, X509* cer
 	}
     }
     if((i >= n) || (!crl)){
-	/* no crls for this issuer */
+	// no crls for this issuer 
 	return(1);
     }
 
-    /* 
-     * Check date of CRL to make sure it's not expired 
-     */
+    
+     // Check date of CRL to make sure it's not expired 
+     
     ret = X509_cmp_current_time(X509_CRL_get_nextUpdate(crl));
     if (ret == 0) {
-	/* crl expired */
+	//crl expired 
 	return(1);
     }
     
-    /* 
-     * Check if the current certificate is revoked by this CRL
-     */
+     
+     // Check if the current certificate is revoked by this CRL
+     
     n = sk_num(X509_CRL_get_REVOKED(crl));
     for (i = 0; i < n; i++) {
         revoked = (X509_REVOKED *)sk_value(X509_CRL_get_REVOKED(crl), i);
@@ -1019,16 +1022,18 @@ xmlSecSymbianCryptoX509VerifyCertAgainstCrls(STACK_OF(X509_CRL) *crls, X509* cer
 #endif		//XMLSEC_FUTURE_SUPPORT    
     return(1);    
 }
+*/
 
 
 /**
  * xmlSecSymbianCryptoX509NameRead:
- */       
+ */  
+ /*     
 static X509_NAME *
 xmlSecSymbianCryptoX509NameRead(xmlSecByte *str, int len) {
-    xmlSecByte name[256];
-    xmlSecByte value[256];
-    int nameLen, valueLen;
+   
+    
+    
     X509_NAME *nm = NULL;
 
     xmlSecAssert2(str, NULL);
@@ -1045,7 +1050,7 @@ xmlSecSymbianCryptoX509NameRead(xmlSecByte *str, int len) {
     }
     
     while(len > 0) {
-	/* skip spaces after comma or semicolon */
+	//skip spaces after comma or semicolon 
 	while((len > 0) && isspace(*str)) {
 	    ++str; --len;
 	}
@@ -1077,7 +1082,7 @@ xmlSecSymbianCryptoX509NameRead(xmlSecByte *str, int len) {
 		    return(NULL);
     		}
 		
-		/* skip quote */
+		//skip quote 
 		if((len <= 0) || ((*str) != '\"')) {
 		    xmlSecError(XMLSEC_ERRORS_HERE,
 				NULL,
@@ -1090,7 +1095,7 @@ xmlSecSymbianCryptoX509NameRead(xmlSecByte *str, int len) {
 		}
                 ++str; --len;
 
-		/* skip spaces before comma or semicolon */
+		//skip spaces before comma or semicolon 
 		while((len > 0) && isspace(*str)) {
 		    ++str; --len;
 		}
@@ -1109,7 +1114,7 @@ xmlSecSymbianCryptoX509NameRead(xmlSecByte *str, int len) {
 		}
 		type = MBSTRING_ASC;
 	    } else if((*str) == '#') {
-		/* Not implemented currently */
+		//Not implemented currently
 		xmlSecError(XMLSEC_ERRORS_HERE,
 			    NULL,
 			    NULL,
@@ -1144,11 +1149,12 @@ xmlSecSymbianCryptoX509NameRead(xmlSecByte *str, int len) {
     return(nm);
 }
 
-
+*/
 
 /**
  * xmlSecSymbianCryptoX509NameStringRead:
  */
+ /*
 static int 
 xmlSecSymbianCryptoX509NameStringRead(xmlSecByte **str, int *strLen, 
 			xmlSecByte *res, int resLen,
@@ -1204,11 +1210,13 @@ xmlSecSymbianCryptoX509NameStringRead(xmlSecByte **str, int *strLen,
     (*str) = p;
     return((ingoreTrailingSpaces) ? nonSpace - res + 1 : q - res);
 }
+*/
 
+/*
 static
 int xmlSecSymbianCryptoX509_NAME_cmp(const X509_NAME *a, const X509_NAME *b) {
-    int i,ret;
-/*    
+  
+    
     const X509_NAME_ENTRY *na,*nb;
 
     xmlSecAssert2(a != NULL, -1);
@@ -1227,9 +1235,10 @@ int xmlSecSymbianCryptoX509_NAME_cmp(const X509_NAME *a, const X509_NAME *b) {
 	    return(ret);
 	}
     }	
-*/
+
     return(0);
 }
+*/
 
 
 /** 
@@ -1238,6 +1247,7 @@ int xmlSecSymbianCryptoX509_NAME_cmp(const X509_NAME *a, const X509_NAME *b) {
  * we have to sort X509_NAME entries to get correct results.
  * This is ugly but SymbianCrypto does not support it
  */
+ /*
 static int		
 xmlSecSymbianCryptoX509NamesCompare(X509_NAME *a, X509_NAME *b) {
     X509_NAME *a1 = NULL;
@@ -1266,22 +1276,22 @@ xmlSecSymbianCryptoX509NamesCompare(X509_NAME *a, X509_NAME *b) {
         return(1);
     }
         
-    /* sort both */
+    //sort both
     sk_X509_NAME_ENTRY_set_cmp_func(a1->entries, xmlSecSymbianCryptoX509_NAME_ENTRY_cmp);
     sk_X509_NAME_ENTRY_sort(a1->entries);
     sk_X509_NAME_ENTRY_set_cmp_func(b1->entries, xmlSecSymbianCryptoX509_NAME_ENTRY_cmp);
     sk_X509_NAME_ENTRY_sort(b1->entries);
 
-    /* actually compare */
+     //actually compare
     ret = xmlSecSymbianCryptoX509_NAME_cmp(a1, b1);
     
-    /* cleanup */
+    //cleanup
     X509_NAME_free(a1);
     X509_NAME_free(b1);
 #endif		//XMLSEC_FUTURE_SUPPORT    
     return(ret);
 }
-			
+		*/	
 
 /**
  * xmlSecSymbianCryptoX509_NAME_ENTRY_cmp:
