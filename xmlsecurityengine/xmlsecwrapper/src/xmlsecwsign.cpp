@@ -214,11 +214,13 @@ xmlSecKeyPtr ReadKeyFromBufferL(const TDesC8& aBuffer,
 // Reset template settings
 // ---------------------------------------------------------------------------
 //   
-void TemplateCleanup(TAny* aPref)
+void TemplateCleanupL(TAny* aPref)
     {
+   
     if(aPref)
         {
-        delete aPref;
+        CleanupStack::PushL(aPref);
+        CleanupStack::PopAndDestroy(aPref);
         xmlSetPrefix(NULL);
         }
     xmlSetNewLineFlag(1);
@@ -625,7 +627,7 @@ EXPORT_C const RXmlEngDocument& CXmlSecSign::CreateTemplateL(TXmlSecKeyType aKey
         pref = (unsigned char*) XmlEngXmlCharFromDes8L(aPref);
         xmlSetPrefix(pref);
         }
-    CleanupStack::PushL(TCleanupItem(Sign::TemplateCleanup,(TAny*)pref));
+    CleanupStack::PushL(TCleanupItem(Sign::TemplateCleanupL,(TAny*)pref));
         
     xmlNodePtr signNode = NULL;
     xmlNodePtr refNode = NULL;

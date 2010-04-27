@@ -577,6 +577,7 @@ xmlSecSymbianCryptoKeyDataX509Duplicate(xmlSecKeyDataPtr dst, xmlSecKeyDataPtr s
     size = xmlSecSymbianCryptoKeyDataX509GetCertsSize(src);
     for(pos = 0; pos < size; ++pos) {
 	certSrc = xmlSecSymbianCryptoKeyDataX509GetCert(src, pos);
+	certDst = xmlSecSymbianCryptoKeyDataX509GetCert(dst, pos);
 	if(!certSrc) {
 	    xmlSecError(XMLSEC_ERRORS_HERE,
 			xmlSecErrorsSafeString(xmlSecKeyDataGetName(src)),
@@ -610,6 +611,7 @@ xmlSecSymbianCryptoKeyDataX509Duplicate(xmlSecKeyDataPtr dst, xmlSecKeyDataPtr s
     size = xmlSecSymbianCryptoKeyDataX509GetCrlsSize(src);
     for(pos = 0; pos < size; ++pos) {
 	crlSrc = xmlSecSymbianCryptoKeyDataX509GetCrl(src, pos);
+	crlDst =xmlSecSymbianCryptoKeyDataX509GetCrl(dst, pos);
 	if(!crlSrc) {
 	    xmlSecError(XMLSEC_ERRORS_HERE,
 			xmlSecErrorsSafeString(xmlSecKeyDataGetName(src)),
@@ -618,7 +620,6 @@ xmlSecSymbianCryptoKeyDataX509Duplicate(xmlSecKeyDataPtr dst, xmlSecKeyDataPtr s
 			"pos=%d", pos);
 	    return(-1);
 	}
-	
 	if(!crlDst) {
 	    xmlSecError(XMLSEC_ERRORS_HERE,
 			xmlSecErrorsSafeString(xmlSecKeyDataGetName(dst)),
@@ -1106,8 +1107,7 @@ xmlSecSymbianCryptoX509SubjectNameNodeRead(xmlSecKeyDataPtr data,
     xmlSecKeyDataStorePtr x509Store;
     xmlChar* subject;
     X509* cert;
-    X509* cert2 = NULL;
-    int ret;
+    //X509* cert2 = NULL;
     
     xmlSecAssert2(xmlSecKeyDataCheckId(data, xmlSecSymbianCryptoKeyDataX509Id), -1);
     xmlSecAssert2(node, -1);
@@ -1142,8 +1142,6 @@ xmlSecSymbianCryptoX509SubjectNameNodeRead(xmlSecKeyDataPtr data,
 
     cert = xmlSecSymbianCryptoX509StoreFindCert(x509Store, subject, NULL, NULL, NULL, keyInfoCtx);
     if(!cert){
-	xmlFree(subject);
-
 	if((keyInfoCtx->flags & XMLSEC_KEYINFO_FLAGS_X509DATA_STOP_ON_UNKNOWN_CERT) != 0) {
 	    xmlSecError(XMLSEC_ERRORS_HERE,
 		        xmlSecErrorsSafeString(xmlSecKeyDataGetName(data)),
@@ -1151,11 +1149,15 @@ xmlSecSymbianCryptoX509SubjectNameNodeRead(xmlSecKeyDataPtr data,
 			XMLSEC_ERRORS_R_CERT_NOT_FOUND,
 			"subject=%s", 
 			xmlSecErrorsSafeString(subject));
+	    xmlFree(subject);
 	    return(-1);
 	}
+	xmlFree(subject);
 	return(0);
     }
-
+    
+    //dead error condition
+    /*
     if(!cert2) {
 	xmlSecError(XMLSEC_ERRORS_HERE,
 		    xmlSecErrorsSafeString(xmlSecKeyDataGetName(data)),
@@ -1176,7 +1178,7 @@ xmlSecSymbianCryptoX509SubjectNameNodeRead(xmlSecKeyDataPtr data,
 	xmlFree(subject);
 	return(-1);
     }
-    
+    */
     xmlFree(subject);
     return(0);
 }
@@ -1225,8 +1227,7 @@ xmlSecSymbianCryptoX509IssuerSerialNodeRead(xmlSecKeyDataPtr data,
     xmlChar *issuerName;
     xmlChar *issuerSerial;    
     X509* cert;
-    X509* cert2 = NULL;
-    int ret;
+    //X509* cert2 = NULL;
 
     xmlSecAssert2(xmlSecKeyDataCheckId(data, xmlSecSymbianCryptoKeyDataX509Id), -1);
     xmlSecAssert2(node, -1);
@@ -1320,23 +1321,27 @@ xmlSecSymbianCryptoX509IssuerSerialNodeRead(xmlSecKeyDataPtr data,
                                                             issuerSerial, 
                                                             NULL, 
                                                             keyInfoCtx);
-    if(!cert){
-	xmlFree(issuerSerial);
-	xmlFree(issuerName);
-
-	if((keyInfoCtx->flags & XMLSEC_KEYINFO_FLAGS_X509DATA_STOP_ON_UNKNOWN_CERT) != 0) {
-	    xmlSecError(XMLSEC_ERRORS_HERE,
+    if(!cert)
+        {
+        if((keyInfoCtx->flags & XMLSEC_KEYINFO_FLAGS_X509DATA_STOP_ON_UNKNOWN_CERT) != 0)
+            {
+            xmlSecError(XMLSEC_ERRORS_HERE,
 		        xmlSecErrorsSafeString(xmlSecKeyDataGetName(data)),
 			NULL,
 			XMLSEC_ERRORS_R_CERT_NOT_FOUND,
 			"issuerName=%s;issuerSerial=%s",
 		        xmlSecErrorsSafeString(issuerName), 
 			xmlSecErrorsSafeString(issuerSerial));
-	    return(-1);
-	}
-	return(0);    
-    }
+            xmlFree(issuerSerial);
+            xmlFree(issuerName);
+            return(-1);
+            }
+		xmlFree(issuerSerial);
+        xmlFree(issuerName);
+        return(0);  
+        }
 
+    /*
     if(!cert2) {
 	xmlSecError(XMLSEC_ERRORS_HERE,
 		    xmlSecErrorsSafeString(xmlSecKeyDataGetName(data)),
@@ -1359,7 +1364,7 @@ xmlSecSymbianCryptoX509IssuerSerialNodeRead(xmlSecKeyDataPtr data,
 	xmlFree(issuerName);
 	return(-1);
     }
-    
+    */
     xmlFree(issuerSerial);
     xmlFree(issuerName);
     return(0);
@@ -1410,8 +1415,8 @@ xmlSecSymbianCryptoX509IssuerSerialNodeWrite(X509* cert,
 		    xmlSecErrorsSafeString(xmlSecNodeX509SerialNumber));
 	return(-1);
     }
-
-    /* write data */
+    /*
+    //write data 
     if(!buf) {
 	xmlSecError(XMLSEC_ERRORS_HERE,
 		    NULL,
@@ -1420,9 +1425,7 @@ xmlSecSymbianCryptoX509IssuerSerialNodeWrite(X509* cert,
 		    XMLSEC_ERRORS_NO_MESSAGE);
 	return(-1);
     }
-    xmlNodeSetContent(issuerNameNode, buf);
-    xmlFree(buf);
-
+        
     if(!buf) {
 	xmlSecError(XMLSEC_ERRORS_HERE,
 		    NULL,
@@ -1431,6 +1434,8 @@ xmlSecSymbianCryptoX509IssuerSerialNodeWrite(X509* cert,
 		    XMLSEC_ERRORS_NO_MESSAGE);
 	return(-1);
     }
+	*/
+	xmlNodeSetContent(issuerNameNode, buf);
     xmlNodeSetContent(issuerNumberNode, buf);
     xmlFree(buf);
 
@@ -1445,8 +1450,6 @@ xmlSecSymbianCryptoX509SKINodeRead(xmlSecKeyDataPtr data,
     xmlSecKeyDataStorePtr x509Store;
     xmlChar* ski;
     X509* cert;
-    X509* cert2 = NULL;
-    int ret;
     
     xmlSecAssert2(xmlSecKeyDataCheckId(data, xmlSecSymbianCryptoKeyDataX509Id), -1);
     xmlSecAssert2(node, -1);
@@ -1482,8 +1485,6 @@ xmlSecSymbianCryptoX509SKINodeRead(xmlSecKeyDataPtr data,
 
     cert = xmlSecSymbianCryptoX509StoreFindCert(x509Store, NULL, NULL, NULL, ski, keyInfoCtx);
     if(!cert){
-	xmlFree(ski);
-
 	if((keyInfoCtx->flags & XMLSEC_KEYINFO_FLAGS_X509DATA_STOP_ON_UNKNOWN_CERT) != 0) {
 	    xmlSecError(XMLSEC_ERRORS_HERE,
 		        xmlSecErrorsSafeString(xmlSecKeyDataGetName(data)),
@@ -1491,11 +1492,15 @@ xmlSecSymbianCryptoX509SKINodeRead(xmlSecKeyDataPtr data,
 		        XMLSEC_ERRORS_R_CERT_NOT_FOUND,
 			"ski=%s", 
 			xmlSecErrorsSafeString(ski));
+	    xmlFree(ski);
 	    return(-1);
 	}
+	xmlFree(ski);
 	return(0);
     }
-
+ 
+//dead error condition 
+/*
     if(!cert2) {
 	xmlSecError(XMLSEC_ERRORS_HERE,
 		    xmlSecErrorsSafeString(xmlSecKeyDataGetName(data)),
@@ -1505,7 +1510,7 @@ xmlSecSymbianCryptoX509SKINodeRead(xmlSecKeyDataPtr data,
 	xmlFree(ski);
 	return(-1);
     }
-
+ 
     ret = xmlSecSymbianCryptoKeyDataX509AdoptCert(data, cert2);
     if(ret < 0) {
 	xmlSecError(XMLSEC_ERRORS_HERE,
@@ -1516,6 +1521,7 @@ xmlSecSymbianCryptoX509SKINodeRead(xmlSecKeyDataPtr data,
 	xmlFree(ski);
 	return(-1);
     }
+    */
     
     xmlFree(ski);
     return(0);
@@ -2440,8 +2446,10 @@ xmlSecSymbianCryptoKeyDataRawX509CertBinRead(xmlSecKeyDataId id, xmlSecKeyPtr ke
 		    "xmlSecSymbianCryptoKeyDataX509VerifyAndExtractKey",
 		    XMLSEC_ERRORS_R_XMLSEC_FAILED,
 		    XMLSEC_ERRORS_NO_MESSAGE);
+	X509_free(cert);
 	return(-1);
     }
+    X509_free(cert);
     return(0);
 }
 
