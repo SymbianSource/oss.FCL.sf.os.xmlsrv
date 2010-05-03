@@ -91,6 +91,7 @@ BIO* BIO_new_file(const char *aFilename, const char *aMode, const char *name)
 	if(fileLen < 0)
 		{
 			xmlSecSetErrorFlag( KErrGeneral );
+			fclose(fp);
 			return(NULL);
 		}
 	fseek ( fp , 0L , SEEK_SET );
@@ -98,12 +99,14 @@ BIO* BIO_new_file(const char *aFilename, const char *aMode, const char *name)
 	buf = (char *)malloc(sizeof(char)*(fileLen+1));
     if(!buf) {	   
 		xmlSecSetErrorFlag( KErrNoMemory );
+		fclose(fp);
 	    return(NULL);
 	}    
 				
 	byteRead = fread(buf, sizeof(char), fileLen, fp);
     if(byteRead != fileLen) {
 	    free(buf);
+	    fclose(fp);
 	    return(NULL);
 	}   
 	
@@ -114,6 +117,7 @@ BIO* BIO_new_file(const char *aFilename, const char *aMode, const char *name)
 		{
 		    xmlSecSetErrorFlag( KErrNoMemory );
 			free(buf);
+			fclose(fp);
 			return (NULL);
 		}		
 		strcpy(tmpname, name);
@@ -128,13 +132,14 @@ BIO* BIO_new_file(const char *aFilename, const char *aMode, const char *name)
 		    free(tmpname);
 		    }
 	    free(buf);
+	    fclose(fp);
 	    return(NULL);
 	}
 	
 	bio->mem = buf;
 	bio->len = fileLen;
 	bio->name = tmpname;
-
+	fclose(fp);
 	return bio; 	
 
 }

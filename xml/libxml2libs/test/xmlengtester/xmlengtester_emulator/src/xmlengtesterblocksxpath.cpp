@@ -19,8 +19,8 @@
 #include "xmlengtester.h"
 
 #include <e32svr.h>
-#include <domain/osextensions/StifParser.h>
-#include <domain/osextensions/Stiftestinterface.h>
+#include <StifParser.h>
+#include <Stiftestinterface.h>
 
 #include <XmlEngXPathExtensionFunction.h>
 #include <XmlEngXPathEvaluationContext.h>

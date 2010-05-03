@@ -242,8 +242,9 @@ xmlSecError(const char* file, int line, const char* func,
 	
 	if(msg != NULL) {
 	    va_list va;
-
-	    va_start(va, msg);
+		
+        //va points to the first argument in the list of variable arguments
+		va_start(va, msg);
   	    xmlSecStrVPrintf(error_msg, sizeof(error_msg), BAD_CAST msg, va);
 	    error_msg[sizeof(error_msg) - 1] = '\0';
 	    va_end(va);	

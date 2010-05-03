@@ -190,7 +190,7 @@ sc_md_final (sc_md_hd_t /*a*/)
 /* Set key for HMAC */
 int sc_md_setkey(sc_md_hd_t hd, unsigned char *buffer, size_t length)
 {
-  TInt err;
+  TInt err =KErrNone;
   
   if (!hd || !buffer || length <=0)
   	return KErrArgument;

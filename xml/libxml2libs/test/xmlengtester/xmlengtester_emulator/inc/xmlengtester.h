@@ -20,9 +20,9 @@
 #define XML_TEST_H
 
 //  INCLUDES
-#include <domain/osextensions/StifLogger.h>
-#include <domain/osextensions/TestScripterInternal.h>
-#include <domain/osextensions/StifTestModule.h>
+#include <StifLogger.h>
+#include <TestScripterInternal.h>
+#include <StifTestModule.h>
 #include <f32file.h>
 #include <Xml\XmlParserErrors.h>
 

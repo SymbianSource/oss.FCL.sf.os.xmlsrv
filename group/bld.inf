@@ -20,3 +20,5 @@
 
 #include "../xmlsrv_plat/group/bld.inf"
 #include "../xmlsecurityengine/group/bld.inf"
+
+#include "../extension_makefiles/group/bld.inf"

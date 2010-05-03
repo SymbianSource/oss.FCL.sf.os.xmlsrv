@@ -169,25 +169,28 @@ xmlSecKeyUseWithDuplicate(xmlSecKeyUseWithPtr keyUseWith) {
     xmlSecAssert2(keyUseWith != NULL, NULL);
 
     newKeyUseWith = xmlSecKeyUseWithCreate(NULL, NULL);
-    if(newKeyUseWith == NULL) {
-    	xmlSecError(XMLSEC_ERRORS_HERE,
+    if(newKeyUseWith == NULL) 
+        {
+        xmlSecError(XMLSEC_ERRORS_HERE,
 		    NULL,
 		    "xmlSecKeyUseWithCreate",
 		    XMLSEC_ERRORS_R_XMLSEC_FAILED,
 		    XMLSEC_ERRORS_NO_MESSAGE);
         return(NULL);        
-    }
+        }
 
     ret = xmlSecKeyUseWithCopy(newKeyUseWith, keyUseWith);
-    if(ret < 0) {
+    if(ret < 0) 
+        {
     	xmlSecError(XMLSEC_ERRORS_HERE,
 		    NULL,
 		    "xmlSecKeyUseWithCopy",
 		    XMLSEC_ERRORS_R_XMLSEC_FAILED,
 		    XMLSEC_ERRORS_NO_MESSAGE);
-        xmlSecKeyUseWithDestroy(keyUseWith);
+		xmlSecKeyUseWithDestroy(keyUseWith);
+        xmlSecKeyUseWithDestroy( newKeyUseWith);
         return(NULL);        
-    }
+        }
 
     return(newKeyUseWith);
 }
@@ -1384,8 +1387,9 @@ xmlSecKeysMngrGetKey(xmlNodePtr keyInfoNode, xmlSecKeyInfoCtxPtr keyInfoCtx) {
 
     if(keyInfoNode != NULL) {
 	ret = xmlSecKeyInfoNodeRead(keyInfoNode, key, keyInfoCtx);
-	if(ret < 0) {
-	    xmlSecError(XMLSEC_ERRORS_HERE,
+	if(ret < 0) 
+	    {
+        xmlSecError(XMLSEC_ERRORS_HERE,
 			NULL,
 			"xmlSecKeyInfoNodeRead",
 			XMLSEC_ERRORS_R_XMLSEC_FAILED,
@@ -1403,39 +1407,45 @@ xmlSecKeysMngrGetKey(xmlNodePtr keyInfoNode, xmlSecKeyInfoCtxPtr keyInfoCtx) {
         tempkey=xmlSecKeyDuplicate(key);
         if(tempkey == NULL) 
             {
-	    xmlSecError(XMLSEC_ERRORS_HERE,
-			NULL,
-			"xmlSecKeysMngrFindKey",
-			XMLSEC_ERRORS_R_XMLSEC_FAILED,
-			XMLSEC_ERRORS_NO_MESSAGE);
-	    return(NULL);
+            xmlSecError(XMLSEC_ERRORS_HERE,
+                    NULL,
+                    "xmlSecKeysMngrFindKey",
+                    XMLSEC_ERRORS_R_XMLSEC_FAILED,
+                    XMLSEC_ERRORS_NO_MESSAGE);
+            xmlSecKeyDestroy(key);
+            return(NULL);
             }
-        keyname=xmlSecKeyGetName(tempkey);	
+    keyname=xmlSecKeyGetName(tempkey);	
     xmlSecKeyDestroy(key);
     
     /* if we have keys manager, try it */
-    if(keyInfoCtx->keysMngr != NULL) {
-	key = xmlSecKeysMngrFindKey(keyInfoCtx->keysMngr, keyname /*NULL*/, keyInfoCtx);
-         xmlSecKeyDestroy(tempkey);
-        	if(key == NULL) {
-	    xmlSecError(XMLSEC_ERRORS_HERE,
-			NULL,
-			"xmlSecKeysMngrFindKey",
-			XMLSEC_ERRORS_R_XMLSEC_FAILED,
-			XMLSEC_ERRORS_NO_MESSAGE);
-	    return(NULL);
-	}
-	if(xmlSecKeyGetValue(key) != NULL) {
-	    return(key);
-	}
-	xmlSecKeyDestroy(key);
-    }
+    if(keyInfoCtx->keysMngr != NULL) 
+		{
+		key = xmlSecKeysMngrFindKey(keyInfoCtx->keysMngr, keyname /*NULL*/, keyInfoCtx);
+        	if(key == NULL) 
+				{
+				xmlSecError(XMLSEC_ERRORS_HERE,
+					NULL,
+					"xmlSecKeysMngrFindKey",
+					XMLSEC_ERRORS_R_XMLSEC_FAILED,
+					XMLSEC_ERRORS_NO_MESSAGE);
+				 xmlSecKeyDestroy(tempkey);
+				return(NULL);
+				}
+		if(xmlSecKeyGetValue(key) != NULL) 
+			{
+			xmlSecKeyDestroy(tempkey);
+			return(key);
+			}
+		xmlSecKeyDestroy(key);
+		}
     
     xmlSecError(XMLSEC_ERRORS_HERE,
 		NULL,
 		NULL,
 		XMLSEC_ERRORS_R_KEY_NOT_FOUND,
-		XMLSEC_ERRORS_NO_MESSAGE);    
+		XMLSEC_ERRORS_NO_MESSAGE);  
+    xmlSecKeyDestroy(tempkey);
     return(NULL);
 }
 

@@ -63,14 +63,16 @@ xmlSecKeysMngrCreate(void) {
     memset(mngr, 0, sizeof(xmlSecKeysMngr));    
 
     ret = xmlSecPtrListInitialize(&(mngr->storesList), xmlSecKeyDataStorePtrListId);
-    if(ret < 0) {
-	xmlSecError(XMLSEC_ERRORS_HERE,
+    if(ret < 0) 
+        {
+        xmlSecError(XMLSEC_ERRORS_HERE,
 		    NULL,
 		    "xmlSecPtrListInitialize",
 		    XMLSEC_ERRORS_R_XMLSEC_FAILED,
 		    "xmlSecKeyDataStorePtrListId");
-	return(NULL);
-    }
+        xmlFree(mngr);  
+        return(NULL);
+        }
 
     return(mngr);    
 }

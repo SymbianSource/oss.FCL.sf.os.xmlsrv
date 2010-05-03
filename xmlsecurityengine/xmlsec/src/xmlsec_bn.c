@@ -263,7 +263,7 @@ xmlSecBnFromString(xmlSecBnPtr bn, const xmlChar* str, xmlSecSize base) {
 	        continue;
         }
 
-        xmlSecAssert2(ch <= sizeof(xmlSecBnLookupTable), -1);
+        xmlSecAssert2(ch <(sizeof(xmlSecBnLookupTable)/sizeof(xmlSecBnLookupTable[0])), -1);
         nn = xmlSecBnLookupTable[ch];
         if((nn < 0) || ((xmlSecSize)nn > base)) {
 	        xmlSecError(XMLSEC_ERRORS_HERE,
@@ -426,9 +426,10 @@ xmlSecBnToString(xmlSecBnPtr bn, xmlSecSize base) {
         return (NULL);
     }
     memset(res, 0, len + 1);
-
-    for(i = 0; (xmlSecBufferGetSize(&bn2) > 0) && (i < len); i++) {
-        if(xmlSecBnDiv(&bn2, base, &nn) < 0) {
+    for(i = 0; (xmlSecBufferGetSize(&bn2) > 0) && (i < len); i++) 
+        {
+        if(xmlSecBnDiv(&bn2, base, &nn) < 0) 
+            {
             xmlSecError(XMLSEC_ERRORS_HERE,
                         NULL,
                         "xmlSecBnDiv",
@@ -437,11 +438,19 @@ xmlSecBnToString(xmlSecBnPtr bn, xmlSecSize base) {
             xmlFree(res);
             xmlSecBnFinalize(&bn2);
             return (NULL);
-        }
-        xmlSecAssert2((size_t)nn < sizeof(xmlSecBnRevLookupTable), NULL);
+            }
+        if(nn >=(sizeof(xmlSecBnRevLookupTable)/sizeof(xmlSecBnRevLookupTable[0])))
+            {
+            xmlFree(res);
+            return (NULL);
+            }
         res[i] = xmlSecBnRevLookupTable[nn];
-    }
-    xmlSecAssert2(i < len, NULL);
+         }
+   if(i >=len)
+       {
+       xmlFree(res);
+       return (NULL);
+       }
 
     /* we might have '0' at the beggining, remove it but keep one zero */
     for(len = i; (len > 1) && (res[len - 1] == '0'); len--)

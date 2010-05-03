@@ -135,19 +135,21 @@ xmlSecSymbianCryptoEvpKeyDataDuplicate(xmlSecKeyDataPtr dst, xmlSecKeyDataPtr sr
     ctxSrc = xmlSecSymbianCryptoEvpKeyDataGetCtx(src);
     xmlSecAssert2(ctxSrc, -1);
 
-    if(ctxSrc->pKey) {
+    if(ctxSrc->pKey) 
+    {
 	ctxDst->pKey = xmlSecSymbianCryptoEvpKeyDup(ctxSrc->pKey);
-            ctxDst->pKey->duplicate=0;
-            ctxSrc->pKey->duplicate=1;
-	if(!ctxDst->pKey) {
-	    xmlSecError(XMLSEC_ERRORS_HERE,
-			xmlSecErrorsSafeString(xmlSecKeyDataGetName(dst)),
-			"xmlSecSymbianCryptoEvpKeyDup",
-			XMLSEC_ERRORS_R_XMLSEC_FAILED,
-			XMLSEC_ERRORS_NO_MESSAGE);
-	    return(-1);
-	}	
-    } 
+	if(!ctxDst->pKey) 
+	    {
+	        xmlSecError(XMLSEC_ERRORS_HERE,
+	            xmlSecErrorsSafeString(xmlSecKeyDataGetName(dst)),
+	            "xmlSecSymbianCryptoEvpKeyDup",
+	            XMLSEC_ERRORS_R_XMLSEC_FAILED,
+	            XMLSEC_ERRORS_NO_MESSAGE);
+	        return(-1);
+	    }   
+     ctxDst->pKey->duplicate=0;
+     ctxSrc->pKey->duplicate=1;
+     } 
 
     return(0);
 }
@@ -1401,6 +1403,7 @@ xmlSecSymbianCryptoKeyDataRsaXmlRead(xmlSecKeyDataId id, xmlSecKeyPtr key,
 	return(-1);	
     }
 
+	/*
     if(!rsa) {
 	xmlSecError(XMLSEC_ERRORS_HERE,
 		    xmlSecErrorsSafeString(xmlSecKeyDataKlassGetName(id)),
@@ -1409,7 +1412,7 @@ xmlSecSymbianCryptoKeyDataRsaXmlRead(xmlSecKeyDataId id, xmlSecKeyPtr key,
 		    XMLSEC_ERRORS_NO_MESSAGE);
 	return(-1);
     }
-
+	*/
     cur = xmlSecGetNextElementNode(node->children);
     
     /* first is Modulus node. It is REQUIRED because we do not support Seed and PgenCounter*/
@@ -1652,6 +1655,7 @@ xmlSecSymbianCryptoKeyDataRsaGenerate(xmlSecKeyDataPtr data,
 		    "sc_load_key",
 		    XMLSEC_ERRORS_R_CRYPTO_FAILED,
 		    "sizeBits=%d", sizeBits);
+	sc_pkey_free(pKey);
 	return(-1);  
     }	
 		
@@ -1667,17 +1671,22 @@ xmlSecSymbianCryptoKeyDataRsaGenerate(xmlSecKeyDataPtr data,
 		    "sc_generate_key",
 		    XMLSEC_ERRORS_R_CRYPTO_FAILED,
 		    "sizeBits=%d", sizeBits);
-	            return(-1);      
+			sc_pkey_free(pKey);
+	        return(-1);      
 		}
 	}		
-	if (!pKey->load) {
-	xmlSecError(XMLSEC_ERRORS_HERE,
+	if (!pKey->load) 
+		{
+	
+		xmlSecError(XMLSEC_ERRORS_HERE,
 		    xmlSecErrorsSafeString(xmlSecKeyDataGetName(data)),
 		    "sc_generate_key",
 		    XMLSEC_ERRORS_R_CRYPTO_FAILED,
 		    "sizeBits=%d", sizeBits);
-	return(-1);  
-    }	
+		
+		sc_pkey_free(pKey);
+		return(-1);  
+		}	
 
     ret = xmlSecSymbianCryptoKeyDataRsaAdoptEvp(data, pKey);
     if(ret < 0) {
@@ -1705,6 +1714,7 @@ xmlSecSymbianCryptoKeyDataRsaGenerate(xmlSecKeyDataPtr data,
 	return(-1);
     }
 */
+    sc_pkey_free(pKey);
     return(0);
 }
 

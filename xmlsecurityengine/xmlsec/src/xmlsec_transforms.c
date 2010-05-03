@@ -588,15 +588,17 @@ xmlSecTransformCtxCreateAndAppend(xmlSecTransformCtxPtr ctx, xmlSecTransformId i
     xmlSecAssert2(id != xmlSecTransformIdUnknown, NULL);
 
     transform = xmlSecTransformCreate(id);
-    if(!xmlSecTransformIsValid(transform)) {
-	xmlSecError(XMLSEC_ERRORS_HERE,
+    if(!xmlSecTransformIsValid(transform)) 
+        {
+        xmlSecError(XMLSEC_ERRORS_HERE,
 		    NULL,
 		    "xmlSecTransformCreate",		    
 		    XMLSEC_ERRORS_R_XMLSEC_FAILED,
 		    "transform=%s",
 		    xmlSecErrorsSafeString(xmlSecTransformKlassGetName(id)));
-	return(NULL);
-    }
+        xmlSecTransformDestroy(transform);
+        return(NULL);
+        }
 
     ret = xmlSecTransformCtxAppend(ctx, transform);
     if(ret < 0) {
@@ -634,27 +636,30 @@ xmlSecTransformCtxCreateAndPrepend(xmlSecTransformCtxPtr ctx, xmlSecTransformId 
     xmlSecAssert2(id != xmlSecTransformIdUnknown, NULL);
 
     transform = xmlSecTransformCreate(id);
-    if(!xmlSecTransformIsValid(transform)) {
-	xmlSecError(XMLSEC_ERRORS_HERE,
+    if(!xmlSecTransformIsValid(transform)) 
+        {
+        xmlSecError(XMLSEC_ERRORS_HERE,
 		    NULL,
 		    "xmlSecTransformCreate",		    
 		    XMLSEC_ERRORS_R_XMLSEC_FAILED,
 		    "transform=%s",
 		    xmlSecErrorsSafeString(xmlSecTransformKlassGetName(id)));
-	return(NULL);
-    }
+        xmlSecTransformDestroy(transform);
+        return(NULL);
+        }
 
     ret = xmlSecTransformCtxPrepend(ctx, transform);
-    if(ret < 0) {
-	xmlSecError(XMLSEC_ERRORS_HERE,
+    if(ret < 0) 
+        {
+        xmlSecError(XMLSEC_ERRORS_HERE,
 		    NULL,
 		    "xmlSecTransformCtxPrepend",	    
 		    XMLSEC_ERRORS_R_XMLSEC_FAILED,
 		    "name=%s",
 		    xmlSecErrorsSafeString(xmlSecTransformGetName(transform)));
-	xmlSecTransformDestroy(transform);
-	return(NULL);
-    }
+        xmlSecTransformDestroy(transform);
+        return(NULL);
+        }
 
     return(transform);
 }
@@ -1570,6 +1575,7 @@ xmlSecTransformNodeRead(xmlNodePtr node, xmlSecTransformUsage usage, xmlSecTrans
 		    "transform=%s",
 		    xmlSecErrorsSafeString(xmlSecTransformKlassGetName(id)));
 	xmlFree(href);
+	xmlSecTransformDestroy(transform);
 	return(NULL);		
     }
 

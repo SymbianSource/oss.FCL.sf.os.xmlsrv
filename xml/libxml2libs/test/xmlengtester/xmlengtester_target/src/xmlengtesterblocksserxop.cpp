@@ -20,8 +20,8 @@
 
 #include <e32svr.h>
 #include <e32std.h>
-#include <domain/osextensions/StifParser.h>
-#include <domain/osextensions/Stiftestinterface.h>
+#include <StifParser.h>
+#include <Stiftestinterface.h>
 #include "XmlEngBinaryContainer.h"
 #include "XmlEngChunkContainer.h"
 #include "XmlEngFileContainer.h"

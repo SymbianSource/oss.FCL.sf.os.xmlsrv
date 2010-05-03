@@ -59,9 +59,10 @@ XmlSecGlobalState* XmlSecSetTlsL()
 // UnSet global state for dll
 // ---------------------------------------------------------------------------
 //    
-void XmlSecUnsetTlsD( void* aGlobalState )
+void XmlSecUnsetTlsDL( void* aGlobalState )
     {
-    delete aGlobalState;
+    CleanupStack::PushL(aGlobalState);
+    CleanupStack::PopAndDestroy(aGlobalState);
     Dll::SetTls( NULL );
     }
     
@@ -79,7 +80,7 @@ EXPORT_C void XmlSecInitializeL()
         }
     if(gs->iUserCount == 0)
         {
-        CleanupStack::PushL( TCleanupItem( XmlSecUnsetTlsD, gs ) );
+        CleanupStack::PushL( TCleanupItem( XmlSecUnsetTlsDL, gs ) );
         XmlEngineAttachL();
         
         RXmlEngDOMImplementation dom;
