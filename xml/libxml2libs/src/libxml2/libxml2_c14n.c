@@ -1116,7 +1116,7 @@ static int
 xmlC14NProcessElementNode(xmlC14NCtxPtr ctx, xmlNodePtr cur, int visible)
 {
 	int ret;
-    xmlC14NVisibleNsStack state ;
+    xmlC14NVisibleNsStack state ={0,0,0,0,NULL,NULL};
     int parent_is_doc = 0;
     LOAD_GS_SAFE_NODE(cur)
 

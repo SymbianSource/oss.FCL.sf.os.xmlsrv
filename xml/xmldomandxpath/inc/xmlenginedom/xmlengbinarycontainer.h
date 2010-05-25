@@ -69,7 +69,7 @@ public:
 	@leave KXmlEngErrNullNode Node is NULL
 	@leave - One of the system-wide error codes
     */    
-    EXPORT_C void AppendContentsL( const TDesC8& aData );
+    IMPORT_C void AppendContentsL( const TDesC8& aData );
 
     /** Default constructor */
 	inline TXmlEngBinaryContainer(); 

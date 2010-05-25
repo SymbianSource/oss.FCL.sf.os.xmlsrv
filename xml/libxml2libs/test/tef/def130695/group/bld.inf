@@ -19,9 +19,9 @@ DEFAULT
 PRJ_EXPORTS
 
 PRJ_TESTEXPORTS
-../scripts/def130695_Suite.script		z:/testdata/scripts/def130695_Suite.script
-../testdata/def130695_suite.ini		    z:/testdata/configs/def130695_Suite.ini
-./def130695_suite.iby   			    /epoc32/rom/include/def130695_Suite.iby
+../scripts/def130695_Suite.script		z:/testdata/scripts/def130695_suite.script
+../testdata/def130695_suite.ini		    z:/testdata/configs/def130695_suite.ini
+./def130695_suite.iby   			    /epoc32/rom/include/def130695_suite.iby
 
 
 PRJ_MMPFILES
