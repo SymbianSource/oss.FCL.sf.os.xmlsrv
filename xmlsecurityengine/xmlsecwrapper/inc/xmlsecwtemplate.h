@@ -21,11 +21,11 @@
 #include <e32std.h>
 #include <f32file.h>
  
-#include <xmlengdom.h>
-#include <libxml2_tree.h>
-#include <libxml2_xmlmemory.h>
-#include <libxml2_parser.h>
-#include <libxml2_globals.h>
+#include <xml/dom/xmlengdom.h>
+#include <stdapis/libxml2/libxml2_tree.h>
+#include <stdapis/libxml2/libxml2_xmlmemory.h>
+#include <stdapis/libxml2/libxml2_parser.h>
+#include <stdapis/libxml2/libxml2_globals.h>
 
 class XmlSecTemplate
     {

@@ -18,6 +18,7 @@
 // 
 //
 
+//RTEST
 TARGET			t_wbxmloomwmlparserstabilitytests.exe
 TARGETTYPE		exe
 

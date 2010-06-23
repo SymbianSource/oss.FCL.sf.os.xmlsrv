@@ -22,9 +22,9 @@ BUILD_DIR = $(EPOCROOT)epoc32/build/generated/xml
 
 GENERATED_FILES = $(BUILD_DIR)/t_stringdictionary00tagtable.cpp
 
-$(BUILD_DIR)/t_stringdictionary00tagtable.cpp : $(EXTENSION_ROOT)/../test/rtest/tsrc/t_stringdictionary00tagtable.st
+$(BUILD_DIR)/t_stringdictionary00tagtable.cpp : $(EXTENSION_ROOT)/../tsrc/t_stringdictionary00tagtable.st
 	$(call createdir,$(BUILD_DIR))
-	@perl $(EPOCROOT)epoc32/tools/ecopyfile.pl $(EXTENSION_ROOT)/../test/rtest/tsrc/t_stringdictionary00tagtable.st $(BUILD_DIR)$/t_stringdictionary00tagtable.st
+	@perl $(EPOCROOT)epoc32/tools/ecopyfile.pl $(EXTENSION_ROOT)/../tsrc/t_stringdictionary00tagtable.st $(BUILD_DIR)$/t_stringdictionary00tagtable.st
 	@perl $(EPOCROOT)epoc32/tools/stringtable.pl $(BUILD_DIR)/t_stringdictionary00tagtable.st 
 
 DO_NOTHING:

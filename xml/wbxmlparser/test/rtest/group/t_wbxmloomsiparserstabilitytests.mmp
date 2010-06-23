@@ -13,6 +13,7 @@
 // Description:
 //
 
+//RTEST
 //default stack size(8K) is too small and cause stack overflow
 //in the hardware test udeb
 EPOCSTACKSIZE	16384

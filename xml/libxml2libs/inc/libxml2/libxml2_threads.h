@@ -17,7 +17,7 @@
 #ifndef XML_THREADS_H
 #define XML_THREADS_H
 
-#include <libxml2_globals.h>
+#include <stdapis/libxml2/libxml2_globals.h>
 
 #ifdef __cplusplus
 extern "C" {

@@ -25,16 +25,16 @@
 #include <f32file.h>
 #include <Xml\XmlParserErrors.h>
 
-#include <xmlengdom.h>
-#include <XmlEngErrors.h>
+#include <xml/dom/xmlengdom.h>
+#include <xml/dom/xmlengerrors.h>
 // This include is not required anymore.
 // #include <XmlEngXPathObject.h>
-#include <XmlEngDOMParser.h>
+#include <xml/dom/xmlengdomparser.h>
 
-#include "XmlEngDeserializer.h"
-#include "XmlEngDeserializerDOM.h"
-#include "XmlEngSerializer.h"
-#include <XmlEngXPathResult.h>
+#include <xml/dom/xmlengdeserializer.h>
+#include <xml/dom/xmlengdeserializerdom.h>
+#include <xml/dom/xmlengserializer.h>
+#include <xml/dom/xmlengxpathresult.h>
  
 // CONSTANTS
 

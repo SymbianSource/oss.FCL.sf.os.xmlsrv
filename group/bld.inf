@@ -14,11 +14,23 @@
 * Description:       Build information file for xmlsrv package
 *
 */
-
+PRJ_PLATFORMS
+DEFAULT
 
 #include "../inc/xmlsrv.hrh"
 
 #include "../xmlsrv_plat/group/bld.inf"
-#include "../xmlsecurityengine/group/bld.inf"
 
 #include "../extension_makefiles/group/bld.inf"
+#include "../xml/cxmllibrary/group/bld.inf"
+#include "../xml/xmlparser/group/bld.inf"
+#include "../xml/legacyminidomparser/GROUP/bld.inf"
+#include "../xml/xmlfw/GROUP/bld.inf"
+#include "../xml/libxml2libs/group/bld.inf"
+#include "../xml/xmldomandxpath/GROUP/bld.inf"
+#include "../xml/wbxmlparser/group/bld.inf"
+#include "../xml/xmllibxml2parser/group/bld.inf"
+#include "../xml/xmlexpatparser/group/bld.inf"
+
+#include "../xmlsecurityengine/group/bld.inf"
+
