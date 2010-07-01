@@ -24,7 +24,7 @@
 
 #pragma warning(disable: 4127 4132 4510 4512 4610)
 
-#include "libxml2_xmlstring.h"
+#include <stdapis/libxml2/libxml2_xmlstring.h>
 
 #ifdef __cplusplus
 extern "C" {

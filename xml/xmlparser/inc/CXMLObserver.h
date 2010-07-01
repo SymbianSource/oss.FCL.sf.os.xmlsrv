@@ -22,9 +22,7 @@
 
 //  INCLUDES
 #include <e32std.h>
-//#include <eikenv.h>
-#include <badesca.h>  
-#include <txtetext.h>  
+#include <txtetext.h>
 #include "CXMLAttributes.h"
 #include <xml/MXMLContentHandler.h>
 #include <xml/MWBXMLContentHandler.h>

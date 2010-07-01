@@ -23,7 +23,7 @@ PRJ_TESTMMPFILES
 
 PRJ_TESTEXPORTS
 ../GmxmlTest.txt c:/gmxmltest.txt
-
+legacyminidomparsertest.iby /epoc32/rom/include/legacyminidomparsertest.iby
 
 
 // SMIL Input valid

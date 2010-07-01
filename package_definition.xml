@@ -68,7 +68,13 @@
       <component id="wbxmlparser" name="WBXML Parser" introduced="7.0s" purpose="optional" class="plugin">
         <unit bldFile="xml/wbxmlparser/group" mrp="xml/wbxmlparser/group/syslibs_wbxmlparser.mrp"/>
       </component>
-    </collection>
+      <component id="cxmllibrary" filter="s60" name="CXML Parser">
+        <unit bldFile="xml/cxmllibrary/group"/>
+      </component>
+      <component id="xmlparser" filter="s60" name="XML Parser">
+        <unit bldFile="xml/xmlparser/group"/>
+      </component>
+      </collection>
     <collection id="xmlsrv_info" name="XML Services Info" level="specific">
       <component id="xmlsrv_plat" filter="s60" name="XML Services Platform Interfaces" class="api">
         <unit bldFile="xmlsrv_plat/group"/>

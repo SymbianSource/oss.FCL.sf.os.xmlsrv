@@ -22,7 +22,6 @@
 
 //  INCLUDES
 #include <e32std.h>
-//#include <eikenv.h>  
 #include <badesca.h>  
 #include <xml/MXMLAttributes.h>
 

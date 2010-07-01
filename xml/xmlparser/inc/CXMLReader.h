@@ -22,7 +22,7 @@
 
 //  INCLUDES
 #include <e32std.h>
-#include <F32File.h>
+#include <f32file.h>
 #include <utf.h>
 #include <xml/cxml/nw_cXML_Parser.h>
 
