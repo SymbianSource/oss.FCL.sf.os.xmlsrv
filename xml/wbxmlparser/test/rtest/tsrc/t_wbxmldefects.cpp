@@ -28,12 +28,12 @@ LOCAL_D RFs					TheFs;
 LOCAL_D CTrapCleanup* 		TheTrapCleanup 		= NULL;
 
 // Installed via bld.inf test exports
-_LIT  (KTestDocument1,"z:\\system\\xmltest\\SyncML\\1.2\\Defects\\DEF078987_1.wbxml");
-_LIT  (KTestDocument2,"z:\\system\\xmlTest\\SyncML\\1.2\\Defects\\DEF078987_2.wbxml");
-_LIT  (KCorruptWAPEmailPushMsg1,"z:\\system\\xmltest\\defects\\00000036.emnc");
-_LIT  (KCorruptWAPEmailPushMsg2,"z:\\system\\xmltest\\defects\\00000036b.emnc");
-_LIT  (KCorruptWAPEmailPushMsg3,"z:\\system\\xmltest\\defects\\00000060.emnc");
-_LIT  (KCorruptWAPEmailPushMsg4,"z:\\system\\xmltest\\defects\\00000104.emnc");
+_LIT  (KTestDocument1,"c:\\system\\xmltest\\SyncML\\1.2\\Defects\\DEF078987_1.wbxml");
+_LIT  (KTestDocument2,"c:\\system\\xmlTest\\SyncML\\1.2\\Defects\\DEF078987_2.wbxml");
+_LIT  (KCorruptWAPEmailPushMsg1,"c:\\system\\xmltest\\defects\\00000036.emnc");
+_LIT  (KCorruptWAPEmailPushMsg2,"c:\\system\\xmltest\\defects\\00000036b.emnc");
+_LIT  (KCorruptWAPEmailPushMsg3,"c:\\system\\xmltest\\defects\\00000060.emnc");
+_LIT  (KCorruptWAPEmailPushMsg4,"c:\\system\\xmltest\\defects\\00000104.emnc");
 
 
 typedef void (*TestFunc) (void);
@@ -371,8 +371,8 @@ LOCAL_C void DEF083625L()
 	{
 	test.Next(_L(" @SYMTestCaseID:SYSLIB-XML-UT-1679 "));
 	_LIT8 (KWbxmlParserDataType, "text/wbxml");
-	_LIT  (KTestDocument1, "z:\\system\\XmlTest\\SyncML\\1.1\\add-to-client\\FromServer1.wbxml");
-	_LIT  (KTestDocument2, "z:\\system\\XmlTest\\SyncML\\1.1\\add-to-server\\FromServer1.wbxml");
+	_LIT  (KTestDocument1, "c:\\system\\XmlTest\\SyncML\\1.1\\add-to-client\\FromServer1.wbxml");
+	_LIT  (KTestDocument2, "c:\\system\\XmlTest\\SyncML\\1.1\\add-to-server\\FromServer1.wbxml");
 
 	RDefectTests handler;
 	CleanupClosePushL (handler);

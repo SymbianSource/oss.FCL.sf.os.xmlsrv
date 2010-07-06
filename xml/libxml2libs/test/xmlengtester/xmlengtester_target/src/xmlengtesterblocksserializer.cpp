@@ -22,10 +22,10 @@
 #include <StifParser.h>
 #include <Stiftestinterface.h>
 
-#include <XmlEngSerializer.h>
-#include <XmlEngBinaryContainer.h>
-#include <XmlEngChunkContainer.h>
-#include <XmlEngFileContainer.h>
+#include <xml/dom/xmlengserializer.h>
+#include <xml/dom/xmlengbinarycontainer.h>
+#include <xml/dom/xmlengchunkcontainer.h>
+#include <xml/dom/xmlengfilecontainer.h>
 #include "xmlengtesterdef.h"
 #include "TestFileOutputStream.h"
 

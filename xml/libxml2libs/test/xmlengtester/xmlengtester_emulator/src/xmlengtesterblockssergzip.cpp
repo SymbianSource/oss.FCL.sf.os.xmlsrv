@@ -23,8 +23,9 @@
 #include <StifParser.h>
 #include <Stiftestinterface.h>
 
-#include <XmlEngSerializer.h>
-#include <XmlEngBinaryContainer.h>
+
+#include <xml/dom/xmlengserializer.h>
+#include <xml/dom/xmlengbinarycontainer.h>
 #include "xmlengtesterdef.h"
 
 #include <InetProtTextUtils.h>

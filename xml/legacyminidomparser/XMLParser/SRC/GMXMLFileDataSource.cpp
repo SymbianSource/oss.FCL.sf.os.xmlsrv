@@ -89,7 +89,7 @@ void CMDXMLParserFileDataSource::ConstructL(RFs aRFs, const TDesC& aFileToParse)
 	User::LeaveIfError(iXMLFile.Size(fileSize));
 
 	// make buffer
-	iXMLFileBuffer = HBufC8::NewLC(fileSize);
+	iXMLFileBuffer = HBufC8::NewL(fileSize);
 	TPtr8 tmpbuffer(iXMLFileBuffer->Des());
 
 	// read file into buffer
@@ -98,7 +98,6 @@ void CMDXMLParserFileDataSource::ConstructL(RFs aRFs, const TDesC& aFileToParse)
 
 	iXMLFile.Close();
 
-	CleanupStack::Pop();	// memory buffer
 	}
 
 void CMDXMLParserFileDataSource::GetData(TPtrC8 &aPtr, TRequestStatus &aStatus)

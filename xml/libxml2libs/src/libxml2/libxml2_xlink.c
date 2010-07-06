@@ -32,12 +32,12 @@
 #include <zlib.h>
 #endif
 
-#include <libxml2_xmlmemory.h>
-#include <libxml2_tree.h>
-#include <libxml2_parser.h>
-#include <libxml2_valid.h>
-#include <libxml2_xlink.h>
-#include <libxml2_globals.h>
+#include <stdapis/libxml2/libxml2_xmlmemory.h>
+#include <stdapis/libxml2/libxml2_tree.h>
+#include <stdapis/libxml2/libxml2_parser.h>
+#include <stdapis/libxml2/libxml2_valid.h>
+#include <stdapis/libxml2/libxml2_xlink.h>
+#include <stdapis/libxml2/libxml2_globals.h>
 
 #define XLINK_NAMESPACE (BAD_CAST "http://www.w3.org/1999/xlink/namespace/")
 #define XHTML_NAMESPACE (BAD_CAST "http://www.w3.org/1999/xhtml/")

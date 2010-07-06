@@ -74,7 +74,7 @@ xmlengineutils.mmp
 #include "../test/common/group/bld.inf"
 #include "../test/tef/def130695/group/bld.inf"
 #include "../test/tef/xml2/group/bld.inf"
-
+#include "../test/xmlengtester/xmlengtester_target/group/bld.inf"
 
 
 

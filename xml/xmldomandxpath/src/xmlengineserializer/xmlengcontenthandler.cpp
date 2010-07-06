@@ -284,7 +284,7 @@ void CXmlEngContentHandler::OnStartPrefixMappingL(const RString& aPrefix, const 
 	HBufC8* uri = aUri.DesC().AllocL();
 	iCachedPrefixes.AppendL(pref);
 	iCachedUris.AppendL(uri);
-	iCachedErrors.Append(aErrorCode);
+	User::LeaveIfError(iCachedErrors.Append(aErrorCode));
 }
 
 /**

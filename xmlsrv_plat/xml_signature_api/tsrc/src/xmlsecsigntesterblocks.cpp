@@ -33,8 +33,8 @@
 #include "xmlsecwerrors.h"
 #include "inetprottextutils.h" 
 
-#include <xmlengelement.h>
-#include <xmlengdomimplementation.h>
+#include <xml/dom/xmlengelement.h>
+#include <xml/dom/xmlengdomimplementation.h>
 
 
 // MACROS

@@ -27,7 +27,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
-#include <xmlengtriodef.h>
+#include <stdapis/libxml2/xmlengtriodef.h>
 #include "libxml2_triop.h"
 
 enum {

@@ -11,33 +11,19 @@
 // Contributors:
 //
 // Description:
-// t_gmxmlparser.mmp
+// This file contains build information for the XML parser
+// 
 //
 
-TARGET          t_gmxmlparser.exe
-TARGETTYPE      exe
+PRJ_TESTEXPORTS
+xmlparsertests.iby	/epoc32/rom/include/xmlparsertests.iby
+xmlparsertests.bat	/epoc32/data/c/system/test/xmlparsertests.bat
 
-SOURCEPATH      .
-SOURCE 			GmxmlTestUtils.cpp
-SOURCE         	t_GmxmlParser.CPP 
+//xml zip test data
+../data/xml.zip			c:/system/data/xml/xml.zip 
+../data/xmldefect.zip		c:/system/data/xml/xmldefect.zip
 
-
-USERINCLUDE      .
-
-OS_LAYER_SYSTEMINCLUDE_SYMBIAN
-
-
-
-
-
-
-LIBRARY			euser.lib
-LIBRARY			efsrv.lib
-LIBRARY         xmlparser.lib
- 
-
-EPOCSTACKSIZE 0x8000
-
-
-
-SMPSAFE
+PRJ_TESTMMPFILES
+t_xmlparser.mmp
+t_xmlparserheap.mmp
+t_xmldefect.mmp

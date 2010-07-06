@@ -24,7 +24,7 @@
 
 #include <Xml\Parser.h>
 #include <Xml\ParserFeature.h>
-#include <XmlEngNodeFilter.h>
+#include <xml/dom/xmlengnodefilter.h>
 
 #include <libc\string.h>
 #include <charconv.h>

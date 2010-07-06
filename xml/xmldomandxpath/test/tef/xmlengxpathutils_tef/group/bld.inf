@@ -19,7 +19,7 @@ xmlengxpathutils_tef.mmp manual
 
 
 PRJ_TESTEXPORTS
-../scripts/xmlengxpathutilstestsuite.script	z:/xmlengdom_tef/xmlengxpathutilstestsuite.script
+../scripts/xmlengxpathutilstestsuite.script	c:/xmlengdom_tef/xmlengxpathutilstestsuite.script
 xmlengxpathutils_tef.iby							/epoc32/rom/include/xmlengxpathutils_tef.iby
 
 

@@ -39,7 +39,7 @@ LOCAL_D TInt    			TheCorruptedXmlFileTestErrorCount = 0;
 _LIT(KSimpleFile, "c:\\system\\data\\xml\\xml\\another_simple.xml");
 _LIT(KNsAndBindingFile, "c:\\system\\data\\xml\\xml\\default_namespace_and_unbinding.xml");
 
-_LIT(KZipTestFile, "z:\\system\\data\\xml\\xmldefect.zip");
+_LIT(KZipTestFile, "c:\\system\\data\\xml\\xmldefect.zip");
 _LIT(KXmlTestDir, "c:\\system\\data\\xml");
 
 

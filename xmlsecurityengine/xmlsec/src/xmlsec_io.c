@@ -16,10 +16,10 @@
 
 #include <stdio.h> //added for symbian
 
-#include <libxml2_tree.h>
-#include <libxml2_uri.h>
-#include <libxml2_xmlio.h>
-#include <libxml2_globals.h>
+#include <stdapis/libxml2/libxml2_tree.h>
+#include <stdapis/libxml2/libxml2_uri.h>
+#include <stdapis/libxml2/libxml2_xmlio.h>
+#include <stdapis/libxml2/libxml2_globals.h>
 
 #ifdef LIBXML_HTTP_ENABLED
 #include <libxml2_nanohttp.h>

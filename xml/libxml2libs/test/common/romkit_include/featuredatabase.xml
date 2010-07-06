@@ -46,19 +46,19 @@
 			<hrhmacro exclude="SYMBIAN_EXCLUDE_FAX"/>
 		</feature>		
 		<feature name="Print" statusflags="0x00000001" uid="0x10279807">
-			<hrhmacro exclude="SYMBIAN_EXCLUDE_PRINT"/>
+			<hrhmacro include="__UPNP_PRINT_FRAMEWORK"/>
 		</feature>
 		<feature name="Bluetooth" statusflags="0x00000001" uid="0x10279808">
-			<hrhmacro exclude="SYMBIAN_EXCLUDE_BLUETOOTH"/>
+			<hrhmacro include="__BT"/>
 		</feature>
 		<feature name="Infrared" statusflags="0x00000001" uid="0x10279809">
-			<hrhmacro exclude="SYMBIAN_EXCLUDE_INFRARED"/>
+			<hrhmacro include="__IRDA"/>
 		</feature>
 		<feature name="Mmc" statusflags="0x00000001" uid="0x1027980A">
-			<hrhmacro exclude="SYMBIAN_EXCLUDE_MMC"/>
+			<hrhmacro include="__MMC"/>
 		</feature>
 		<feature name="Usb" statusflags="0x00000001" uid="0x1027980B">
-			<hrhmacro exclude="SYMBIAN_EXCLUDE_USB"/>
+			<hrhmacro include="__USB"/>
 		</feature>
 		<feature name="Obex" statusflags="0x00000001" uid="0x1027980C">
 			<hrhmacro exclude="SYMBIAN_EXCLUDE_OBEX"/>
@@ -82,16 +82,16 @@
 			<hrhmacro exclude="SYMBIAN_EXCLUDE_QOS_PROTPLUGINS"/>
 		</feature>
 		<feature name="IPSec" statusflags="0x00000001" uid="0x10279814">
-			<hrhmacro exclude="SYMBIAN_EXCLUDE_IPSEC"/>
+			<hrhmacro include="__IPSEC"/>
 		</feature>
 		<feature name="Dhcp" statusflags="0x00000001" uid="0x10279815">
-			<hrhmacro exclude="SYMBIAN_EXCLUDE_DHCP"/>
+			<hrhmacro include="__DHCP"/>
 		</feature>
 		<feature name="Connectivity" statusflags="0x00000001" uid="0x10279816">
 			<hrhmacro exclude="SYMBIAN_EXCLUDE_PC_CONNECTIVITY_EXCEPT_SECURE_BACKUP"/>
 		</feature>
 		<feature name="MTP" statusflags="0x00000001" uid="0x10279817">
-			<hrhmacro exclude="SYMBIAN_EXCLUDE_MTP"/>
+			<hrhmacro include="__MTP_PROTOCOL_SUPPORT"/>
 		</feature>
 		<feature name="Location" statusflags="0x00000001" uid="0x10281818"></feature>
 		<feature name="MobileIP" statusflags="0x00000001" uid="0x10281819"></feature>
@@ -101,16 +101,16 @@
 			<hrhmacro exclude="SYMBIAN_EXCLUDE_OMA_DS_HOSTSERVERS"/>
 		</feature>
 		<feature name="Vibra" statusflags="0x00000001" uid="0x102835AE">
-			<hrhmacro exclude="SYMBIAN_EXCLUDE_VIBRA"/>
+			<hrhmacro include="__VIBRA"/>
 		</feature>
 		<feature name="AmbientLightSensor" statusflags="0x00000001" uid="0x102835AF">
-			<hrhmacro exclude="SYMBIAN_EXCLUDE_AMBIENT_LIGHT_SENSOR"/>
+			<hrhmacro include="__SERIES60_AMBIENT_LIGHT_SENSOR"/>
 		</feature>
 		<feature name="CoverDisplay" statusflags="0x00000001" uid="0x102835B0">
-			<hrhmacro exclude="SYMBIAN_EXCLUDE_COVER_DISPLAY"/>
+			<hrhmacro include="__COVER_DISPLAY"/>
 		</feature>
 		<feature name="KeypadNoSlider" statusflags="0x00000001" uid="0x102835B1">
-			<hrhmacro exclude="SYMBIAN_EXCLUDE_KEYPAD_NO_SLIDER"/>
+			<hrhmacro include="__SERIES60_KEYPAD_NO_SLIDER"/>
 		</feature>
 		<feature name="LocationManagement" statusflags="0x00000001" uid="0x10279818">
 			<hrhmacro exclude="SYMBIAN_EXCLUDE_LOCATION_MANAGEMENT"/>
@@ -119,7 +119,7 @@
 			<hrhmacro include="SYMBIAN_INCLUDE_LOCATION_API_VARIANT2"/>
 		</feature>
 		<feature name="BluetoothGPSPositioningPlugin" statusflags="0x00000000" uid="0x10285D6A">
-			<hrhmacro include="SYMBIAN_INCLUDE_BLUETOOTH_GPS_PM"/>
+			<hrhmacro include="__BLUETOOTHGPSPSY"/>
 		</feature>
 		<feature name="DefaultPositioningPlugin" statusflags="0x00000000" uid="0x10285D6B">
 			<hrhmacro include="SYMBIAN_INCLUDE_DEFAULT_PM"/>
@@ -134,16 +134,16 @@
 			<hrhmacro include="SYMBIAN_INCLUDE_LOCATION_ADVANCED_DIALOG"/>
 		</feature>
 		<feature name="CsVideoTelephony" statusflags="0x00000001" uid="0x10285A22">
-			<hrhmacro exclude="SYMBIAN_EXCLUDE_CS_VIDEO_TELEPHONY"/>
+			<hrhmacro include="__CS_VIDEO_TELEPHONY"/>
 		</feature>
 		<feature name="EmergencyCallsEnabledInOfflineMode" statusflags="0x00000001" uid="0x10285A23">
-			<hrhmacro exclude="SYMBIAN_EXCLUDE_EMERGENCY_CALLS_ENABLED_IN_OFFLINE_MODE"/>
+			<hrhmacro include="__COMMON_TSY__EMERGENCY_CALLS_ENABLED_IN_OFFLINE_MODE"/>
 		</feature>
 		<feature name="DriveModeCanRestrictMtCalls" statusflags="0x00000001" uid="0x10285A24">
-			<hrhmacro exclude="SYMBIAN_EXCLUDE_DRIVE_MODE_CAN_RESTRICT_MT_CALLS"/>
+			<hrhmacro include="__DRIVE_MODE"/>
 		</feature>
 		<feature name="FmTx" statusflags="0x00000001" uid="0x10285DD6">
- 			<hrhmacro exclude="SYMBIAN_EXCLUDE_FMTX"/>
+ 			<hrhmacro include="FF_FMTX"/>
  		</feature>
 		<!-- PREQ 2051 - Variation Support - Start -->
 		<feature name="Libxml2" statusflags="0x00000001" uid="0x10286747">

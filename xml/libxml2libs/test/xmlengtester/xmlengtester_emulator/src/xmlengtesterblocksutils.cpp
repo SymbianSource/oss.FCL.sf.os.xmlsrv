@@ -29,7 +29,7 @@
 #include <libc\string.h>
 #include <charconv.h>
 #include <UTF.H>
-#include <XmlEngutils.h>
+#include <xml/utils/xmlengutils.h>
 using namespace Xml;
 
 /************************************** Utils **************************************/

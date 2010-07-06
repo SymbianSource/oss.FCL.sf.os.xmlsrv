@@ -18,9 +18,9 @@
 #include "TestContentHandler.h"
 #include "xmlengtester.h"
 //#include "XmlEngDOMChunkParser.h"
-#include "XmlEngFileContainer.h"
-#include "XmlEngBinaryContainer.h"
-#include "XmlEngNode.h"
+#include <xml/dom/xmlengfilecontainer.h>
+#include <xml/dom/xmlengbinarycontainer.h>
+#include <xml/dom/xmlengnode.h>
 #include <e32svr.h>
 #include <StifParser.h>
 #include <Stiftestinterface.h>

@@ -22,5 +22,5 @@ PRJ_TESTMMPFILES
 xmlengdomnodeset_tef.mmp manual
 
 PRJ_TESTEXPORTS
-../scripts/xmlengdomnodetesttefsuite.script	z:/xmlengdom_tef/xmlengdomnodetesttefsuite.script
+../scripts/xmlengdomnodetesttefsuite.script	c:/xmlengdom_tef/xmlengdomnodetesttefsuite.script
 xmlengdomnodeset_tef.iby						/epoc32/rom/include/xmlengdomnodeset_tef.iby
