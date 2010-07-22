@@ -31,8 +31,8 @@ _LIT8 (KStringDictionarySML11, "SYNCML:SYNCML1.1");
 _LIT8 (KStringDictionaryDTDSML10, "-//SYNCML//DTD SyncML 1.0//EN~0");
 _LIT8 (KStringDictionaryDTDSML11, "-//SYNCML//DTD SyncML 1.1//EN~0");
 
-_LIT  (KTestDocument, "z:\\system\\XmlTest\\Wml\\Unknown\\UnknownPubId_AllElements.wmlc");
-_LIT  (KTestDocument1, "z:\\system\\XmlTest\\SyncML\\Unknown\\DEF078987_3.wbxml");
+_LIT  (KTestDocument, "c:\\system\\XmlTest\\Wml\\Unknown\\UnknownPubId_AllElements.wmlc");
+_LIT  (KTestDocument1, "c:\\system\\XmlTest\\SyncML\\Unknown\\DEF078987_3.wbxml");
 
 static RTest test(_L("t_wbxmlunknownparsertests"));
 

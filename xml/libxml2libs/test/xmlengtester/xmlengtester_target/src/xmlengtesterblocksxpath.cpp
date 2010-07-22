@@ -23,12 +23,12 @@
 #include <StifParser.h>
 #include <Stiftestinterface.h>
 
-#include <XmlEngXPathExtensionFunction.h>
-#include <XmlEngXPathEvaluationContext.h>
-#include <xmlengxpathconfiguration.h>
-#include <XmlEngXPathEvaluator.h>
-#include <XmlEngXPathExpression.h>
-#include <xmlengxpatherrors.h>
+#include <xml/dom/xmlengxpathextensionfunction.h>
+#include <xml/dom/xmlengxpathevaluationcontext.h>
+#include <xml/dom/xmlengxpathconfiguration.h>
+#include <xml/dom/xmlengxpathevaluator.h>
+#include <xml/dom/xmlengxpathexpression.h>
+#include <xml/dom/xmlengxpatherrors.h>
 
 #include <Xml\Parser.h>
 #include <Xml\ParserFeature.h>
@@ -36,7 +36,7 @@
 #include <libc\string.h>
 #include <charconv.h>
 #include <UTF.H>
-#include <xmlengxpathutils.h>
+#include <xml/dom/xmlengxpathutils.h>
 
 using namespace Xml;
 

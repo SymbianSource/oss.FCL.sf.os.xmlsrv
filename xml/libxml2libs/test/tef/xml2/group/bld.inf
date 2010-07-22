@@ -23,5 +23,5 @@ xml2tef.mmp manual
 
 PRJ_TESTEXPORTS
 xml2teftests.iby		/epoc32/rom/include/xml2teftests.iby
-../scripts/xml2tefsuite.script		z:/tef_xml2/xml2tefsuite.script
+../scripts/xml2tefsuite.script		c:/tef_xml2/xml2tefsuite.script
 

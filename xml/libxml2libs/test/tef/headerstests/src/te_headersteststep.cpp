@@ -16,7 +16,7 @@
 
 #include <e32std.h>
 #include "te_headersteststep.h"
-#include <xmlengxestrings.h>
+#include <xml/utils/xmlengxestrings.h>
 
 
 //test S60_header_files

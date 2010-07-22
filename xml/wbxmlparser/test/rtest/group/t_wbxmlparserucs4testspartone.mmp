@@ -13,6 +13,8 @@
 // Description:
 //
 
+//RTEST
+
 MACRO			__SHOW_MANUAL_OUTPUT__
 MACRO			__COMPARE_OUTPUT__
 

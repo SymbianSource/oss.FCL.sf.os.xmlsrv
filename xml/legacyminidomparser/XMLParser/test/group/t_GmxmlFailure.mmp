@@ -13,14 +13,16 @@
 // Description:
 //
 
-target			t_gmxmlfailure.exe
-targettype		exe
+//RTEST
 
-SOURCEPATH		../test
+TARGET			t_gmxmlfailure.exe
+TARGETTYPE		exe
+
+SOURCEPATH		../
 SOURCE			t_GmxmlFailure.CPP
 SOURCE			t_XMLParserLOG.CPP
 
-USERINCLUDE		../test
+USERINCLUDE		../
 
 OS_LAYER_SYSTEMINCLUDE_SYMBIAN
 

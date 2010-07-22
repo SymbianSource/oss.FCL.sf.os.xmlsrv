@@ -31,7 +31,7 @@ else
 	DEST_DIR = $(EPOCROOT)epoc32/data/z/system/xmltest/serviceindication
 endif
 
-SOURCE_DIR = $(EXTENSION_ROOT)/../test/rtest/data/serviceindication
+SOURCE_DIR = $(EXTENSION_ROOT)/../data/serviceindication
 
 # Ensure we have a clean canvas - this also avoids us having to specify
 # switches to commands that are not recognised across platforms.

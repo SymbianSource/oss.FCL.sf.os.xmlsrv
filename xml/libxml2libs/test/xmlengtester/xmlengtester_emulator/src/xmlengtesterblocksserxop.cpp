@@ -22,19 +22,22 @@
 #include <e32std.h>
 #include <StifParser.h>
 #include <Stiftestinterface.h>
-#include "XmlEngBinaryContainer.h"
-#include "XmlEngChunkContainer.h"
-#include "XmlEngFileContainer.h"
+#include <xml/dom/xmlengbinarycontainer.h>
+#include <xml/dom/xmlengfilecontainer.h>
+#include <xml/dom/xmlengchunkcontainer.h>
+
 #include "xmlengtesterdef.h"
 
-#include <XmlEngSerializer.h>
-#include <XmlEngDeserializer.h>
+#include <xml/dom/xmlengserializer.h>
+#include <xml/dom/xmlengdeserializer.h>
+
 
 #include <InetProtTextUtils.h>
 #include <libc\string.h>
 #include <charconv.h>
 #include <UTF.H>
-#include <XmlEngDOMParser.h>
+#include <xml/dom/xmlengdomparser.h>
+
 
 /************************************** SerXOP ****************************************/
 // -----------------------------------------------------------------------------

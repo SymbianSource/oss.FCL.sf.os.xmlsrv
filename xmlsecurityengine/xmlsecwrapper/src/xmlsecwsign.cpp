@@ -16,17 +16,18 @@
 */
 
 // XML Engine
-#include <libxml2_tree.h>
-#include <libxml2_xmlmemory.h>
-#include <libxml2_parser.h>
-#include <libxml2_globals.h>
+#include <stdapis/libxml2/libxml2_tree.h>
+#include <stdapis/libxml2/libxml2_xmlmemory.h>
+#include <stdapis/libxml2/libxml2_parser.h>
+#include <stdapis/libxml2/libxml2_globals.h>
 
-#include <xmlengmem.h>
-#include <xmlengxestd.h>
-#include <xmlengutils.h>
-#include <xmlengxestrings.h>
+#include <xml/utils/xmlengmem.h>
+#include <xml/utils/xmlengxestd.h>
+#include <xml/utils/xmlengutils.h>
 
-#include <xmlengdom.h>
+#include <xml/utils/xmlengxestrings.h>
+
+#include <xml/dom/xmlengdom.h>
 
 // XML Sec
 #include "xmlsec_crypto.h"

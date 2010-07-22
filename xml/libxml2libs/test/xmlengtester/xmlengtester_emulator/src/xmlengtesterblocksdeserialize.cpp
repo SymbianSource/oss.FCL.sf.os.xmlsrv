@@ -23,7 +23,7 @@
 #include <StifParser.h>
 #include <Stiftestinterface.h>
 
-#include <XmlEngDeserializer.h>
+#include <xml/dom/xmlengserializer.h>
 #include <Xml\ParserFeature.h>
 #include "xmlengtesterdef.h"
 
@@ -32,11 +32,13 @@
 #include <charconv.h>
 #include <UTF.H>
 
-#include "XmlEngBinaryContainer.h"
-#include "XmlEngChunkContainer.h"
-#include "XmlEngFileContainer.h"
-#include "XmlEngDataContainer.h"
-#include <xmlengparsingoptions.h>
+
+#include <xml/dom/xmlengbinarycontainer.h>
+#include <xml/dom/xmlengfilecontainer.h>
+#include <xml/dom/xmlengchunkcontainer.h>
+#include <xml/dom/xmlengdatacontainer.h>
+
+#include <xml/dom/xmlengparsingoptions.h>
 
 
 // -----------------------------------------------------------------------------

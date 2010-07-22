@@ -17,7 +17,7 @@
 // INCLUDE FILES
 #include "xmlengtester.h"
 #include "xmlengtesterdef.h"
-#include <XmlEngxestd.h>
+#include <xml/utils/xmlengxestd.h>
 #include <Stiftestinterface.h>
 
 #include <sys/reent.h>

@@ -23,14 +23,14 @@
 #include <StifParser.h>
 #include <Stiftestinterface.h>
 
-#include <XmlEngBinaryContainer.h>
+#include <xml/dom/xmlengbinarycontainer.h>
 #include "xmlengtesterdef.h"
 
 #include <InetProtTextUtils.h>
 #include <libc\string.h>
 #include <charconv.h>
 #include <UTF.H>
-#include <XmlEngSerializer.h>
+#include <xml/dom/xmlengserializer.h>
 
 
 /************************************** AddFun ****************************************/

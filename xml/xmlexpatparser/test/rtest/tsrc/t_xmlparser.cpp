@@ -38,7 +38,7 @@ _LIT(KCapsTestFile,      "c:\\system\\data\\xml\\xml\\caps.xml");
 _LIT(KEncodingTestFile,  "c:\\system\\data\\xml\\xml\\doc_jp_utf.xml");
 _LIT(KEncodingRefFile,   "c:\\system\\data\\xml\\xml\\ref_doc_jp_utf.xml");
 
-_LIT(KZipTestFile, "z:\\system\\data\\xml\\xml.zip");
+_LIT(KZipTestFile, "c:\\system\\data\\xml\\xml.zip");
 _LIT(KXmlTestDir, "c:\\system\\data\\xml");
 
 _LIT8(KIncompleteData, "<DIDL-Lite xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns:upnp=\"urn:schemas-upnp-org:metadata-1-0/upnp/\" xmlns=\"urn:schemas-upnp-org:metadata-1-0/DIDL-Lite/\"><container id=\"1\" parentID=\"0\" child ");

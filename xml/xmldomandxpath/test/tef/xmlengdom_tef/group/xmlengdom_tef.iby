@@ -21,8 +21,8 @@
 #define __XMLENGDOMTEF_IBY__
 
 #include <testexecute.iby>
-data=ABI_DIR\BUILD_DIR\xmlengdom_tef.exe	System\bin\xmlengdom_tef.exe
+data=ABI_DIR\BUILD_DIR\xmlengdom_tef.exe	sys\bin\xmlengdom_tef.exe
 
-data=DATAZ_\xmlengdom_tef\xmlengdomtefsuite.script 	xmlengdom_tef\xmlengdomtefsuite.script
+data=DATAC_\xmlengdom_tef\xmlengdomtefsuite.script 	xmlengdom_tef\xmlengdomtefsuite.script
 
 #endif

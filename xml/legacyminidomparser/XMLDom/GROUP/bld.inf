@@ -25,7 +25,7 @@ PRJ_EXPORTS
     ../INC/GMXMLCharacterData.h 			SYMBIAN_OS_LAYER_PLATFORM_EXPORT_PATH(gmxmlcharacterdata.h)
     ../INC/GMXMLComment.h 					SYMBIAN_OS_LAYER_PLATFORM_EXPORT_PATH(gmxmlcomment.h)
     ../INC/GMXMLDocument.h 					SYMBIAN_OS_LAYER_PLATFORM_EXPORT_PATH(gmxmldocument.h)
-    ../INC/GMxmldomconstants.h 				SYMBIAN_OS_LAYER_PLATFORM_EXPORT_PATH(gmxmldomconstants.h)
+    ../INC/GMxmldomconstants.h 				SYMBIAN_OS_LAYER_PUBLIC_EXPORT_PATH(gmxmldomconstants.h)
     ../INC/GMXMLDocumentElement.h 			SYMBIAN_OS_LAYER_PLATFORM_EXPORT_PATH(gmxmldocumentelement.h)
     ../INC/GMXMLElement.h 					SYMBIAN_OS_LAYER_PLATFORM_EXPORT_PATH(gmxmlelement.h)
     ../INC/GMXMLNode.h 						SYMBIAN_OS_LAYER_PLATFORM_EXPORT_PATH(gmxmlnode.h)

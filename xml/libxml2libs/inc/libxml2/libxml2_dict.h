@@ -17,7 +17,7 @@
 #ifndef XML_DICT_H
 #define XML_DICT_H
 
-#include "libxml2_xmlstring.h"
+#include <stdapis/libxml2/libxml2_xmlstring.h>
 
 #ifdef __cplusplus
 extern "C" {

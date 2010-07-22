@@ -20,7 +20,7 @@
 #include <ctype.h>
 #include <errno.h>
 
-#include <libxml2_tree.h>
+#include <stdapis/libxml2/libxml2_tree.h>
 
 #include "xmlsec_xmlsec.h"
 #include "xmlsec_xmltree.h"
