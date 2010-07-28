@@ -22,7 +22,7 @@ TARGETTYPE      dll
 //TARGETPATH      /z/sys/bin
 UID             0x1000af5a 0x01700000
 
-#if defined(ARMCC)
+#if defined(EABI)
   DEFFILE ../eabi/test_xmlsecencrypt.def
 #elif defined(WINSCW) || defined(WINS)
   DEFFILE ../bwinscw/test_xmlsecencrypt.def

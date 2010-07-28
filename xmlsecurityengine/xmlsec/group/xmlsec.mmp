@@ -71,7 +71,7 @@ LIBRARY		wsstarxmlengine.lib
 nostrictdef
 epocallowdlldata
 
-#if defined(ARMCC)
+#if defined(EABI)
 #if !defined(__RD_XMLSEC_MEMCOPY_PROBLEM_FIX__)
   DEFFILE ../eabi/xmlsec.def
 #else
