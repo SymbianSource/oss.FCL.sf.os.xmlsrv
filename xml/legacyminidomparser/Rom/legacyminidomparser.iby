@@ -18,7 +18,7 @@
 #ifndef __LEGACYMINIDOMPARSER_IBY__
 #define __LEGACYMINIDOMPARSER_IBY__
 
-file=ABI_DIR\BUILD_DIR\XMLDOM.dll	System\libs\XMLDOM.dll
+file=ABI_DIR\BUILD_DIR\xmldom.dll	System\libs\xmldom.dll
 file=ABI_DIR\BUILD_DIR\xmlparser.dll	System\libs\xmlparser.dll
 
 #endif
