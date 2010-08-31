@@ -19,12 +19,12 @@
 #include "xmlengtester.h"
 
 #include <e32svr.h>
-#include <domain/osextensions/StifParser.h>
-#include <domain/osextensions/Stiftestinterface.h>
+#include <StifParser.h>
+#include <Stiftestinterface.h>
 
 #include <Xml\Parser.h>
 #include <Xml\ParserFeature.h>
-#include <XmlEngNodeFilter.h>
+#include <xml/dom/xmlengnodefilter.h>
 
 #include <libc\string.h>
 #include <charconv.h>

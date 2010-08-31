@@ -14,7 +14,7 @@
 // XML API Performance tests
 // 
 //
-
+//RTEST
 TARGET          tp_xmlframeworkperftests.exe
 CAPABILITY		None
 TARGETTYPE		exe

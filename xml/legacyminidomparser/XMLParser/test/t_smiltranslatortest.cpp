@@ -1191,8 +1191,8 @@ void CopyFileL()
 	CleanupStack::PushL(fileMan); 
 
 	// Do the file copy	
-	User::LeaveIfError(fileMan->Copy(_L("z:\\gmxmltest.txt"),_L("c:\\gmxmltest.txt"),CFileMan::EOverWrite));
-    User::LeaveIfError(fileMan->Copy(_L("z:\\legacyminidomparsertest"),_L("c:\\legacyminidomparsertest"),CFileMan::EOverWrite|CFileMan::ERecurse));
+	//User::LeaveIfError(fileMan->Copy(_L("z:\\gmxmltest.txt"),_L("c:\\gmxmltest.txt"),CFileMan::EOverWrite));
+  //User::LeaveIfError(fileMan->Copy(_L("z:\\legacyminidomparsertest"),_L("c:\\legacyminidomparsertest"),CFileMan::EOverWrite|CFileMan::ERecurse));
     
 	CleanupStack::PopAndDestroy(2); 
 	}

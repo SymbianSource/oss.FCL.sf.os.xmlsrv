@@ -20,20 +20,9 @@ PRJ_EXPORTS
 
 xmlparserplugin.iby						/epoc32/rom/include/xmlparserplugin.iby
 
-../src/expatcopyright.txt				z:/resource/xml/expatcopyright.txt
+../src/expatcopyright.txt				c:/resource/xml/expatcopyright.txt
 
 PRJ_MMPFILES
 xmlparserplugin.mmp
 
-PRJ_TESTEXPORTS
-../test/rtest/group/xmlparsertests.iby	/epoc32/rom/include/xmlparsertests.iby
-../test/rtest/group/xmlparsertests.bat	/epoc32/data/z/system/test/xmlparsertests.bat
-
-//xml zip test data
-../test/rtest/data/xml.zip				z:/system/data/xml/xml.zip 
-../test/rtest/data/xmldefect.zip		z:/system/data/xml/xmldefect.zip
-
-PRJ_TESTMMPFILES
-../test/rtest/group/t_xmlparser.mmp
-../test/rtest/group/t_xmlparserheap.mmp
-../test/rtest/group/t_xmldefect.mmp
+#include "../test/rtest/group/bld.inf"

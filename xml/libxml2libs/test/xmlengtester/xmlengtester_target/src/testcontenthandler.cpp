@@ -264,7 +264,7 @@ void CTestHandler::OnBinaryContentL(const TDesC8& aBytes, const TDesC8& aCid, TI
 	User::LeaveIfError(fs.Connect());
 	RFile f;
 	CleanupClosePushL(f);
-	TInt err = f.Replace(fs, _L("c:\\xmlengine\\deserializer\\output\\bin.doc"), EFileWrite);
+	TInt err = f.Replace(fs, _L("f:\\xmlengine\\deserializer\\output\\bin.doc"), EFileWrite);
 	err = f.Write(aBytes);
 	CleanupStack::PopAndDestroy(2); //f fs
 */

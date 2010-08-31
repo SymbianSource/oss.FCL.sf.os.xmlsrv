@@ -18,9 +18,9 @@
 
 REM XML Parser Tests
 
-file=ABI_DIR\BUILD_DIR\tc_xmlcustomresolvercomptests.exe 	test\tc_xmlcustomresolvercomptests.exe
+file=ABI_DIR\BUILD_DIR\tc_xmlcustomresolvercomptests.exe 	sys\bin\tc_xmlcustomresolvercomptests.exe
 
-data=ZSYSTEM\xmltest\resolver\simple.xml  					system\xmltest\resolver\simple.xml
+data=CSYSTEM\xmltest\resolver\simple.xml  					system\xmltest\resolver\simple.xml
 
 ECOM_PLUGIN(t_testxmlparserplugin1.dll,10273863.rsc)
 ECOM_PLUGIN(t_testxmlparserplugin2.dll,10273865.rsc)

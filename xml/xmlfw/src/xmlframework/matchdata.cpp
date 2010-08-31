@@ -800,11 +800,12 @@ Assignement operator
 CMatchData& CMatchData::operator=(const CMatchData & aMatchData)
 	{
 
-	 /*If pointing to same. Then return itself*/
+	/*If pointing to same. Then return itself*/
 	 if ( &aMatchData ==  this )
 	 {
 		 return *this;
 	 }
+
 
 	 /*
 	  * SYMBIAN DEF132492 FIX : Added TRAP statements to handle	the case wherein the functions

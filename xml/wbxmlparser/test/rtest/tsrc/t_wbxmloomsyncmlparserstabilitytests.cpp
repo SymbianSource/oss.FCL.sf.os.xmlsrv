@@ -73,7 +73,7 @@ static void SyncmlOomTestsL()
 	syncmlTestMax->StabilityTestL(KOpaqueDirectory(), 	 KWbxmlExt(), &CStabilityTestClass::TestChunkL);
 	CleanupStack::PopAndDestroy(syncmlTestMax);
 
-	::DeleteTestDirL();
+	//::DeleteTestDirL();
 
 	__UHEAP_MARKEND;
 	}

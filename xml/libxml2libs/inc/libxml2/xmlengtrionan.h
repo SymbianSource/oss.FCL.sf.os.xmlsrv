@@ -21,7 +21,7 @@
 #ifndef TRIO_NAN_H
 #define TRIO_NAN_H
 
-#include <xmlengtriodef.h>
+#include <stdapis/libxml2/xmlengtriodef.h>
 
 #ifdef __cplusplus
 extern "C" {

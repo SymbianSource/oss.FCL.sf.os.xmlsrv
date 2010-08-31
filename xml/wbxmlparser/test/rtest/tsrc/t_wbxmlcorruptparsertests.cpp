@@ -26,21 +26,21 @@ using namespace Xml;
 _LIT8 (KWmlStringDictionaryUri,"4~0");
 _LIT8 (KSiStringDictionaryUri, "5~0");
 
-_LIT  (KTestDocument1, "z:\\system\\XmlTest\\Wml\\Corrupt\\CorruptTag_AllElements.wmlc");
-_LIT  (KTestDocument2, "z:\\system\\XmlTest\\Wml\\Corrupt\\CorruptAttr_mob.wmlc");
-_LIT  (KTestDocument3, "z:\\system\\XmlTest\\Wml\\Corrupt\\CorruptAttrVal_mob.wmlc");
-_LIT  (KTestDocument4, "z:\\system\\XmlTest\\Wml\\Corrupt\\NonNullTermInlineStr.wmlc");
+_LIT  (KTestDocument1, "c:\\system\\XmlTest\\Wml\\Corrupt\\CorruptTag_AllElements.wmlc");
+_LIT  (KTestDocument2, "c:\\system\\XmlTest\\Wml\\Corrupt\\CorruptAttr_mob.wmlc");
+_LIT  (KTestDocument3, "c:\\system\\XmlTest\\Wml\\Corrupt\\CorruptAttrVal_mob.wmlc");
+_LIT  (KTestDocument4, "c:\\system\\XmlTest\\Wml\\Corrupt\\NonNullTermInlineStr.wmlc");
 
-_LIT  (KTestDocument20, "z:\\system\\XmlTest\\ServiceIndication\\Corrupt\\si_inv_act_undf.bdy");
-_LIT  (KTestDocument21, "z:\\system\\XmlTest\\ServiceIndication\\Corrupt\\si_inv_cd_token.bdy");
-_LIT  (KTestDocument22, "z:\\system\\XmlTest\\ServiceIndication\\Corrupt\\si_inv_cd_type.bdy");
-_LIT  (KTestDocument23, "z:\\system\\XmlTest\\ServiceIndication\\Corrupt\\si_inv_char.bdy");
-_LIT  (KTestDocument24, "z:\\system\\XmlTest\\ServiceIndication\\Corrupt\\si_inv_msg_ter.bdy");
-_LIT  (KTestDocument25, "z:\\system\\XmlTest\\ServiceIndication\\Corrupt\\si_val_wbx_ver_14.bdy");
-_LIT  (KTestDocument26,"z:\\system\\XmlTest\\ServiceIndication\\Corrupt\\si_val_wbx_ver_30.bdy");
-_LIT  (KTestDocument27,"z:\\system\\XmlTest\\ServiceIndication\\Corrupt\\si_val_wbx_ver_FF.bdy");
-_LIT  (KTestDocument28,"z:\\system\\XmlTest\\ServiceIndication\\Corrupt\\si_inv_hrf_ter.bdy");
-_LIT  (KTestDocument29,"z:\\system\\XmlTest\\ServiceIndication\\Corrupt\\si_inv_msg_ter2.bdy");
+_LIT  (KTestDocument20, "c:\\system\\XmlTest\\ServiceIndication\\Corrupt\\si_inv_act_undf.bdy");
+_LIT  (KTestDocument21, "c:\\system\\XmlTest\\ServiceIndication\\Corrupt\\si_inv_cd_token.bdy");
+_LIT  (KTestDocument22, "c:\\system\\XmlTest\\ServiceIndication\\Corrupt\\si_inv_cd_type.bdy");
+_LIT  (KTestDocument23, "c:\\system\\XmlTest\\ServiceIndication\\Corrupt\\si_inv_char.bdy");
+_LIT  (KTestDocument24, "c:\\system\\XmlTest\\ServiceIndication\\Corrupt\\si_inv_msg_ter.bdy");
+_LIT  (KTestDocument25, "c:\\system\\XmlTest\\ServiceIndication\\Corrupt\\si_val_wbx_ver_14.bdy");
+_LIT  (KTestDocument26,"c:\\system\\XmlTest\\ServiceIndication\\Corrupt\\si_val_wbx_ver_30.bdy");
+_LIT  (KTestDocument27,"c:\\system\\XmlTest\\ServiceIndication\\Corrupt\\si_val_wbx_ver_FF.bdy");
+_LIT  (KTestDocument28,"c:\\system\\XmlTest\\ServiceIndication\\Corrupt\\si_inv_hrf_ter.bdy");
+_LIT  (KTestDocument29,"c:\\system\\XmlTest\\ServiceIndication\\Corrupt\\si_inv_msg_ter2.bdy");
 
 
 static RTest test(_L("t_WbxmlCorruptParserTests"));

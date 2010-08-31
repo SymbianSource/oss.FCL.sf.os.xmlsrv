@@ -52,29 +52,4 @@ xmlframework.mmp
 // Customer Resolver bldmake file
 #include "xmlcustomresolver.inf"
 
-PRJ_TESTEXTENSIONS
-// Must be run before t_stringdictionary00.mmp
-start extension syslibs/test/xml_stringdictionary00tagtable
-end
-
-PRJ_TESTMMPFILES
-../test/rtest/group/t_stringdictionary00.mmp				support
-../test/rtest/group/t_parser.mmp							support
-../test/rtest/group/t_parserucs4test.mmp
-../test/rtest/group/t_processfilemancopyfile.mmp			support
-../test/rtest/group/t_validator.mmp							support
-../test/rtest/group/t_xmlcore.mmp
-../test/rtest/group/t_xmlmisc.mmp
-../test/rtest/group/tp_xmlframeworkperftests.mmp
-../test/rtest/group/tu_xmlcmatchdataunittests.mmp
-../test/rtest/group/tu_xmlramparserplugins.mmp				support
-../test/rtest/group/tu_xmlromparserplugins.mmp				support
-
-PRJ_TESTEXTENSIONS
-// Must be run after plugins/tu_xmlramparserplugins.mmp
-start extension syslibs/test/xml_xmlcmatchdatapostbuild
-end
-
-PRJ_TESTEXPORTS
-../test/rtest/group/xmlframeworktests.bat 		/epoc32/data/z/system/test/xmlframeworktests.bat
-../test/rtest/group/xmlframeworktests.iby 		/epoc32/rom/include/xmlframeworktests.iby
+#include "../test/rtest/group/bld.inf"

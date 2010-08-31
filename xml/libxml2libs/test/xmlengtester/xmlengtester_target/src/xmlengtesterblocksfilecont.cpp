@@ -18,12 +18,12 @@
 #include "TestContentHandler.h"
 #include "xmlengtester.h"
 //#include "XmlEngDOMChunkParser.h"
-#include "XmlEngFileContainer.h"
-#include "XmlEngBinaryContainer.h"
-#include "XmlEngNode.h"
+#include <xml/dom/xmlengfilecontainer.h>
+#include <xml/dom/xmlengbinarycontainer.h>
+#include <xml/dom/xmlengnode.h>
 #include <e32svr.h>
-#include <domain/osextensions/StifParser.h>
-#include <domain/osextensions/Stiftestinterface.h>
+#include <StifParser.h>
+#include <Stiftestinterface.h>
 
 #include <Xml\Parser.h>
 #include <Xml\ParserFeature.h>
@@ -47,7 +47,7 @@ TInt CLibxml2Tester::FileContainer_GetListL( CStifItemParser& /*aItem*/ )
     _LIT(KFileError,"FileContainer Error GetList..");
     _LIT(KEndParsing,"Checking FileContainer GetList end.");
     TBufC8<100> cid(_L8("123456789@123456789") );
-    _LIT(KInputFile1,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
+    _LIT(KInputFile1,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
 
     RFs rfs;
     User::LeaveIfError(rfs.Connect());
@@ -116,7 +116,7 @@ TInt CLibxml2Tester::FileContainer_GetListL( CStifItemParser& /*aItem*/ )
     iLog->Log((TDesC)KEndParsing);
     CleanupStack::PopAndDestroy(3);//list,  rfs,file
     return KErrNone;    
-    }    
+    }   
 // -----------------------------------------------------------------------------
 // CLibxml2Tester::FileContainer_CidL
 // test method function.
@@ -129,7 +129,7 @@ TInt CLibxml2Tester::FileContainer_CidL( CStifItemParser& /*aItem*/ )
     _LIT(KFileError,"File Cid() Error.");
     _LIT(KEndParsing,"Checking FileContainer end.");
     TBufC8<100> cid(_L8("123456789@123456789") );
-    _LIT(KInputFile1,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
+    _LIT(KInputFile1,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
 
     RFs rfs;
     User::LeaveIfError(rfs.Connect());
@@ -176,9 +176,9 @@ TInt CLibxml2Tester::FileContainer_CidErrorL( CStifItemParser& /*aItem*/ )
     _LIT(KEndParsing,"Checking FileContainer end.");
     TBufC8<100> cid(_L8("123456789@123456789") );
     TBufC8<100> cid2(_L8("22222222@123456789") );
-    _LIT(KInputFile1,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
-    _LIT(KInputFile2,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
-    _LIT(KInputFile3,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
+    _LIT(KInputFile1,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
+    _LIT(KInputFile2,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
+    _LIT(KInputFile3,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
 
     RFs rfs;
     User::LeaveIfError(rfs.Connect());
@@ -265,7 +265,7 @@ TInt CLibxml2Tester::FileContainer_SizeL( CStifItemParser& /*aItem*/ )
     _LIT(KFileError,"File Size() Error.");
     _LIT(KEndParsing,"Checking FileContainer end.");
     TBufC8<100> cid(_L8("123456789@123456789") );
-    _LIT(KInputFile1,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
+    _LIT(KInputFile1,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
 
     RFs rfs;
     User::LeaveIfError(rfs.Connect());
@@ -310,7 +310,7 @@ TInt CLibxml2Tester::FileContainer_FileL( CStifItemParser& /*aItem*/ )
     _LIT(KFileError,"File File().Name() Error.");
     _LIT(KEndParsing,"Checking FileContainer end.");
     TBufC8<100> cid(_L8("123456789@123456789") );
-    _LIT(KInputFile1,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
+    _LIT(KInputFile1,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
 
     RFs rfs;
     User::LeaveIfError(rfs.Connect());
@@ -358,7 +358,7 @@ TInt CLibxml2Tester::FileContainer_NodeTypeL( CStifItemParser& /*aItem*/ )
      _LIT(KFileError,"File NodeType() Error.");
     _LIT(KEndParsing,"Checking FileContainer end.");
     TBufC8<100> cid(_L8("123456789@123456789") );
-    _LIT(KInputFile1,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
+    _LIT(KInputFile1,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
 
     RFs rfs;
     User::LeaveIfError(rfs.Connect());
@@ -406,9 +406,9 @@ TInt CLibxml2Tester::FileContainer_RemoveL( CStifItemParser& /*aItem*/ )
     TBufC8<100> cid1(_L8("11111111@123456789") );
     TBufC8<100> cid2(_L8("22222222@123456789") );
     TBufC8<100> cid3(_L8("33333333@123456789") );
-    _LIT(KInputFile1,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
-    _LIT(KInputFile2,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
-    _LIT(KInputFile3,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
+    _LIT(KInputFile1,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
+    _LIT(KInputFile2,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
+    _LIT(KInputFile3,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
 
     RFs rfs;
     User::LeaveIfError(rfs.Connect());
@@ -479,9 +479,9 @@ TInt CLibxml2Tester::FileContainer_Remove2L( CStifItemParser& /*aItem*/ )
     TBufC8<100> cid1(_L8("11111111@123456789") );
     TBufC8<100> cid2(_L8("22222222@123456789") );
     TBufC8<100> cid3(_L8("33333333@123456789") );
-    _LIT(KInputFile1,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
-    _LIT(KInputFile2,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
-    _LIT(KInputFile3,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
+    _LIT(KInputFile1,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
+    _LIT(KInputFile2,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
+    _LIT(KInputFile3,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
 
     RFs rfs;
     User::LeaveIfError(rfs.Connect());
@@ -559,9 +559,9 @@ TInt CLibxml2Tester::FileContainer_Remove3L( CStifItemParser& /*aItem*/ )
     TBufC8<100> cid1(_L8("11111111@123456789") );
     TBufC8<100> cid2(_L8("22222222@123456789") );
     TBufC8<100> cid3(_L8("33333333@123456789") );
-    _LIT(KInputFile1,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
-    _LIT(KInputFile2,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
-    _LIT(KInputFile3,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
+    _LIT(KInputFile1,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
+    _LIT(KInputFile2,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
+    _LIT(KInputFile3,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
     HBufC8* str1=ReadFileL(KInputFile1);
     CleanupStack::PushL(str1);
     
@@ -639,9 +639,9 @@ TInt CLibxml2Tester::FileContainer_UnlinkL( CStifItemParser& /*aItem*/ )
     TBufC8<100> cid1(_L8("11111111@123456789") );
     TBufC8<100> cid2(_L8("22222222@123456789") );
     TBufC8<100> cid3(_L8("33333333@123456789") );
-    _LIT(KInputFile1,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
-    _LIT(KInputFile2,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
-    _LIT(KInputFile3,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
+    _LIT(KInputFile1,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
+    _LIT(KInputFile2,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
+    _LIT(KInputFile3,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
 
     RFs rfs;
     User::LeaveIfError(rfs.Connect());
@@ -732,9 +732,9 @@ TInt CLibxml2Tester::FileContainer_ReplaceWithL( CStifItemParser& /*aItem*/ )
     TBufC8<100> cid1(_L8("11111111@123456789") );
     TBufC8<100> cid2(_L8("22222222@123456789") );
     TBufC8<100> cid3(_L8("33333333@123456789") );
-    _LIT(KInputFile1,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
-    _LIT(KInputFile2,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
-    _LIT(KInputFile3,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
+    _LIT(KInputFile1,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
+    _LIT(KInputFile2,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
+    _LIT(KInputFile3,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
 
     RFs rfs;
     User::LeaveIfError(rfs.Connect());
@@ -804,9 +804,9 @@ TInt CLibxml2Tester::FileContainer_SubstituteForL( CStifItemParser& /*aItem*/ )
     TBufC8<100> cid1(_L8("11111111@123456789") );
     TBufC8<100> cid2(_L8("22222222@123456789") );
     TBufC8<100> cid3(_L8("33333333@123456789") );
-    _LIT(KInputFile1,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
-    _LIT(KInputFile2,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
-    _LIT(KInputFile3,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
+    _LIT(KInputFile1,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
+    _LIT(KInputFile2,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
+    _LIT(KInputFile3,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
 
     RFs rfs;
     User::LeaveIfError(rfs.Connect());
@@ -905,9 +905,9 @@ TInt CLibxml2Tester::FileContainer_CopyL( CStifItemParser& /*aItem*/ )
     TBufC8<100> cid1(_L8("11111111@123456789") );
     TBufC8<100> cid2(_L8("22222222@123456789") );
     TBufC8<100> cid3(_L8("33333333@123456789") );
-    _LIT(KInputFile1,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
-    _LIT(KInputFile2,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
-    _LIT(KInputFile3,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
+    _LIT(KInputFile1,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
+    _LIT(KInputFile2,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
+    _LIT(KInputFile3,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
 
     RFs rfs;
     User::LeaveIfError(rfs.Connect());
@@ -1025,9 +1025,9 @@ TInt CLibxml2Tester::FileContainer_Copy2L( CStifItemParser& /*aItem*/ )
     TBufC8<100> cid1(_L8("11111111@123456789") );
     TBufC8<100> cid2(_L8("22222222@123456789") );
     TBufC8<100> cid3(_L8("33333333@123456789") );
-    _LIT(KInputFile1,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
-    _LIT(KInputFile2,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
-    _LIT(KInputFile3,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
+    _LIT(KInputFile1,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
+    _LIT(KInputFile2,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
+    _LIT(KInputFile3,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
 
     RFs rfs;
     User::LeaveIfError(rfs.Connect());
@@ -1149,9 +1149,9 @@ TInt CLibxml2Tester::FileContainer_Copy3L( CStifItemParser& /*aItem*/ )
     TBufC8<100> cid1(_L8("11111111@123456789") );
     TBufC8<100> cid2(_L8("22222222@123456789") );
     TBufC8<100> cid3(_L8("33333333@123456789") );
-    _LIT(KInputFile1,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
-    _LIT(KInputFile2,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
-    _LIT(KInputFile3,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
+    _LIT(KInputFile1,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
+    _LIT(KInputFile2,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
+    _LIT(KInputFile3,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
 
     RFs rfs;
     User::LeaveIfError(rfs.Connect());
@@ -1243,9 +1243,9 @@ TInt CLibxml2Tester::FileContainer_Copy4L( CStifItemParser& /*aItem*/ )
     TBufC8<100> cid1(_L8("11111111@123456789") );
     TBufC8<100> cid2(_L8("22222222@123456789") );
     TBufC8<100> cid3(_L8("33333333@123456789") );
-    _LIT(KInputFile1,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
-    _LIT(KInputFile2,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
-    _LIT(KInputFile3,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
+    _LIT(KInputFile1,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
+    _LIT(KInputFile2,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
+    _LIT(KInputFile3,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
 
     RFs rfs;
     User::LeaveIfError(rfs.Connect());
@@ -1368,9 +1368,9 @@ TInt CLibxml2Tester::FileContainer_CopyToL( CStifItemParser& /*aItem*/ )
     TBufC8<100> cid1(_L8("11111111@123456789") );
     TBufC8<100> cid2(_L8("22222222@123456789") );
     TBufC8<100> cid3(_L8("33333333@123456789") );
-    _LIT(KInputFile1,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
-    _LIT(KInputFile2,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
-    _LIT(KInputFile3,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
+    _LIT(KInputFile1,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
+    _LIT(KInputFile2,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
+    _LIT(KInputFile3,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
 
     RFs rfs;
     User::LeaveIfError(rfs.Connect());
@@ -1456,9 +1456,9 @@ TInt CLibxml2Tester::FileContainer_CloneL( CStifItemParser& /*aItem*/ )
     TBufC8<100> cid1(_L8("11111111@123456789") );
     TBufC8<100> cid2(_L8("22222222@123456789") );
     TBufC8<100> cid3(_L8("33333333@123456789") );
-    _LIT(KInputFile1,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
-    _LIT(KInputFile2,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
-    _LIT(KInputFile3,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
+    _LIT(KInputFile1,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
+    _LIT(KInputFile2,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
+    _LIT(KInputFile3,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
 
     RFs rfs;
     User::LeaveIfError(rfs.Connect());
@@ -1548,9 +1548,9 @@ TInt CLibxml2Tester::FileContainer_AdoptNodeL( CStifItemParser& /*aItem*/ )
     TBufC8<100> cid1(_L8("11111111@123456789") );
     TBufC8<100> cid2(_L8("22222222@123456789") );
     TBufC8<100> cid3(_L8("33333333@123456789") );
-    _LIT(KInputFile1,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
-    _LIT(KInputFile2,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
-    _LIT(KInputFile3,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
+    _LIT(KInputFile1,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
+    _LIT(KInputFile2,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
+    _LIT(KInputFile3,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
 
     RFs rfs;
     User::LeaveIfError(rfs.Connect());
@@ -1669,9 +1669,9 @@ TInt CLibxml2Tester::FileContainer_SetAsFirstSiblingL( CStifItemParser& /*aItem*
     TBufC8<100> cid1(_L8("11111111@123456789") );
     TBufC8<100> cid2(_L8("22222222@123456789") );
     TBufC8<100> cid3(_L8("33333333@123456789") );
-    _LIT(KInputFile1,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
-    _LIT(KInputFile2,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
-    _LIT(KInputFile3,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
+    _LIT(KInputFile1,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
+    _LIT(KInputFile2,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
+    _LIT(KInputFile3,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
 
     RFs rfs;
     User::LeaveIfError(rfs.Connect());
@@ -1764,9 +1764,9 @@ TInt CLibxml2Tester::FileContainer_SetAsLastSiblingL( CStifItemParser& /*aItem*/
     TBufC8<100> cid1(_L8("11111111@123456789") );
     TBufC8<100> cid2(_L8("22222222@123456789") );
     TBufC8<100> cid3(_L8("33333333@123456789") );
-    _LIT(KInputFile1,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
-    _LIT(KInputFile2,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
-    _LIT(KInputFile3,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
+    _LIT(KInputFile1,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
+    _LIT(KInputFile2,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
+    _LIT(KInputFile3,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
 
     RFs rfs;
     User::LeaveIfError(rfs.Connect());
@@ -1859,9 +1859,9 @@ TInt CLibxml2Tester::FileContainer_MoveBeforeSiblingL( CStifItemParser& /*aItem*
     TBufC8<100> cid1(_L8("11111111@123456789") );
     TBufC8<100> cid2(_L8("22222222@123456789") );
     TBufC8<100> cid3(_L8("33333333@123456789") );
-    _LIT(KInputFile1,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
-    _LIT(KInputFile2,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
-    _LIT(KInputFile3,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
+    _LIT(KInputFile1,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
+    _LIT(KInputFile2,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
+    _LIT(KInputFile3,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
 
     RFs rfs;
     User::LeaveIfError(rfs.Connect());
@@ -1954,9 +1954,9 @@ TInt CLibxml2Tester::FileContainer_MoveAfterSiblingL( CStifItemParser& /*aItem*/
     TBufC8<100> cid1(_L8("11111111@123456789") );
     TBufC8<100> cid2(_L8("22222222@123456789") );
     TBufC8<100> cid3(_L8("33333333@123456789") );
-    _LIT(KInputFile1,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
-    _LIT(KInputFile2,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
-    _LIT(KInputFile3,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
+    _LIT(KInputFile1,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
+    _LIT(KInputFile2,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
+    _LIT(KInputFile3,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
 
     RFs rfs;
     User::LeaveIfError(rfs.Connect());
@@ -2050,9 +2050,9 @@ TInt CLibxml2Tester::FileContainer_MoveToL( CStifItemParser& /*aItem*/ )
     TBufC8<100> cid1(_L8("11111111@123456789") );
     TBufC8<100> cid2(_L8("22222222@123456789") );
     TBufC8<100> cid3(_L8("33333333@123456789") );
-    _LIT(KInputFile1,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
-    _LIT(KInputFile2,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
-    _LIT(KInputFile3,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
+    _LIT(KInputFile1,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
+    _LIT(KInputFile2,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
+    _LIT(KInputFile3,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
 
     RFs rfs;
     User::LeaveIfError(rfs.Connect());
@@ -2145,9 +2145,9 @@ TInt CLibxml2Tester::FileContainer_ReconcileNamespacesL( CStifItemParser& /*aIte
     TBufC8<100> cid1(_L8("11111111@123456789") );
     TBufC8<100> cid2(_L8("22222222@123456789") );
     TBufC8<100> cid3(_L8("33333333@123456789") );
-    _LIT(KInputFile1,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
-    _LIT(KInputFile2,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
-    _LIT(KInputFile3,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
+    _LIT(KInputFile1,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
+    _LIT(KInputFile2,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
+    _LIT(KInputFile3,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
 
     RFs rfs;
     User::LeaveIfError(rfs.Connect());

@@ -13,6 +13,7 @@
 // Description:
 //
 
+//RTEST
 TARGET			t_xmlparserheap.exe
 TARGETTYPE		exe
 

@@ -16,7 +16,7 @@
 #include <stdarg.h>
 #include <time.h>
 
-#include <libxml2_tree.h>
+#include <stdapis/libxml2/libxml2_tree.h>
 
 #include "xmlsec_xmlsec.h"
 #include "xmlsec_xmltree.h"
@@ -25,7 +25,7 @@
 
 
 //added for symbian port
-#include "libxml2_globals.h"
+#include <stdapis/libxml2/libxml2_globals.h>
 
 #define XMLSEC_ERRORS_BUFFER_SIZE	1024
 

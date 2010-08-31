@@ -29,7 +29,7 @@
 #define XML_CHAR_ENCODING_H
 
 //#include "libxml/Libxml2_xmlversion.h" // enable this when dependency on tree.h is removed
-#include "libxml2_tree.h"
+#include <stdapis/libxml2/libxml2_tree.h>
 
 #ifdef LIBXML_ICONV_ENABLED
 #include <iconv.h>

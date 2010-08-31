@@ -33,8 +33,8 @@
 #include "xmlsecwerrors.h"
 #include "inetprottextutils.h" 
 
-#include <xmlengelement.h>
-#include <xmlengdomimplementation.h>
+#include <xml/dom/xmlengelement.h>
+#include <xml/dom/xmlengdomimplementation.h>
 
 
 // MACROS
@@ -965,7 +965,7 @@ TInt CXmlSecSignTester::CXmlSecSign_CreateTemplateL_1L(  )
 //
 TInt CXmlSecSignTester::CXmlSecSign_CreateTemplateL_2L(  )
     {
-    _LIT8(t8,"ex:outer");
+
     _LIT8(t9,"dsig:Signature");
     _LIT8(pIdName,"id");
     _LIT8(pIdVal,"http://exem.com");

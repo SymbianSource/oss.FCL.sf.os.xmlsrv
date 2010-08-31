@@ -20,11 +20,11 @@
 
 #include <e32svr.h>
 #include <e32std.h>
-#include <domain/osextensions/StifParser.h>
-#include <domain/osextensions/Stiftestinterface.h>
+#include <StifParser.h>
+#include <Stiftestinterface.h>
 
-#include <XmlEngDeserializer.h>
-#include <XmlEngDeserializerDOM.h>
+#include <xml/dom/xmlengdeserializer.h>
+#include <xml/dom/xmlengdeserializerdom.h>
 #include "xmlengtesterdef.h"
 
 #include <InetProtTextUtils.h>
@@ -32,10 +32,11 @@
 #include <charconv.h>
 #include <UTF.H>
 
-#include "XmlEngBinaryContainer.h"
-#include "XmlEngChunkContainer.h"
-#include "XmlEngFileContainer.h"
-#include "XmlEngDataContainer.h"
+#include <xml/dom/xmlengbinarycontainer.h>
+#include <xml/dom/xmlengfilecontainer.h>
+#include <xml/dom/xmlengchunkcontainer.h>
+#include <xml/dom/xmlengdatacontainer.h>
+
 
 TInt CLibxml2Tester::DOMDeserializeL( CStifItemParser& aItem)
     {

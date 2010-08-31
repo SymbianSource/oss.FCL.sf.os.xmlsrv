@@ -1386,7 +1386,7 @@ xmlSecSymbianCryptoKeyDataRsaXmlRead(xmlSecKeyDataId id, xmlSecKeyPtr key,
 				    xmlNodePtr node, xmlSecKeyInfoCtxPtr keyInfoCtx) {
     xmlSecKeyDataPtr data;
     xmlNodePtr cur;
-    RSA *rsa=NULL;
+    //RSA *rsa=NULL;
     int ret;
 
     xmlSecAssert2(id == xmlSecSymbianCryptoKeyDataRsaId, -1);

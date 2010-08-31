@@ -19,7 +19,3 @@ PRJ_EXPORTS
 
 ../Rom/legacyminidomparser.iby /epoc32/rom/include/legacyminidomparser.iby
 
-PRJ_TESTEXPORTS
-
-../Rom/legacyminidomparsertest.iby /epoc32/rom/include/legacyminidomparsertest.iby
-

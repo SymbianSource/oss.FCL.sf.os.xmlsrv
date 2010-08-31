@@ -16,8 +16,8 @@
 #ifndef XML_XMLREADER_H
 #define XML_XMLREADER_H
 
-#include <libxml2_tree.h>
-#include <libxml2_xmlio.h>
+#include <stdapis/libxml2/libxml2_tree.h>
+#include <stdapis/libxml2/libxml2_xmlio.h>
 
 #ifdef LIBXML_SCHEMAS_ENABLED
 #include "libxml2_relaxng.h"
