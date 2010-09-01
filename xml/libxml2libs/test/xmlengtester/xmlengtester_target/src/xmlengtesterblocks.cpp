@@ -22,8 +22,8 @@
 #include <e32svr.h>
 #include <e32math.h>
 #include <f32file.h>
-#include <StifParser.h>
-#include <Stiftestinterface.h>
+#include <domain/osextensions/StifParser.h>
+#include <domain/osextensions/Stiftestinterface.h>
 
 #include "xmlengtesterdef.h"
 #include <Xml\Parser.h>

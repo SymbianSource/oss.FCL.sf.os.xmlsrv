@@ -20,6 +20,9 @@
 
 #include <testexecute.iby>
 
-file=ABI_DIR\BUILD_DIR\te_xml_ftmgrsuite.exe		sys\bin\te_xml_ftmgrsuite.exe
+file=ABI_DIR\BUILD_DIR\te_XML_FTmgrSuite.exe		sys\bin\te_XML_FTmgrSuite.exe
+
+data=DATAZ_\TestData\configs\te_XML_FTmgrSuite.ini TestData\configs\te_XML_FTmgrSuite.ini
+data=DATAZ_\TestData\scripts\te_XML_FTmgrSuite.script TestData\Scripts\te_XML_FTmgrSuite.Script
 
 #endif

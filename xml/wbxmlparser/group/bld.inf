@@ -31,4 +31,35 @@ syncml1_2stringdictionary01.mmp
 wml1_1stringdictionary00.mmp
 emn1_0stringdict00.mmp
 
-#include "../test/rtest/group/bld.inf"
+PRJ_TESTEXPORTS
+../test/rtest/group/wbxmlparsertests.bat			/epoc32/data/z/system/test/wbxmlparsertests.bat
+../test/rtest/group/wbxmlparsertests.iby			/epoc32/rom/include/wbxmlparsertests.iby
+../test/rtest/data/defects/00000036.emnc			z:/system/xmltest/defects/00000036.emnc
+../test/rtest/data/defects/00000036b.emnc			z:/system/xmltest/defects/00000036b.emnc
+../test/rtest/data/defects/00000060.emnc			z:/system/xmltest/defects/00000060.emnc
+../test/rtest/data/defects/00000104.emnc			z:/system/xmltest/defects/00000104.emnc
+
+
+PRJ_TESTEXTENSIONS
+start extension syslibs/test/xml_syncmltestfiledist
+end
+start extension syslibs/test/xml_wmltestfiledist
+end
+start extension syslibs/test/xml_sitestfiledist
+end
+
+PRJ_TESTMMPFILES
+../test/rtest/group/t_wbxmlbehaviourparsertests.mmp
+../test/rtest/group/t_wbxmlcorruptparsertests.mmp
+../test/rtest/group/t_wbxmldefects.mmp
+../test/rtest/group/t_wbxmloomparsertests.mmp
+../test/rtest/group/t_wbxmloomsiparserstabilitytests.mmp
+../test/rtest/group/t_wbxmloomsyncmlparserstabilitytests.mmp
+../test/rtest/group/t_wbxmloomwmlparserstabilitytests.mmp
+../test/rtest/group/t_wbxmlparsertests.mmp
+../test/rtest/group/t_wbxmlparserucs4testspartone.mmp
+../test/rtest/group/t_wbxmlsiparserstabilitytests.mmp
+../test/rtest/group/t_wbxmlsyncmlparserstabilitytests.mmp
+../test/rtest/group/t_wbxmlunknownparsertests.mmp
+../test/rtest/group/t_wbxmlwmlparserstabilitytests.mmp
+../test/rtest/group/wml1_1stringdictionary255.mmp				support

@@ -278,7 +278,7 @@ void doCertChainInitfromCertStoreL(X509_STORE *aCertStore, STACK_OF(X509) *aCert
             User::LeaveIfError( aCertStore->iSymbianCertStore->GetError() );
             certdata=aCertStore->iSymbianCertStore->GetRetrieveCertData();      
             certX509 = CX509Certificate::NewLC(*certdata);
-            User::LeaveIfError(aCertStore->iRootCertsSCS.Append((CX509Certificate *)certX509));     
+            aCertStore->iRootCertsSCS.Append((CX509Certificate *)certX509);     
             CleanupStack::Pop(certX509);   
             }	
 	aCertStore->iCertChain = CSymbianCertChain::NewL();

@@ -20,6 +20,9 @@
 
 #include <testexecute.iby>
 
-file=ABI_DIR\BUILD_DIR\def130695_suite.exe		sys\bin\def130695_suite.exe
+file=ABI_DIR\BUILD_DIR\def130695_Suite.exe		sys\bin\def130695_Suite.exe
+
+data=DATAZ_\TestData\configs\def130695_Suite.ini TestData\configs\def130695_Suite.ini
+data=DATAZ_\TestData\scripts\def130695_Suite.script TestData\Scripts\def130695_Suite.Script
 
 #endif

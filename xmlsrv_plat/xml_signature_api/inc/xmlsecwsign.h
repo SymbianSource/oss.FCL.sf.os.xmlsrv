@@ -27,7 +27,7 @@
 #include <e32base.h>
 #include <f32file.h>
 
-#include <xml/dom/xmlengdocument.h>
+#include <xmlengdocument.h>
     
 class CXmlSecKeyManager;
 class TXmlEngElement;

@@ -16,8 +16,8 @@
 extern "C" {
 #endif /* __cplusplus */ 
 
-#include <stdapis/libxml2/libxml2_tree.h>
-#include <stdapis/libxml2/libxml2_xmlio.h>
+#include <libxml2_tree.h>
+#include <libxml2_xmlio.h>
 #include "xmlsec_config.h"
 #include "xmlsec_xmlsec.h"
 #include "xmlsec_transforms.h"

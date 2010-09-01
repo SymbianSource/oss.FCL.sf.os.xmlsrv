@@ -14,7 +14,7 @@
 // CMatchData unit tests.
 // 
 //
-//RTEST
+
 TARGET          tu_xmlcmatchdataunittests.exe
 CAPABILITY		None
 TARGETTYPE		exe

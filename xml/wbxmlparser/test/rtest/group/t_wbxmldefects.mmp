@@ -13,7 +13,6 @@
 // Description:
 //
 
-//RTEST
 TARGET	   		t_wbxmldefects.exe
 TARGETTYPE		exe
 

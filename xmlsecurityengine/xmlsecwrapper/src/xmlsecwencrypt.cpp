@@ -18,15 +18,15 @@
 #include <e32std.h>
 
 // XML Engine
-#include <stdapis/libxml2/libxml2_tree.h>
-#include <stdapis/libxml2/libxml2_xmlmemory.h>
-#include <stdapis/libxml2/libxml2_globals.h>
+#include <libxml2_tree.h>
+#include <libxml2_xmlmemory.h>
+#include <libxml2_globals.h>
 
-#include <xml/utils/xmlengmem.h>
-#include <xml/utils/xmlengxestd.h>
-#include <xml/utils/xmlengutils.h>
+#include <xmlengmem.h>
+#include <xmlengxestd.h>
+#include <xmlengutils.h>
 
-#include <xml/dom/xmlengdom.h>
+#include <xmlengdom.h>
 
 // XML Sec
 #include "xmlsec_crypto.h"

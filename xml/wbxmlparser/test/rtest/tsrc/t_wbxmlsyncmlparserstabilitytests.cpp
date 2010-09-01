@@ -59,7 +59,8 @@ static void SyncmlTestsL()
 	{
 	test.Next(_L(" @SYMTestCaseID:SYSLIB-XML-CT-3723 SyncmlTestsL tests... "));
 
-	__UHEAP_MARK;	
+	__UHEAP_MARK;
+
 	CStabilityTestClass* syncml1_1TestWithOpaque = CStabilityTestClass::NewL(test, EFalse, KMaxChunkSize);
 	CleanupStack::PushL(syncml1_1TestWithOpaque);
 	syncml1_1TestWithOpaque->StabilityTestL(KSyncML1_1Directory(), KWbxmlExt(), &CStabilityTestClass::TestWholeL);
@@ -72,7 +73,8 @@ static void SyncmlTestsL()
 	syncml1_1TestMax->StabilityTestL(KOpaqueDirectory(), 	 KWbxmlExt(), &CStabilityTestClass::TestChunkL);
 	CleanupStack::PopAndDestroy(syncml1_1TestMax);
 
-	//::DeleteTestDirL();
+	::DeleteTestDirL();
+
 	CStabilityTestClass* syncml1_2TestWithOpaque = CStabilityTestClass::NewL(test, EFalse, KMaxChunkSize);
 	CleanupStack::PushL(syncml1_2TestWithOpaque);
 	syncml1_2TestWithOpaque->StabilityTestL(KSyncML1_2Directory(), KWbxmlExt(), &CStabilityTestClass::TestWholeL);
@@ -85,7 +87,7 @@ static void SyncmlTestsL()
 	syncml1_2TestMax->StabilityTestL(KOpaqueDirectory(), 	 KWbxmlExt(), &CStabilityTestClass::TestChunkL);
 	CleanupStack::PopAndDestroy(syncml1_2TestMax);
 
-	//::DeleteTestDirL();
+	::DeleteTestDirL();
 
 	__UHEAP_MARKEND;
 	}

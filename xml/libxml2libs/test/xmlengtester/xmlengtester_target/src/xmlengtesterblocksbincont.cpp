@@ -19,12 +19,11 @@
 #include "xmlengtester.h"
 
 #include <e32svr.h>
-#include <StifParser.h>
-#include <Stiftestinterface.h>
+#include <domain/osextensions/StifParser.h>
+#include <domain/osextensions/Stiftestinterface.h>
 
-#include <xml/dom/xmlengbinarycontainer.h>
-#include <xml/dom/xmlengfilecontainer.h>
-
+#include <XmlEngBinaryContainer.h>
+#include <XmlEngFileContainer.h>
 #include "xmlengtesterdef.h"
 
 #include <InetProtTextUtils.h>
@@ -495,7 +494,7 @@ TInt CLibxml2Tester::BinaryContainer_GetListL( CStifItemParser& /*aItem*/ )
     _LIT(KBinaryError,"BinaryContainer Error GetList..");
     _LIT(KEndParsing,"Checking BinaryContainer GetList end.");
     TBufC8<100> cid(_L8("123456789@123456789") );
-    _LIT(KInputFile1,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
+    _LIT(KInputFile1,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
      HBufC8* str1=ReadFileL(KInputFile1);
     CleanupStack::PushL(str1);
 
@@ -577,7 +576,7 @@ TInt CLibxml2Tester::BinaryContainer_GetList2L( CStifItemParser& /*aItem*/ )
     _LIT(KBinaryError,"BinaryContainer Error GetList..");
     _LIT(KEndParsing,"Checking BinaryContainer GetList end.");
     TBufC8<100> cid(_L8("123456789@123456789") );
-    _LIT(KInputFile1,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
+    _LIT(KInputFile1,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
      HBufC8* str1=ReadFileL(KInputFile1);
     CleanupStack::PushL(str1);
 
@@ -619,9 +618,9 @@ TInt CLibxml2Tester::BinaryContainer_CidErrorL( CStifItemParser& /*aItem*/ )
     _LIT(KEndParsing,"Checking BinaryContainer end.");
     TBufC8<100> cid(_L8("123456789@123456789") );
     TBufC8<100> cid2(_L8("22222222@123456789") );
-    _LIT(KInputFile1,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
-    _LIT(KInputFile2,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
-    _LIT(KInputFile3,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
+    _LIT(KInputFile1,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
+    _LIT(KInputFile2,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
+    _LIT(KInputFile3,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
 
     HBufC8* str1=ReadFileL(KInputFile1);
     CleanupStack::PushL(str1);
@@ -705,9 +704,9 @@ TInt CLibxml2Tester::BinaryContainer_RemoveL( CStifItemParser& /*aItem*/ )
     TBufC8<100> cid1(_L8("11111111@123456789") );
     TBufC8<100> cid2(_L8("22222222@123456789") );
     TBufC8<100> cid3(_L8("33333333@123456789") );
-    _LIT(KInputFile1,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
-    _LIT(KInputFile2,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
-    _LIT(KInputFile3,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
+    _LIT(KInputFile1,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
+    _LIT(KInputFile2,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
+    _LIT(KInputFile3,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
   
     HBufC8* str1=ReadFileL(KInputFile1);
     CleanupStack::PushL(str1);
@@ -793,9 +792,9 @@ TInt CLibxml2Tester::BinaryContainer_Remove2L( CStifItemParser& /*aItem*/ )
     TBufC8<100> cid1(_L8("11111111@123456789") );
     TBufC8<100> cid2(_L8("22222222@123456789") );
     TBufC8<100> cid3(_L8("33333333@123456789") );
-    _LIT(KInputFile1,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
-    _LIT(KInputFile2,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
-    _LIT(KInputFile3,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
+    _LIT(KInputFile1,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
+    _LIT(KInputFile2,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
+    _LIT(KInputFile3,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
   
     HBufC8* str1=ReadFileL(KInputFile1);
     CleanupStack::PushL(str1);
@@ -880,9 +879,9 @@ TInt CLibxml2Tester::BinaryContainer_Remove3L( CStifItemParser& /*aItem*/ )
     TBufC8<100> cid1(_L8("11111111@123456789") );
     TBufC8<100> cid2(_L8("22222222@123456789") );
     TBufC8<100> cid3(_L8("33333333@123456789") );
-    _LIT(KInputFile1,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
-    _LIT(KInputFile2,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
-    _LIT(KInputFile3,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
+    _LIT(KInputFile1,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
+    _LIT(KInputFile2,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
+    _LIT(KInputFile3,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
   
     HBufC8* str1=ReadFileL(KInputFile1);
     CleanupStack::PushL(str1);
@@ -956,9 +955,9 @@ TInt CLibxml2Tester::BinaryContainer_UnlinkL( CStifItemParser& /*aItem*/ )
     TBufC8<100> cid1(_L8("11111111@123456789") );
     TBufC8<100> cid2(_L8("22222222@123456789") );
     TBufC8<100> cid3(_L8("33333333@123456789") );
-    _LIT(KInputFile1,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
-    _LIT(KInputFile2,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
-    _LIT(KInputFile3,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
+    _LIT(KInputFile1,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
+    _LIT(KInputFile2,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
+    _LIT(KInputFile3,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
   
     HBufC8* str1=ReadFileL(KInputFile1);
     CleanupStack::PushL(str1);
@@ -1036,9 +1035,9 @@ TInt CLibxml2Tester::BinaryContainer_ReplaceWithL( CStifItemParser& /*aItem*/ )
     TBufC8<100> cid1(_L8("11111111@123456789") );
     TBufC8<100> cid2(_L8("22222222@123456789") );
     TBufC8<100> cid3(_L8("33333333@123456789") );
-    _LIT(KInputFile1,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
-    _LIT(KInputFile2,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
-    _LIT(KInputFile3,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
+    _LIT(KInputFile1,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
+    _LIT(KInputFile2,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
+    _LIT(KInputFile3,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
   
     HBufC8* str1=ReadFileL(KInputFile1);
     CleanupStack::PushL(str1);
@@ -1136,9 +1135,9 @@ TInt CLibxml2Tester::BinaryContainer_SubstituteForL( CStifItemParser& /*aItem*/ 
     TBufC8<100> cid1(_L8("11111111@123456789") );
     TBufC8<100> cid2(_L8("22222222@123456789") );
     TBufC8<100> cid3(_L8("33333333@123456789") );
-    _LIT(KInputFile1,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
-    _LIT(KInputFile2,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
-    _LIT(KInputFile3,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
+    _LIT(KInputFile1,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
+    _LIT(KInputFile2,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
+    _LIT(KInputFile3,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
   
     HBufC8* str1=ReadFileL(KInputFile1);
     CleanupStack::PushL(str1);
@@ -1255,9 +1254,9 @@ TInt CLibxml2Tester::BinaryContainer_CopyL( CStifItemParser& /*aItem*/ )
     TBufC8<100> cid1(_L8("11111111@123456789") );
     TBufC8<100> cid2(_L8("22222222@123456789") );
     TBufC8<100> cid3(_L8("33333333@123456789") );
-    _LIT(KInputFile1,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
-    _LIT(KInputFile2,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
-    _LIT(KInputFile3,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
+    _LIT(KInputFile1,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
+    _LIT(KInputFile2,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
+    _LIT(KInputFile3,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
   
     HBufC8* str1=ReadFileL(KInputFile1);
     CleanupStack::PushL(str1);
@@ -1364,9 +1363,9 @@ TInt CLibxml2Tester::BinaryContainer_Copy2L( CStifItemParser& /*aItem*/ )
     TBufC8<100> cid1(_L8("11111111@123456789") );
     TBufC8<100> cid2(_L8("22222222@123456789") );
     TBufC8<100> cid3(_L8("33333333@123456789") );
-    _LIT(KInputFile1,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
-    _LIT(KInputFile2,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
-    _LIT(KInputFile3,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
+    _LIT(KInputFile1,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
+    _LIT(KInputFile2,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
+    _LIT(KInputFile3,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
   
     HBufC8* str1=ReadFileL(KInputFile1);
     CleanupStack::PushL(str1);
@@ -1469,9 +1468,9 @@ TInt CLibxml2Tester::BinaryContainer_Copy3L( CStifItemParser& /*aItem*/ )
     TBufC8<100> cid1(_L8("11111111@123456789") );
     TBufC8<100> cid2(_L8("22222222@123456789") );
     TBufC8<100> cid3(_L8("33333333@123456789") );
-    _LIT(KInputFile1,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
-    _LIT(KInputFile2,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
-    _LIT(KInputFile3,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
+    _LIT(KInputFile1,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
+    _LIT(KInputFile2,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
+    _LIT(KInputFile3,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
   
     HBufC8* str1=ReadFileL(KInputFile1);
     CleanupStack::PushL(str1);
@@ -1598,9 +1597,9 @@ TInt CLibxml2Tester::BinaryContainer_Copy4L( CStifItemParser& /*aItem*/ )
     TBufC8<100> cid1(_L8("11111111@123456789") );
     TBufC8<100> cid2(_L8("22222222@123456789") );
     TBufC8<100> cid3(_L8("33333333@123456789") );
-    _LIT(KInputFile1,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
-    _LIT(KInputFile2,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
-    _LIT(KInputFile3,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
+    _LIT(KInputFile1,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
+    _LIT(KInputFile2,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
+    _LIT(KInputFile3,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
   
     HBufC8* str1=ReadFileL(KInputFile1);
     CleanupStack::PushL(str1);
@@ -1705,9 +1704,9 @@ TInt CLibxml2Tester::BinaryContainer_CopyToL( CStifItemParser& /*aItem*/ )
     TBufC8<100> cid1(_L8("11111111@123456789") );
     TBufC8<100> cid2(_L8("22222222@123456789") );
     TBufC8<100> cid3(_L8("33333333@123456789") );
-    _LIT(KInputFile1,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
-    _LIT(KInputFile2,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
-    _LIT(KInputFile3,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
+    _LIT(KInputFile1,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
+    _LIT(KInputFile2,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
+    _LIT(KInputFile3,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
   
     HBufC8* str1=ReadFileL(KInputFile1);
     CleanupStack::PushL(str1);
@@ -1780,9 +1779,9 @@ TInt CLibxml2Tester::BinaryContainer_CloneL( CStifItemParser& /*aItem*/ )
     TBufC8<100> cid1(_L8("11111111@123456789") );
     TBufC8<100> cid2(_L8("22222222@123456789") );
     TBufC8<100> cid3(_L8("33333333@123456789") );
-    _LIT(KInputFile1,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
-    _LIT(KInputFile2,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
-    _LIT(KInputFile3,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
+    _LIT(KInputFile1,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
+    _LIT(KInputFile2,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
+    _LIT(KInputFile3,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
   
     HBufC8* str1=ReadFileL(KInputFile1);
     CleanupStack::PushL(str1);
@@ -1907,9 +1906,9 @@ TInt CLibxml2Tester::BinaryContainer_AdoptNodeL( CStifItemParser& /*aItem*/ )
     TBufC8<100> cid1(_L8("11111111@123456789") );
     TBufC8<100> cid2(_L8("22222222@123456789") );
     TBufC8<100> cid3(_L8("33333333@123456789") );
-    _LIT(KInputFile1,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
-    _LIT(KInputFile2,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
-    _LIT(KInputFile3,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
+    _LIT(KInputFile1,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
+    _LIT(KInputFile2,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
+    _LIT(KInputFile3,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
   
     HBufC8* str1=ReadFileL(KInputFile1);
     CleanupStack::PushL(str1);
@@ -2063,9 +2062,9 @@ TInt CLibxml2Tester::BinaryContainer_SetAsFirstSiblingL( CStifItemParser& /*aIte
     TBufC8<100> cid1(_L8("11111111@123456789") );
     TBufC8<100> cid2(_L8("22222222@123456789") );
     TBufC8<100> cid3(_L8("33333333@123456789") );
-    _LIT(KInputFile1,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
-    _LIT(KInputFile2,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
-    _LIT(KInputFile3,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
+    _LIT(KInputFile1,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
+    _LIT(KInputFile2,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
+    _LIT(KInputFile3,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
   
     HBufC8* str1=ReadFileL(KInputFile1);
     CleanupStack::PushL(str1);
@@ -2194,9 +2193,9 @@ TInt CLibxml2Tester::BinaryContainer_SetAsLastSiblingL( CStifItemParser& /*aItem
     TBufC8<100> cid1(_L8("11111111@123456789") );
     TBufC8<100> cid2(_L8("22222222@123456789") );
     TBufC8<100> cid3(_L8("33333333@123456789") );
-    _LIT(KInputFile1,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
-    _LIT(KInputFile2,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
-    _LIT(KInputFile3,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
+    _LIT(KInputFile1,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
+    _LIT(KInputFile2,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
+    _LIT(KInputFile3,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
   
     HBufC8* str1=ReadFileL(KInputFile1);
     CleanupStack::PushL(str1);
@@ -2324,9 +2323,9 @@ TInt CLibxml2Tester::BinaryContainer_MoveBeforeSiblingL( CStifItemParser& /*aIte
     TBufC8<100> cid1(_L8("11111111@123456789") );
     TBufC8<100> cid2(_L8("22222222@123456789") );
     TBufC8<100> cid3(_L8("33333333@123456789") );
-    _LIT(KInputFile1,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
-    _LIT(KInputFile2,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
-    _LIT(KInputFile3,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
+    _LIT(KInputFile1,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
+    _LIT(KInputFile2,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
+    _LIT(KInputFile3,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
   
     HBufC8* str1=ReadFileL(KInputFile1);
     CleanupStack::PushL(str1);
@@ -2457,9 +2456,9 @@ TInt CLibxml2Tester::BinaryContainer_MoveAfterSiblingL( CStifItemParser& /*aItem
     TBufC8<100> cid1(_L8("11111111@123456789") );
     TBufC8<100> cid2(_L8("22222222@123456789") );
     TBufC8<100> cid3(_L8("33333333@123456789") );
-    _LIT(KInputFile1,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
-    _LIT(KInputFile2,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
-    _LIT(KInputFile3,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
+    _LIT(KInputFile1,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
+    _LIT(KInputFile2,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
+    _LIT(KInputFile3,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
   
     HBufC8* str1=ReadFileL(KInputFile1);
     CleanupStack::PushL(str1);
@@ -2589,9 +2588,9 @@ TInt CLibxml2Tester::BinaryContainer_MoveToL( CStifItemParser& /*aItem*/ )
     TBufC8<100> cid1(_L8("11111111@123456789") );
     TBufC8<100> cid2(_L8("22222222@123456789") );
     TBufC8<100> cid3(_L8("33333333@123456789") );
-    _LIT(KInputFile1,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
-    _LIT(KInputFile2,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
-    _LIT(KInputFile3,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
+    _LIT(KInputFile1,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
+    _LIT(KInputFile2,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
+    _LIT(KInputFile3,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
   
     HBufC8* str1=ReadFileL(KInputFile1);
     CleanupStack::PushL(str1);
@@ -2721,9 +2720,9 @@ TInt CLibxml2Tester::BinaryContainer_ReconcileNamespacesL( CStifItemParser& /*aI
     TBufC8<100> cid1(_L8("11111111@123456789") );
     TBufC8<100> cid2(_L8("22222222@123456789") );
     TBufC8<100> cid3(_L8("33333333@123456789") );
-    _LIT(KInputFile1,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
-    _LIT(KInputFile2,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
-    _LIT(KInputFile3,"f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
+    _LIT(KInputFile1,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg");
+    _LIT(KInputFile2,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\icon.gif");
+    _LIT(KInputFile3,"E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.doc");
   
     HBufC8* str1=ReadFileL(KInputFile1);
     CleanupStack::PushL(str1);

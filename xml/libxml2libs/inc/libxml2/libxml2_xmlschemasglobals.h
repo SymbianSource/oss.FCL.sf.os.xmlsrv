@@ -19,7 +19,8 @@
 typedef struct _xmlSchemaTypesGlobalData xmlSchemaTypesGlobalData;
 typedef xmlSchemaTypesGlobalData* xmlSchemaTypesGlobalDataPtr;
 
-#include <stdapis/libxml2/libxml2_schemasinternals.h>
+#include <libxml2_schemasinternals.h>
+
 // xmlSchemaTypesInitialized is defined as separate global variable
 
 struct _xmlSchemaTypesGlobalData{

@@ -20,22 +20,22 @@
 #define XML_TEST_H
 
 //  INCLUDES
-#include <StifLogger.h>
-#include <TestScripterInternal.h>
-#include <StifTestModule.h>
+#include <domain/osextensions/StifLogger.h>
+#include <domain/osextensions/TestScripterInternal.h>
+#include <domain/osextensions/StifTestModule.h>
 #include <f32file.h>
 #include <Xml\XmlParserErrors.h>
 
-#include <xml/dom/xmlengdom.h>
-#include <xml/dom/xmlengerrors.h>
+#include <xmlengdom.h>
+#include <XmlEngErrors.h>
 // This include is not required anymore.
 // #include <XmlEngXPathObject.h>
-#include <xml/dom/xmlengdomparser.h>
+#include <XmlEngDOMParser.h>
 
-#include <xml/dom/xmlengdeserializer.h>
-#include <xml/dom/xmlengdeserializerdom.h>
-#include <xml/dom/xmlengserializer.h>
-#include <xml/dom/xmlengxpathresult.h>
+#include "XmlEngDeserializer.h"
+#include "XmlEngDeserializerDOM.h"
+#include "XmlEngSerializer.h"
+#include <XmlEngXPathResult.h>
  
 // CONSTANTS
 

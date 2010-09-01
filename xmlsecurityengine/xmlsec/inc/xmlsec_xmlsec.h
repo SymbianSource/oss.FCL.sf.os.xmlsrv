@@ -16,14 +16,14 @@
 extern "C" {
 #endif /* __cplusplus */ 
 
-#include <stdapis/libxml2/libxml2_tree.h>
+#include <libxml2_tree.h>
 #include "xmlsec_config.h"
 #include "xmlsec_version.h"
 #include "xmlsec_exports.h"
 #include "xmlsec_strings.h"
 
 //added for symbian port
-#include <stdapis/libxml2/libxml2_xmlmemory.h>
+#include <libxml2_xmlmemory.h>
 
 /***********************************************************************
  *

@@ -18,15 +18,13 @@
 #include "TestContentHandler.h"
 #include "xmlengtester.h"
 //#include "XmlEngDOMChunkParser.h"
-
-#include <xml/dom/xmlengchunkcontainer.h>
-#include <xml/dom/xmlengbinarycontainer.h>
-#include <xml/dom/xmlengfilecontainer.h>
-
-#include <xml/dom/xmlengnode.h>
+#include "XmlEngChunkContainer.h"
+#include "XmlEngBinaryContainer.h"
+#include "XmlEngFileContainer.h"
+#include "XmlEngNode.h"
 #include <e32svr.h>
-#include <StifParser.h>
-#include <Stiftestinterface.h>
+#include <domain/osextensions/StifParser.h>
+#include <domain/osextensions/Stiftestinterface.h>
 
 #include <Xml\Parser.h>
 #include <Xml\ParserFeature.h>
@@ -629,7 +627,7 @@ TInt CLibxml2Tester::ChunkContainer_Remove3L( CStifItemParser& /*aItem*/ )
     el.AppendChildL(binData2);	
     
     // (3.) some other data 
-    _LIT(KInputFile1, "f:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg"); 
+    _LIT(KInputFile1, "E:\\testing\\data\\xmleng\\efute\\input\\filecontainer\\test.jpg"); 
     _LIT8(KCid, "111");      
     HBufC8* str1=ReadFileL(KInputFile1);
     CleanupStack::PushL(str1);

@@ -12,7 +12,7 @@
 //
 // Description:
 //
-//RTEST
+
 TARGET			t_xmlmisc.exe
 TARGETTYPE		exe
 

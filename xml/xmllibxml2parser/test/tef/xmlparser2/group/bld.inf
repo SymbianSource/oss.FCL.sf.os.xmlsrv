@@ -23,8 +23,8 @@ testcontentprocessor.mmp support
 
 PRJ_TESTEXPORTS
 xmlparser2teftests.iby		/epoc32/rom/include/xmlparser2teftests.iby
-../scripts/xmlparser2tefsuite.script		c:/tef_xml2/xmlparser2tefsuite.script
-../data/xmlexample.xml c:/testdata/xmlexample.xml
-../data/xmlexample.dtd c:/testdata/xmlexample.dtd
-../data/corruptxml1.xml c:/testdata/corruptxml1.xml
+../scripts/xmlparser2tefsuite.script		z:/tef_xml2/xmlparser2tefsuite.script
+../data/xmlexample.xml z:/testdata/xmlexample.xml
+../data/xmlexample.dtd z:/testdata/xmlexample.dtd
+../data/corruptxml1.xml z:/testdata/corruptxml1.xml
 

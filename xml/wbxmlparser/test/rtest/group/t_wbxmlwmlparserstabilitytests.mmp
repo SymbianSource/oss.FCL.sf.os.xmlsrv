@@ -18,7 +18,6 @@
 // 
 //
 
-//RTEST
 TARGET			t_wbxmlwmlparserstabilitytests.exe
 TARGETTYPE		exe
 

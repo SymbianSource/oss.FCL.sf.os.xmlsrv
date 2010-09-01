@@ -124,9 +124,9 @@ XMLPUBFUN void* XMLCALL malloc_impl(size_t size);
 XMLPUBFUN void* XMLCALL realloc_impl(void *ptr, size_t size);
 
 #ifdef LIBXML_XPATH_ENABLED
-#include <stdapis/libxml2/xmlengtriodef.h>
-#include <stdapis/libxml2/xmlengtrionan.h>
-#include <stdapis/libxml2/libxml2_xpathinternals.h>
+#   include "xmlengtriodef.h"
+#   include "xmlengtrionan.h"
+#   include "libxml2_xpathinternals.h"
 #endif
 
 #ifdef LIBXML_CATALOG_ENABLED

@@ -20,18 +20,18 @@
 
 #include "stabilitytestclass.h"
 #include "testdocuments.h"
-_LIT  (KTestDocument0, "c:\\system\\XmlTest\\SyncML\\1.1\\add-to-client\\FromServer0.wbxml");
-_LIT  (KTestDocument1, "c:\\system\\XmlTest\\SyncML\\1.1\\add-to-client\\FromServer1.wbxml");
-_LIT  (KTestDocument2, "c:\\system\\XmlTest\\SyncML\\1.1\\add-to-server\\FromServer1.wbxml");
-_LIT  (KTestDocument3, "c:\\system\\XmlTest\\SyncML\\1.1\\Atomic\\FromServer1.wbxml");
-_LIT  (KTestDocument4, "c:\\system\\XmlTest\\Wml\\1.1\\AllElements.wmlc");
-_LIT  (KTestDocument5, "c:\\system\\XmlTest\\Wml\\1.1\\CharEntities.wmlc");
-_LIT  (KTestDocument6, "c:\\system\\XmlTest\\Wml\\1.1\\data.wmlc");
-_LIT  (KTestDocument7, "c:\\system\\XmlTest\\Wml\\1.1\\http___www.bbc.co.uk_mobile_sportheads1.wmlc");
-_LIT  (KTestDocument8, "c:\\system\\XmlTest\\Wml\\1.1\\mob.wmlc");
-_LIT  (KTestDocument9, "c:\\system\\XmlTest\\Wml\\1.1\\Variables.wmlc");
-_LIT  (KTestDocument10,"c:\\system\\XmlTest\\Wml\\1.1\\wireless_char.wmlc");
-_LIT  (KTestDocument11,"c:\\system\\XmlTest\\Wml\\Codepage\\wml_data_attr_copepage_255.wmlc");
+_LIT  (KTestDocument0, "z:\\system\\XmlTest\\SyncML\\1.1\\add-to-client\\FromServer0.wbxml");
+_LIT  (KTestDocument1, "z:\\system\\XmlTest\\SyncML\\1.1\\add-to-client\\FromServer1.wbxml");
+_LIT  (KTestDocument2, "z:\\system\\XmlTest\\SyncML\\1.1\\add-to-server\\FromServer1.wbxml");
+_LIT  (KTestDocument3, "z:\\system\\XmlTest\\SyncML\\1.1\\Atomic\\FromServer1.wbxml");
+_LIT  (KTestDocument4, "z:\\system\\XmlTest\\Wml\\1.1\\AllElements.wmlc");
+_LIT  (KTestDocument5, "z:\\system\\XmlTest\\Wml\\1.1\\CharEntities.wmlc");
+_LIT  (KTestDocument6, "z:\\system\\XmlTest\\Wml\\1.1\\data.wmlc");
+_LIT  (KTestDocument7, "z:\\system\\XmlTest\\Wml\\1.1\\http___www.bbc.co.uk_mobile_sportheads1.wmlc");
+_LIT  (KTestDocument8, "z:\\system\\XmlTest\\Wml\\1.1\\mob.wmlc");
+_LIT  (KTestDocument9, "z:\\system\\XmlTest\\Wml\\1.1\\Variables.wmlc");
+_LIT  (KTestDocument10,"z:\\system\\XmlTest\\Wml\\1.1\\wireless_char.wmlc");
+_LIT  (KTestDocument11,"z:\\system\\XmlTest\\Wml\\Codepage\\wml_data_attr_copepage_255.wmlc");
 
 // Some characters had to have their string representation amended.
 // i.e. dir paths should be seperated by '\\'

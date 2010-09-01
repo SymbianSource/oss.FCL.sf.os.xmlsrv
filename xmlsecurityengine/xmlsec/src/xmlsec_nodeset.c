@@ -14,10 +14,10 @@
 #include <stdlib.h>
 #include <string.h>
  
-#include <stdapis/libxml2/libxml2_tree.h>
-#include <stdapis/libxml2/libxml2_globals.h>
-#include <stdapis/libxml2/libxml2_xpath.h>
-#include <stdapis/libxml2/libxml2_xpathinternals.h>
+#include <libxml2_tree.h>
+#include <libxml2_xpath.h>
+#include <libxml2_xpathinternals.h>
+#include <libxml2_globals.h>
 
 #include "xmlsec_xmlsec.h"
 #include "xmlsec_nodeset.h"

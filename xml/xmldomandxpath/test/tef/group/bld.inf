@@ -26,25 +26,25 @@ PRJ_TESTMMPFILES
 
 
 PRJ_TESTEXPORTS
-//../domsmoketest/scripts/domelemsmoketest.script	c:/xml/scripts/domelemsmoketest.script
-//../domsmoketest/scripts/domelemsmoketest.ini		c:/xml/scripts/domelemsmoketest.ini
-//../domsmoketest/scripts/domchunkcontsmoketest.script	c:/xml/scripts/domchunkcontsmoketest.script
-//../domsmoketest/scripts/domchunkcontsmoketest.ini		c:/xml/scripts/domchunkcontsmoketest.ini
+//../domsmoketest/scripts/domelemsmoketest.script	z:/xml/scripts/domelemsmoketest.script
+//../domsmoketest/scripts/domelemsmoketest.ini		z:/xml/scripts/domelemsmoketest.ini
+//../domsmoketest/scripts/domchunkcontsmoketest.script	z:/xml/scripts/domchunkcontsmoketest.script
+//../domsmoketest/scripts/domchunkcontsmoketest.ini		z:/xml/scripts/domchunkcontsmoketest.ini
 
-//../domserializersmoketest/scripts/domserializersmoketest.script	c:/xml/scripts/domserializersmoketest.script
-//../domserializersmoketest/scripts/domserializersmoketest.ini		c:/xml/scripts/domserializersmoketest.ini
+//../domserializersmoketest/scripts/domserializersmoketest.script	z:/xml/scripts/domserializersmoketest.script
+//../domserializersmoketest/scripts/domserializersmoketest.ini		z:/xml/scripts/domserializersmoketest.ini
 
-//../../data/domgeneral/element/input/correct/dom_elem_001.xml c:/xml/data/dom_elem_001.xml
-//../../data/domgeneral/element/input/correct/dom_elem_002.xml c:/xml/data/dom_elem_002.xml
-//../../data/domgeneral/element/input/correct/dom_elem_004.xml c:/xml/data/dom_elem_004.xml
-//../../data/domgeneral/element/input/correct/dom_elem_000_schema.xml c:/xml/data/dom_elem_000_schema.xml
-//../../data/domgeneral/element/verification/correct/dom_elem_001.ref c:/xml/data/dom_elem_001.ref
-//../../data/domgeneral/element/verification/correct/dom_elem_002.ref c:/xml/data/dom_elem_002.ref
-//../../data/domgeneral/element/verification/correct/dom_elem_004.ref c:/xml/data/dom_elem_004.ref
+//../../data/domgeneral/element/input/correct/dom_elem_001.xml z:/xml/data/dom_elem_001.xml
+//../../data/domgeneral/element/input/correct/dom_elem_002.xml z:/xml/data/dom_elem_002.xml
+//../../data/domgeneral/element/input/correct/dom_elem_004.xml z:/xml/data/dom_elem_004.xml
+//../../data/domgeneral/element/input/correct/dom_elem_000_schema.xml z:/xml/data/dom_elem_000_schema.xml
+//../../data/domgeneral/element/verification/correct/dom_elem_001.ref z:/xml/data/dom_elem_001.ref
+//../../data/domgeneral/element/verification/correct/dom_elem_002.ref z:/xml/data/dom_elem_002.ref
+//../../data/domgeneral/element/verification/correct/dom_elem_004.ref z:/xml/data/dom_elem_004.ref
 
-//../../data/chunk/cont/input/correct/xml_wf_11.xml c:/xml/data/xml_wf_11.xml
+//../../data/chunk/cont/input/correct/xml_wf_11.xml z:/xml/data/xml_wf_11.xml
 
-//../../data/serializer/default/verification/correct/serdefault-serializerl.ref //c:/xml/data/serdefault-serializerl.ref
+//../../data/serializer/default/verification/correct/serdefault-serializerl.ref //z:/xml/data/serdefault-serializerl.ref
 
 
 //domsmoktesttefsuite.iby /epoc32/rom/include/domsmoktesttefsuite.iby

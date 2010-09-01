@@ -12,7 +12,7 @@
 //
 // Description:
 //
-//RTEST
+
 TARGET			t_parserucs4test.exe
 TARGETTYPE		exe
 

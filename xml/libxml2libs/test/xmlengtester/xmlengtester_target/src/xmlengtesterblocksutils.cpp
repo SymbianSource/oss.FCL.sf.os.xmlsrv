@@ -20,8 +20,8 @@
 #include "xmlengtester.h"
 
 #include <e32svr.h>
-#include <StifParser.h>
-#include <Stiftestinterface.h>
+#include <domain/osextensions/StifParser.h>
+#include <domain/osextensions/Stiftestinterface.h>
 
 #include <Xml\Parser.h>
 #include <Xml\ParserFeature.h>
@@ -29,7 +29,7 @@
 #include <libc\string.h>
 #include <charconv.h>
 #include <UTF.H>
-#include <xml/utils/xmlengutils.h>
+#include <XmlEngutils.h>
 using namespace Xml;
 
 /************************************** Utils **************************************/

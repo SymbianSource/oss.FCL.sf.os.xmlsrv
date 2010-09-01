@@ -18,12 +18,12 @@
 #include "TestContentHandler.h"
 #include "xmlengtester.h"
 //#include "XmlEngDOMChunkParser.h"
-#include <xml/dom/xmlengfilecontainer.h>
-#include <xml/dom/xmlengbinarycontainer.h>
-#include <xml/dom/xmlengnode.h>
+#include "XmlEngFileContainer.h"
+#include "XmlEngBinaryContainer.h"
+#include "XmlEngNode.h"
 #include <e32svr.h>
-#include <StifParser.h>
-#include <Stiftestinterface.h>
+#include <domain/osextensions/StifParser.h>
+#include <domain/osextensions/Stiftestinterface.h>
 
 #include <Xml\Parser.h>
 #include <Xml\ParserFeature.h>

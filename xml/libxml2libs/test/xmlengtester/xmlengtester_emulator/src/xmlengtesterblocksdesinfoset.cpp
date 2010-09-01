@@ -20,9 +20,10 @@
 
 #include <e32svr.h>
 #include <e32std.h>
-#include <StifParser.h>
-#include <Stiftestinterface.h>
-#include <xml/dom/xmlengdeserializer.h>
+#include <domain/osextensions/StifParser.h>
+#include <domain/osextensions/Stiftestinterface.h>
+
+#include <XmlEngDeserializer.h>
 #include <Xml\ParserFeature.h>
 #include "xmlengtesterdef.h"
 
@@ -31,10 +32,10 @@
 #include <charconv.h>
 #include <UTF.H>
 
-#include <xml/dom/xmlengbinarycontainer.h>
-#include <xml/dom/xmlengfilecontainer.h>
-#include <xml/dom/xmlengchunkcontainer.h>
-#include <xml/dom/xmlengdatacontainer.h>
+#include "XmlEngBinaryContainer.h"
+#include "XmlEngChunkContainer.h"
+#include "XmlEngFileContainer.h"
+#include "XmlEngDataContainer.h"
 
 
 // -----------------------------------------------------------------------------

@@ -22,6 +22,6 @@
 #include <xmlengineutils.iby>
 
 data=ABI_DIR\BUILD_DIR\texml2.exe		sys\bin\texml2.exe
-data=DATAC_\tef_xml2\xml2tefsuite.script 	tef_xml2\xml2tefsuite.script
+data=DATAZ_\tef_xml2\xml2tefsuite.script 	tef_xml2\xml2tefsuite.script
 
 #endif

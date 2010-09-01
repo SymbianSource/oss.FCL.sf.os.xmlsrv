@@ -20,9 +20,10 @@
 
 #include <e32svr.h>
 #include <e32std.h>
-#include <StifParser.h>
-#include <Stiftestinterface.h>
-#include <xml/dom/xmlengdeserializer.h>
+#include <domain/osextensions/StifParser.h>
+#include <domain/osextensions/Stiftestinterface.h>
+
+#include <XmlEngDeserializer.h>
 #include <Xml\ParserFeature.h>
 #include "xmlengtesterdef.h"
 
@@ -31,10 +32,10 @@
 #include <charconv.h>
 #include <UTF.H>
 
-#include <xml/dom/xmlengbinarycontainer.h>
-#include <xml/dom/xmlengfilecontainer.h>
-#include <xml/dom/xmlengchunkcontainer.h>
-#include <xml/dom/xmlengdatacontainer.h>
+#include "XmlEngBinaryContainer.h"
+#include "XmlEngChunkContainer.h"
+#include "XmlEngFileContainer.h"
+#include "XmlEngDataContainer.h"
 
 
 // -----------------------------------------------------------------------------
@@ -80,7 +81,7 @@ TInt CLibxml2Tester::DeserializeInfosetL( CStifItemParser& aItem)
     aRFs.Connect();
     CleanupClosePushL( aRFs );
 	RFile fp;
-	User::LeaveIfError( fp.Open(aRFs, _L("f:\\testing\\data\\xmleng\\efute\\input\\containers\\petit.jpg"), EFileRead) );
+	User::LeaveIfError( fp.Open(aRFs, _L("E:\\testing\\data\\xmleng\\efute\\input\\containers\\petit.jpg"), EFileRead) );
 	CleanupClosePushL(fp); 	
     TXmlEngBinaryContainer bincont = iDoc.CreateBinaryContainerL(CID_1(), contbuff);
     TXmlEngChunkContainer chunkcont = iDoc.CreateChunkContainerL(CID_2(), chunk, offset, binarySize);
@@ -177,7 +178,7 @@ TInt CLibxml2Tester::Deserialize2InfosetL( CStifItemParser& aItem)
     aRFs.Connect();
     CleanupClosePushL( aRFs );
 	RFile fp;
-	User::LeaveIfError( fp.Open(aRFs, _L("f:\\testing\\data\\xmleng\\efute\\input\\containers\\petit.jpg"), EFileRead) );
+	User::LeaveIfError( fp.Open(aRFs, _L("E:\\testing\\data\\xmleng\\efute\\input\\containers\\petit.jpg"), EFileRead) );
 	CleanupClosePushL(fp); 	
     TXmlEngBinaryContainer bincont = iDoc.CreateBinaryContainerL(CID_1(), contbuff);
     TXmlEngChunkContainer chunkcont = iDoc.CreateChunkContainerL(CID_2(), chunk, offset, binarySize);
@@ -278,7 +279,7 @@ TInt CLibxml2Tester::DeserializeFromFileInfosetL( CStifItemParser& aItem)
     aRFs.Connect();
     CleanupClosePushL( aRFs );
 	RFile fp;
-	User::LeaveIfError( fp.Open(aRFs, _L("f:\\testing\\data\\xmleng\\efute\\input\\containers\\petit.jpg"), EFileRead) );
+	User::LeaveIfError( fp.Open(aRFs, _L("E:\\testing\\data\\xmleng\\efute\\input\\containers\\petit.jpg"), EFileRead) );
 	CleanupClosePushL(fp); 	
     TXmlEngBinaryContainer bincont = iDoc.CreateBinaryContainerL(CID_1(), contbuff);
     TXmlEngChunkContainer chunkcont = iDoc.CreateChunkContainerL(CID_2(), chunk, offset, binarySize);
@@ -378,7 +379,7 @@ TInt CLibxml2Tester::DeserializeFromBufferInfosetL(CStifItemParser& aItem)
     aRFs.Connect();
     CleanupClosePushL( aRFs );
 	RFile fp;
-	User::LeaveIfError( fp.Open(aRFs, _L("f:\\testing\\data\\xmleng\\efute\\input\\containers\\petit.jpg"), EFileRead) );
+	User::LeaveIfError( fp.Open(aRFs, _L("E:\\testing\\data\\xmleng\\efute\\input\\containers\\petit.jpg"), EFileRead) );
 	CleanupClosePushL(fp); 	
     TXmlEngBinaryContainer bincont = iDoc.CreateBinaryContainerL(CID_1(), contbuff);
     TXmlEngChunkContainer chunkcont = iDoc.CreateChunkContainerL(CID_2(), chunk, offset, binarySize);
@@ -464,7 +465,7 @@ TInt CLibxml2Tester::TestDeserializerInfosetL(CStifItemParser& aItem)
     aRFs.Connect();
     CleanupClosePushL( aRFs );
 	RFile fp;
-	User::LeaveIfError( fp.Open(aRFs, _L("f:\\testing\\data\\xmleng\\efute\\input\\containers\\petit.jpg"), EFileRead) );
+	User::LeaveIfError( fp.Open(aRFs, _L("E:\\testing\\data\\xmleng\\efute\\input\\containers\\petit.jpg"), EFileRead) );
 	CleanupClosePushL(fp); 	
     TXmlEngBinaryContainer bincont = iDoc.CreateBinaryContainerL(CID_1(), contbuff);
     TXmlEngChunkContainer chunkcont = iDoc.CreateChunkContainerL(CID_2(), chunk, offset, binarySize);
@@ -543,7 +544,7 @@ TInt CLibxml2Tester::TestSetInputFileInfosetL(CStifItemParser& aItem)
     aRFs.Connect();
     CleanupClosePushL( aRFs );
 	RFile fp;
-	User::LeaveIfError( fp.Open(aRFs, _L("f:\\testing\\data\\xmleng\\efute\\input\\containers\\petit.jpg"), EFileRead) );
+	User::LeaveIfError( fp.Open(aRFs, _L("E:\\testing\\data\\xmleng\\efute\\input\\containers\\petit.jpg"), EFileRead) );
 	CleanupClosePushL(fp); 	
     TXmlEngBinaryContainer bincont = iDoc.CreateBinaryContainerL(CID_1(), contbuff);
     TXmlEngChunkContainer chunkcont = iDoc.CreateChunkContainerL(CID_2(), chunk, offset, binarySize);
@@ -608,7 +609,7 @@ TInt CLibxml2Tester::TestSetInputBufferInfosetL(CStifItemParser& aItem)
     aRFs.Connect();
     CleanupClosePushL( aRFs );
 	RFile fp;
-	User::LeaveIfError( fp.Open(aRFs, _L("f:\\testing\\data\\xmleng\\efute\\input\\containers\\petit.jpg"), EFileRead) );
+	User::LeaveIfError( fp.Open(aRFs, _L("E:\\testing\\data\\xmleng\\efute\\input\\containers\\petit.jpg"), EFileRead) );
 	CleanupClosePushL(fp); 	
     TXmlEngBinaryContainer bincont = iDoc.CreateBinaryContainerL(CID_1(), contbuff);
     TXmlEngChunkContainer chunkcont = iDoc.CreateChunkContainerL(CID_2(), chunk, offset, binarySize);
@@ -679,7 +680,7 @@ TInt CLibxml2Tester::TestSetContentHandlerInfosetL(CStifItemParser& aItem)
     aRFs.Connect();
     CleanupClosePushL( aRFs );
 	RFile fp;
-	User::LeaveIfError( fp.Open(aRFs, _L("f:\\testing\\data\\xmleng\\efute\\input\\containers\\petit.jpg"), EFileRead) );
+	User::LeaveIfError( fp.Open(aRFs, _L("E:\\testing\\data\\xmleng\\efute\\input\\containers\\petit.jpg"), EFileRead) );
 	CleanupClosePushL(fp); 	
     TXmlEngBinaryContainer bincont = iDoc.CreateBinaryContainerL(CID_1(), contbuff);
     TXmlEngChunkContainer chunkcont = iDoc.CreateChunkContainerL(CID_2(), chunk, offset, binarySize);
@@ -759,7 +760,7 @@ TInt CLibxml2Tester::TestEnableFeatureInfosetL(CStifItemParser& aItem)
     aRFs.Connect();
     CleanupClosePushL( aRFs );
 	RFile fp;
-	User::LeaveIfError( fp.Open(aRFs, _L("f:\\testing\\data\\xmleng\\efute\\input\\containers\\petit.jpg"), EFileRead) );
+	User::LeaveIfError( fp.Open(aRFs, _L("E:\\testing\\data\\xmleng\\efute\\input\\containers\\petit.jpg"), EFileRead) );
 	CleanupClosePushL(fp); 	
     TXmlEngBinaryContainer bincont = iDoc.CreateBinaryContainerL(CID_1(), contbuff);
     TXmlEngChunkContainer chunkcont = iDoc.CreateChunkContainerL(CID_2(), chunk, offset, binarySize);
@@ -840,7 +841,7 @@ TInt CLibxml2Tester::TestDisableFeatureInfosetL(CStifItemParser& aItem)
     aRFs.Connect();
     CleanupClosePushL( aRFs );
 	RFile fp;
-	User::LeaveIfError( fp.Open(aRFs, _L("f:\\testing\\data\\xmleng\\efute\\input\\containers\\petit.jpg"), EFileRead) );
+	User::LeaveIfError( fp.Open(aRFs, _L("E:\\testing\\data\\xmleng\\efute\\input\\containers\\petit.jpg"), EFileRead) );
 	CleanupClosePushL(fp); 	
     TXmlEngBinaryContainer bincont = iDoc.CreateBinaryContainerL(CID_1(), contbuff);
     TXmlEngChunkContainer chunkcont = iDoc.CreateChunkContainerL(CID_2(), chunk, offset, binarySize);
@@ -1185,7 +1186,7 @@ TInt CLibxml2Tester::TestDesFileConvinienceInfosetL(CStifItemParser& aItem)
     aRFs.Connect();
     CleanupClosePushL( aRFs );
 	RFile fp;
-	User::LeaveIfError( fp.Open(aRFs, _L("f:\\testing\\data\\xmleng\\efute\\input\\containers\\petit.jpg"), EFileRead) );
+	User::LeaveIfError( fp.Open(aRFs, _L("E:\\testing\\data\\xmleng\\efute\\input\\containers\\petit.jpg"), EFileRead) );
 	CleanupClosePushL(fp); 	
     TXmlEngBinaryContainer bincont = iDoc.CreateBinaryContainerL(CID_1(), contbuff);
     TXmlEngChunkContainer chunkcont = iDoc.CreateChunkContainerL(CID_2(), chunk, offset, binarySize);
@@ -1269,7 +1270,7 @@ TInt CLibxml2Tester::TestDesBufferConvinienceInfosetL(CStifItemParser& aItem)
     aRFs.Connect();
     CleanupClosePushL( aRFs );
 	RFile fp;
-	User::LeaveIfError( fp.Open(aRFs, _L("f:\\testing\\data\\xmleng\\efute\\input\\containers\\petit.jpg"), EFileRead) );
+	User::LeaveIfError( fp.Open(aRFs, _L("E:\\testing\\data\\xmleng\\efute\\input\\containers\\petit.jpg"), EFileRead) );
 	CleanupClosePushL(fp); 	
     TXmlEngBinaryContainer bincont = iDoc.CreateBinaryContainerL(CID_1(), contbuff);
     TXmlEngChunkContainer chunkcont = iDoc.CreateChunkContainerL(CID_2(), chunk, offset, binarySize);
@@ -1354,7 +1355,7 @@ TInt CLibxml2Tester::TestDeserializerBufferInfosetL(CStifItemParser& aItem)
     aRFs.Connect();
     CleanupClosePushL( aRFs );
 	RFile fp;
-	User::LeaveIfError( fp.Open(aRFs, _L("f:\\testing\\data\\xmleng\\efute\\input\\containers\\petit.jpg"), EFileRead) );
+	User::LeaveIfError( fp.Open(aRFs, _L("E:\\testing\\data\\xmleng\\efute\\input\\containers\\petit.jpg"), EFileRead) );
 	CleanupClosePushL(fp); 	
     TXmlEngBinaryContainer bincont = iDoc.CreateBinaryContainerL(CID_1(), contbuff);
     TXmlEngChunkContainer chunkcont = iDoc.CreateChunkContainerL(CID_2(), chunk, offset, binarySize);

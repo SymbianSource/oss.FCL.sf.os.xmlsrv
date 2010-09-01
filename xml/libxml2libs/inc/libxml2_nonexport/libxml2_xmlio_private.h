@@ -17,7 +17,7 @@
 #ifndef LIBXML2_TREE_PRIVATE_H
 #define LIBXML2_TREE_PRIVATE_H
 
-#include <stdapis/libxml2/libxml2_xmlio.h>
+#include <libxml2_xmlio.h>
 
 #ifdef __cplusplus
 extern "C" {

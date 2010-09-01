@@ -16,8 +16,8 @@
 #ifndef XML_XLINK_H
 #define XML_XLINK_H
 
-#include <stdapis/libxml2/libxml2_xmlversion.h>
-#include <stdapis/libxml2/libxml2_tree.h>
+#include <libxml2_xmlversion.h>
+#include <libxml2_tree.h>
 
 #ifdef __cplusplus
 extern "C" {

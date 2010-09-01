@@ -21,7 +21,8 @@
 #define CTestFileOutputStream_H_INCLUDED
 
 #include <f32file.h>
-#include <xml/dom/xmlengoutputstream.h>
+#include "XmlEngOutputStream.h"
+
 
 
 /**

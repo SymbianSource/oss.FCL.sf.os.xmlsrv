@@ -12,7 +12,7 @@
 //
 // Description:
 //
-//RTEST
+
 // renamed the output file to remove conflict with ECOM's version of the same utility
 TARGET			t_xmlprocessfilemancopyfile.exe
 // needed to access file system

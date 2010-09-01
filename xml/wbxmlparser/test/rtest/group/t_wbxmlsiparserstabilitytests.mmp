@@ -18,7 +18,6 @@
 // 
 //
 
-//RTEST
 EPOCSTACKSIZE	0x3000 // 12K
 
 TARGET			t_wbxmlsiparserstabilitytests.exe

@@ -26,9 +26,9 @@
 #include "xmlsec_xmlsec.h"
 #include "xmlsec_xmltree.h"
 
-#include <xml/dom/xmlengdocument.h>
-#include <xml/dom/xmlengdomparser.h>
-#include <xml/utils/xmlengutils.h>
+#include <xmlengdocument.h>
+#include <xmlengdomparser.h>
+#include <xmlengutils.h>
 
 // ---------------------------------------------------------------------------
 // Set Template 

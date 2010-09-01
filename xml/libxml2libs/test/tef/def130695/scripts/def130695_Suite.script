@@ -25,7 +25,7 @@ START_TESTCASE BASESRVCS-XML-CT-4925 // Libmxl2 vulnerability test
 //!@SYMTestActions               Pass NULL to XmlBufferResize( )
 //!@SYMTestExpectedResults       The API should recognize the NULL and report back in case of such vulnerable situations.
 //!@SYMDEF                       DEF130695
-RUN_TEST_STEP 100 def130695_Suite def130695_Step1 c:\testdata\configs\def130695_Suite.ini Section0
+RUN_TEST_STEP 100 def130695_Suite def130695_Step1 z:\testdata\configs\def130695_Suite.ini Section0
 END_TESTCASE BASESRVCS-XML-CT-4925 // Libmxl2 vulnerability test
 
 START_TESTCASE BASESRVCS-XML-CT-4926 // Libmxl2 vulnerability test
@@ -35,7 +35,7 @@ START_TESTCASE BASESRVCS-XML-CT-4926 // Libmxl2 vulnerability test
 //!@SYMTestActions               Pass NULL to XmlSax2Characters( )
 //!@SYMTestExpectedResults       The API should recognize the NULL and report back in case of such vulnerable situations.
 //!@SYMDEF                       DEF130695
-RUN_TEST_STEP 100 def130695_Suite def130695_Step2 c:\testdata\configs\def130695_Suite.ini Section1
+RUN_TEST_STEP 100 def130695_Suite def130695_Step2 z:\testdata\configs\def130695_Suite.ini Section1
 END_TESTCASE BASESRVCS-XML-CT-4926 // Libmxl2 vulnerability test
 
 PRINT Complate_def130695__Tests

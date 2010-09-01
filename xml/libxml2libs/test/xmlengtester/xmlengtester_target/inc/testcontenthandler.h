@@ -16,7 +16,7 @@
 #ifndef __TESTCONTENTHANDLER_H__
 #define __TESTCONTENTHANDLER_H__
 
-#include <xml/dom/xmlengextendedcontenthandler.h>
+#include "XmlEngExtendedContentHandler.h"
 #include <Xml\DocumentParameters.h>
 #include <Xml\ContentHandler.h>
 #include <f32file.h>

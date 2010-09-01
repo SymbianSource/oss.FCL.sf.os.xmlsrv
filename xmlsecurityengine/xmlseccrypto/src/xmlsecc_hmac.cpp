@@ -13,7 +13,7 @@
 
 #include <string.h>
 
-#include <stdapis/libxml2/libxml2_globals.h>
+#include <libxml2_globals.h>
 #include <e32err.h>         //definition of KErrNoMemory
 
 #include "xmlsec_xmlsec.h"

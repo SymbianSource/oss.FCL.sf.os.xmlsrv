@@ -15,8 +15,8 @@
 *
 */
 // XML Engine
-#include <stdapis/libxml2/libxml2_globals.h>
-#include <xml/utils/xmlengxestd.h>
+#include <libxml2_globals.h>
+#include <xmlengxestd.h>
 
 // XML Sec
 #include "xmlsec_crypto.h"

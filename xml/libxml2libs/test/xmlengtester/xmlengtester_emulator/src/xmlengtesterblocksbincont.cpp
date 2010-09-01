@@ -19,12 +19,11 @@
 #include "xmlengtester.h"
 
 #include <e32svr.h>
-#include <StifParser.h>
-#include <Stiftestinterface.h>
+#include <domain/osextensions/StifParser.h>
+#include <domain/osextensions/Stiftestinterface.h>
 
-#include <xml/dom/xmlengbinarycontainer.h>
-#include <xml/dom/xmlengfilecontainer.h>
-
+#include <XmlEngBinaryContainer.h>
+#include <XmlEngFileContainer.h>
 #include "xmlengtesterdef.h"
 
 #include <InetProtTextUtils.h>

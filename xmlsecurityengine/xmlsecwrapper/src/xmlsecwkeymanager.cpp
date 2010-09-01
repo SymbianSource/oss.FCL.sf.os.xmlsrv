@@ -18,9 +18,8 @@
 
 #include <e32base.h>
 
-#include <stdapis/libxml2/libxml2_globals.h>
-
-#include <xml/utils/xmlengmem.h>
+#include <libxml2_globals.h>
+#include <xmlengmem.h>
 
 #include "xmlsec_crypto.h"
 #include "xmlsec_xmlsec.h"

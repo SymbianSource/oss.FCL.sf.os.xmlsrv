@@ -13,7 +13,6 @@
 // Description:
 //
 
-//RTEST
 TARGET			t_xmlcore.exe
 TARGETTYPE		exe
 

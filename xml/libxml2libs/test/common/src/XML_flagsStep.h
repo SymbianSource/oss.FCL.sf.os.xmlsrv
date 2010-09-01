@@ -27,7 +27,7 @@
 #include "Te_XML_FTmgrSuiteStepBase.h"
 #include <featmgr/featmgr.h>
 #include <featmgr/featurecontrol.h> 
-
+#include "Symbian_OS.hrh"
 
 
 

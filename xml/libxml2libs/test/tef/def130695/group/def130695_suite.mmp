@@ -13,9 +13,9 @@
 // Description:
 //
 
-TARGET      def130695_suite.exe
-TARGETTYPE  exe
-UID             0x1000007A 0x101F7784
+          TARGET      def130695_Suite.exe
+          TARGETTYPE  exe
+          UID             0x1000007A 0x101F7784
 
 
 //Please add any change under here

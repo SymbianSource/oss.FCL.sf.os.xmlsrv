@@ -29,9 +29,9 @@ using namespace Xml;
 /**
  * Class CXmlParser2Step implementation
  */
-_LIT(KSimpleXmlFile, "c:\\testdata\\xmlexample.xml");
+_LIT(KSimpleXmlFile, "z:\\testdata\\xmlexample.xml");
 #ifdef _DEBUG
-_LIT(KCorruptXm1File, "c:\\testdata\\corruptxml1.xml");
+_LIT(KCorruptXm1File, "z:\\testdata\\corruptxml1.xml");
 #endif
 
 /**

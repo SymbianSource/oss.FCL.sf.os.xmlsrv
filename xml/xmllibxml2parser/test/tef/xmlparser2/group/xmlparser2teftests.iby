@@ -20,10 +20,10 @@
 #include <xmlenginesaxplugin.iby>
 
 data=ABI_DIR/BUILD_DIR/texmlparser2.exe		sys/bin/texmlparser2.exe
-data=DATAC_/tef_xml2/xmlparser2tefsuite.script 	tef_xml2/xmlparser2tefsuite.script
-data=EPOCROOT##Epoc32/data/c/testdata/corruptxml1.xml           /testdata/corruptxml1.xml
-data=EPOCROOT##Epoc32/data/c/testdata/xmlexample.dtd           /testdata/xmlexample.dtd
-data=EPOCROOT##Epoc32/data/c/testdata/xmlexample.xml           /testdata/xmlexample.xml
+data=DATAZ_/tef_xml2/xmlparser2tefsuite.script 	tef_xml2/xmlparser2tefsuite.script
+data=EPOCROOT##Epoc32/data/z/testdata/corruptxml1.xml           /testdata/corruptxml1.xml
+data=EPOCROOT##Epoc32/data/z/testdata/xmlexample.dtd           /testdata/xmlexample.dtd
+data=EPOCROOT##Epoc32/data/z/testdata/xmlexample.xml           /testdata/xmlexample.xml
 ECOM_PLUGIN(tetestcontentprocessor.dll,tetestcontentprocessor.rsc)
 
 #endif

@@ -20,8 +20,6 @@
 
 #include "../../inc/xmlsrv.hrh"
 
-#include "../cxml_library_api/group/bld.inf"
-#include "../xml_parser_api/group/bld.inf"
 #include "../xml_encryption_api/group/bld.inf"
 #include "../xml_signature_api/group/bld.inf"
 #include "../xml_security_engine_utils_api/group/bld.inf"

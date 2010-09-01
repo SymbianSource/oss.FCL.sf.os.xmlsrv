@@ -12,7 +12,7 @@
 //
 // Description:
 //
-//RTEST
+
 TARGET			tc_xmlcustomresolvercomptests.exe
 CAPABILITY 		None
 TARGETTYPE		exe

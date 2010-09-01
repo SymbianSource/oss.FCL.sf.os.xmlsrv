@@ -23,29 +23,29 @@ REM XML Framework Tests
 #include <xmlcustomresolvertests.iby>
 
 // batch file that runs all automatic Framework tests
-data=CSYSTEM\test\xmlframeworktests.bat						test\xmlframeworktests.bat
+data=ZSYSTEM\test\xmlframeworktests.bat						test\xmlframeworktests.bat
 
 // Framework test exe
-file=ABI_DIR\BUILD_DIR\t_xmlcore.exe						sys\bin\t_xmlcore.exe
+file=ABI_DIR\BUILD_DIR\t_xmlcore.exe						test\t_xmlcore.exe
 
 // Framework components test exe
-file=ABI_DIR\BUILD_DIR\t_xmlmisc.exe						sys\bin\t_xmlmisc.exe
+file=ABI_DIR\BUILD_DIR\t_xmlmisc.exe						test\t_xmlmisc.exe
 
 // CMatchData unit test exe
-file=ABI_DIR\BUILD_DIR\tu_xmlcmatchdataunittests.exe		sys\bin\tu_xmlcmatchdataunittests.exe
+file=ABI_DIR\BUILD_DIR\tu_xmlcmatchdataunittests.exe		test\tu_xmlcmatchdataunittests.exe
 
 // API performance test exe
-file=ABI_DIR\BUILD_DIR\tp_xmlframeworkperftests.exe 		sys\bin\tp_xmlframeworkperftests.exe
+file=ABI_DIR\BUILD_DIR\tp_xmlframeworkperftests.exe 		test\tp_xmlframeworkperftests.exe
 
 // Access to file system helper exe
-file=ABI_DIR\BUILD_DIR\t_xmlprocessfilemancopyfile.exe		sys\bin\t_xmlprocessfilemancopyfile.exe
+file=ABI_DIR\BUILD_DIR\t_xmlprocessfilemancopyfile.exe		test\t_xmlprocessfilemancopyfile.exe
 
-file=ABI_DIR\BUILD_DIR\t_parserucs4test.exe					sys\bin\t_parserucs4test.exe
+file=ABI_DIR\BUILD_DIR\t_parserucs4test.exe					test\t_parserucs4test.exe
 
 
 // Z: to C:
-data=DATAC\XmlRAMOnly\tu_xmlramparserplugins.dll	XmlRAMOnly\tu_xmlramparserplugins.dll
-data=DATAC\XmlRAMOnly\tu_xmlramparserplugins.rsc	XmlRAMOnly\tu_xmlramparserplugins.rsc
+data=EPOCROOT##epoc32\data\z\XmlRAMOnly\tu_xmlramparserplugins.dll	XmlRAMOnly\tu_xmlramparserplugins.dll
+data=EPOCROOT##epoc32\data\z\XmlRAMOnly\tu_xmlramparserplugins.rsc	XmlRAMOnly\tu_xmlramparserplugins.rsc
 
 // Test plugin
 

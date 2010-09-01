@@ -13,9 +13,11 @@
 // Description:
 //
 
-TARGET      te_xml_ftmgrsuite.exe
-TARGETTYPE  exe
-UID             0x1000007A 0x101F7784
+          TARGET      te_xml_ftmgrsuite.exe
+          TARGETTYPE  exe
+          UID             0x1000007A 0x101F7784
+
+
 
 //Please add any change under here
 SOURCEPATH  ../src

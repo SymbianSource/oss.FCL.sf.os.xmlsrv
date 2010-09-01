@@ -15,9 +15,9 @@
 #include <stdio.h>
 #include <string.h>
 
-#include <stdapis/libxml2/libxml2_tree.h>
-#include <stdapis/libxml2/libxml2_c14n.h>
-#include <stdapis/libxml2/libxml2_globals.h>
+#include <libxml2_tree.h>
+#include <libxml2_c14n.h>
+#include <libxml2_globals.h>
 
 #include "xmlsec_xmlsec.h"
 #include "xmlsec_keys.h"

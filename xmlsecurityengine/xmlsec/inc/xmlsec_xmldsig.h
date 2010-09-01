@@ -20,8 +20,8 @@
 extern "C" {
 #endif /* __cplusplus */ 
 
-#include <stdapis/libxml2/libxml2_tree.h>
-#include <stdapis/libxml2/libxml2_parser.h>
+#include <libxml2_tree.h>
+#include <libxml2_parser.h>
 
 #include "xmlsec_xmlsec.h"
 #include "xmlsec_list.h"

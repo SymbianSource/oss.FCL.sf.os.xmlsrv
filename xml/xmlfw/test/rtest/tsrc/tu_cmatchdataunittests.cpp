@@ -117,8 +117,8 @@ static void FileCopyL(const TDesC& anOld,const TDesC& aNew)
 
 static void TestPrepareL()
 	{
-	FileCopyL(_L("c:\\XMLRAMONLY\\tu_XmlRamParserPlugins.dll"), _L("C:\\sys\\bin\\tu_XmlRamParserPlugins.dll"));
-	FileCopyL(_L("c:\\XMLRAMONLY\\tu_XmlRamParserPlugins.RSC"), _L("C:\\resource\\plugins\\tu_XmlRamParserPlugins.RSC"));
+	FileCopyL(_L("z:\\XMLRAMONLY\\tu_XmlRamParserPlugins.dll"), _L("C:\\sys\\bin\\tu_XmlRamParserPlugins.dll"));
+	FileCopyL(_L("z:\\XMLRAMONLY\\tu_XmlRamParserPlugins.RSC"), _L("C:\\resource\\plugins\\tu_XmlRamParserPlugins.RSC"));
 
 	//The reason for the folowing delay is:
 	//ECOM server could be already started. It means that when we copy some

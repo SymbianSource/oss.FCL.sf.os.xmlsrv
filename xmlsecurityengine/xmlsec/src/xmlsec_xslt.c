@@ -16,8 +16,8 @@
 #include <stdlib.h>
 #include <string.h>
  
-#include <stdapis/libxml2/libxml2_tree.h>
-#include <stdapis/libxml2/libxml2_xmlmemory.h>//added for symbian port
+#include <libxml2_tree.h>
+#include <libxml2_xmlmemory.h> //added for symbian port
 #include <libxslt/libxslt_xslt.h>
 #include <libxslt/libxslt_xsltinternals.h>
 #include <libxslt/libxslt_transform.h>

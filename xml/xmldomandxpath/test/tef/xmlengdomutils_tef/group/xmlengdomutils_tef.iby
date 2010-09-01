@@ -19,8 +19,8 @@
 #define __XMLENGDOMUTILSTEF_IBY__
 
 #include <testexecute.iby>
-data=ABI_DIR\BUILD_DIR\xmlengdomutils_tef.exe		sys\bin\xmlengdomutils_tef.exe
+data=ABI_DIR\BUILD_DIR\xmlengdomutils_tef.exe		System\bin\xmlengdomutils_tef.exe
 
-data=DATAC_\xmlengdom_tef\xmlengdomutiltefsuite.script		 	xmlengdom_tef\xmlengdomutiltefsuite.script		
+data=DATAZ_\xmlengdom_tef\xmlengdomutiltefsuite.script		 	xmlengdom_tef\xmlengdomutiltefsuite.script		
 
 #endif

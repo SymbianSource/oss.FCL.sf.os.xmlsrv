@@ -13,9 +13,8 @@
 // Description:
 //
 
-//RTEST
-TARGET			t_wbxmlunknownparsertests.exe
-TARGETTYPE		exe
+target			t_wbxmlunknownparsertests.exe
+targettype		exe
 
 VENDORID		0x70000001
 

@@ -23,7 +23,7 @@ PRJ_TESTEXPORTS
 ../test/rtest/group/xmlcustomresolvertests.iby 		/epoc32/rom/include/xmlcustomresolvertests.iby
 
 //xml test data
-../test/rtest/data/simple.xml  						c:/system/xmltest/resolver/simple.xml
+../test/rtest/data/simple.xml  						z:/system/xmltest/resolver/simple.xml
 
 PRJ_TESTMMPFILES
 ../test/rtest/group/tc_xmlcustomresolvercomptests.mmp

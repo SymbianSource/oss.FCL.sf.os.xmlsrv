@@ -19,6 +19,6 @@ xmlengdomutils_tef.mmp manual
 
 
 PRJ_TESTEXPORTS
-../scripts/xmlengdomutiltefsuite.script	c:/xmlengdom_tef/xmlengdomutiltefsuite.script
+../scripts/xmlengdomutiltefsuite.script	z:/xmlengdom_tef/xmlengdomutiltefsuite.script
 xmlengdomutils_tef.iby						/epoc32/rom/include/xmlengdomutils_tef.iby
 

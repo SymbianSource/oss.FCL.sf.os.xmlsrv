@@ -42,7 +42,7 @@
 
 using namespace Xml;
 
-_LIT(KXmlTestSimpleTestFile,    "c:\\System\\XmlTest\\Resolver\\simple.xml");
+_LIT(KXmlTestSimpleTestFile,    "z:\\System\\XmlTest\\Resolver\\simple.xml");
 _LIT8(KXmlTestParserMimeType, "text/xml");
 _LIT8(KXmlTestParserMimeTypeCS, "TEXT/XML");
 _LIT8(KXmlTestWbXmlParserMimeType, "text/wbxml");

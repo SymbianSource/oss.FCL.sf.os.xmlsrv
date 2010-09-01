@@ -18,7 +18,7 @@
 #ifndef C_GLOABALSTATE_H
 #define C_GLOABALSTATE_H
 
-#include <xml/dom/xmlengdomimplementation.h>
+#include <xmlengdomimplementation.h>
 
 class CXmlSecKeyManager;    
 /**

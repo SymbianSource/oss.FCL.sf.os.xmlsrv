@@ -19,13 +19,13 @@
 #include "xmlengtester.h"
 
 #include <e32svr.h>
-#include <StifParser.h>
-#include <Stiftestinterface.h>
+#include <domain/osextensions/StifParser.h>
+#include <domain/osextensions/Stiftestinterface.h>
 
-#include <xml/dom/xmlengserializer.h>
-#include <xml/dom/xmlengbinarycontainer.h>
-#include <xml/dom/xmlengchunkcontainer.h>
-#include <xml/dom/xmlengfilecontainer.h>
+#include <XmlEngSerializer.h>
+#include <XmlEngBinaryContainer.h>
+#include <XmlEngChunkContainer.h>
+#include <XmlEngFileContainer.h>
 #include "xmlengtesterdef.h"
 #include "TestFileOutputStream.h"
 

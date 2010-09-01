@@ -14,9 +14,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include <stdapis/libxml2/libxml2_tree.h>
-#include <stdapis/libxml2/libxml2_parser.h>
-#include <stdapis/libxml2/libxml2_parserinternals.h>
+#include <libxml2_tree.h>
+#include <libxml2_parser.h>
+#include <libxml2_parserinternals.h>
 
 #include "xmlsec_xmlsec.h"
 #include "xmlsec_xmltree.h"

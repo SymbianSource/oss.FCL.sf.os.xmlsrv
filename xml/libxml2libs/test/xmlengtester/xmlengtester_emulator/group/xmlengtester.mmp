@@ -16,7 +16,7 @@
 
 
 
-//#include <platform_paths.hrh>
+//#include <domain/osextensions/platform_paths.hrh>
 
 TARGET          xmlengtester.dll
 TARGETTYPE      dll
@@ -54,7 +54,7 @@ SOURCE		testfileoutputstream.cpp
 SOURCE		testbuffermanager.cpp
 
 USERINCLUDE   ../inc
-	
+USERINCLUDE 	/epoc32/include/domain/osextensions 	
 
 //USERINCLUDE   ../../../../../../../unref/orphan/comgen/syslibs/xml/inc
 //USERINCLUDE   ../../../../../../../unref/orphan/comgen/syslibs/inc
