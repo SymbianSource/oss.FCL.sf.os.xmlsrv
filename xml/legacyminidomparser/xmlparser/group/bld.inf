@@ -17,10 +17,10 @@ PRJ_PLATFORMS
     DEFAULT
 
 PRJ_EXPORTS
-    ../INC/GMXMLComposer.h 			SYMBIAN_OS_LAYER_PLATFORM_EXPORT_PATH(gmxmlcomposer.h)
-    ../INC/GMXMLParser.h 			SYMBIAN_OS_LAYER_PUBLIC_EXPORT_PATH(gmxmlparser.h)
-    ../INC/GMXMLConstants.h 		SYMBIAN_OS_LAYER_PUBLIC_EXPORT_PATH(gmxmlconstants.h)
-    ../INC/GMXMLEntityConverter.h 	SYMBIAN_OS_LAYER_PLATFORM_EXPORT_PATH(gmxmlentityconverter.h)
+    ../inc/gmxmlcomposer.h 			SYMBIAN_OS_LAYER_PLATFORM_EXPORT_PATH(gmxmlcomposer.h)
+    ../inc/gmxmlparser.h 			SYMBIAN_OS_LAYER_PUBLIC_EXPORT_PATH(gmxmlparser.h)
+    ../inc/gmxmlconstants.h 		SYMBIAN_OS_LAYER_PUBLIC_EXPORT_PATH(gmxmlconstants.h)
+    ../inc/gmxmlentityconverter.h 	SYMBIAN_OS_LAYER_PLATFORM_EXPORT_PATH(gmxmlentityconverter.h)
 
 PRJ_MMPFILES
     xmlparser.mmp

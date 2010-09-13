@@ -24,13 +24,13 @@
 #include <e32std.h>
 #include <f32file.h>
 #include <utf.h>
-#include <xml/cxml/nw_cXML_Parser.h>
+#include <xml/cxml/nw_cxml_parser.h>
 
-#include "CXMLAttributes.h"
-#include <xml/MXMLContentHandler.h>
-#include <xml/MWBXMLContentHandler.h>
-#include "CXMLObserver.h"
-#include <xml/XMLUtils.h>
+#include "cxmlattributes.h"
+#include <xml/mxmlcontenthandler.h>
+#include <xml/mwbxmlcontenthandler.h>
+#include "cxmlobserver.h"
+#include <xml/xmlutils.h>
 
 
 // CLASS DECLARATION

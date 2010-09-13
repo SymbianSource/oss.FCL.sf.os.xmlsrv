@@ -11,32 +11,25 @@
 *
 * Contributors:
 *
-* Description: 
-*    BLD.INF file for the XMLInterface modules. 
-*
+* Description:  cXml Parser build info
 *
 */
-
 
 #include <platform_paths.hrh>
 
 PRJ_PLATFORMS
-
 DEFAULT
+//WINS THUMB ARMI ARM4 WINSCW
 
 PRJ_EXPORTS
 
-// Move the includes into "Public Nokia implemented" in CORE_OS_LAYER_IBY_EXPORT_PATH
+../rom/cXmlParser.iby	CORE_OS_LAYER_IBY_EXPORT_PATH(cXmlParser.iby)
 
-
-../rom/xmlinterface.iby					CORE_OS_LAYER_IBY_EXPORT_PATH(xmlinterface.iby)
 
 PRJ_MMPFILES
-
-xmlinterface.mmp
+cXmlParser.mmp
 
 PRJ_TESTMMPFILES
+//../test/xmlparser_test.mmp
 
-// ../Internal/tsrc/test.mmp
 
-/* End of File */

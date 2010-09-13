@@ -26,20 +26,20 @@ CAPABILITY All -TCB
 UID				0x1000008d 0x101F9117
 VENDORID 0x70000001
 
-SOURCEPATH		../SRC
-SOURCE			GMXMLCDATASection.cpp
-SOURCE			GMXMLCharacterData.cpp
-SOURCE			GMXMLComment.cpp
-SOURCE			GMXMLDocument.cpp
-SOURCE			GMXMLDocumentElement.cpp
-SOURCE			GMXMLElement.cpp
-SOURCE			GMXMLNode.cpp
-SOURCE			GMXMLProcessingInstruction.cpp
-SOURCE			GMXMLText.cpp
+SOURCEPATH		../src
+SOURCE			gmxmlcdatasection.cpp
+SOURCE			gmxmlcharacterdata.cpp
+SOURCE			gmxmlcomment.cpp
+SOURCE			gmxmldocument.cpp
+SOURCE			gmxmldocumentelement.cpp
+SOURCE			gmxmlelement.cpp
+SOURCE			gmxmlnode.cpp
+SOURCE			gmxmlprocessinginstruction.cpp
+SOURCE			gmxmltext.cpp
 
 
 
-USERINCLUDE		../INC
+USERINCLUDE		../inc
 OS_LAYER_SYSTEMINCLUDE_SYMBIAN
 LIBRARY				euser.lib
 LIBRARY         	bafl.lib 

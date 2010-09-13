@@ -18,7 +18,7 @@
 
 
 // INCLUDE FILES
-#include "CXMLAttributes.h"
+#include "cxmlattributes.h"
 
 
 

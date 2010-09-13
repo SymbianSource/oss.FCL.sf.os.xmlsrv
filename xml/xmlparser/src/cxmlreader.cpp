@@ -18,7 +18,7 @@
 
 
 // INCLUDE FILES
-#include "CXMLReader.h"
+#include "cxmlreader.h"
 
 
 /* Dictionar Public ID's */
