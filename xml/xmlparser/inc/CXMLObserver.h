@@ -23,9 +23,9 @@
 //  INCLUDES
 #include <e32std.h>
 #include <txtetext.h>
-#include "CXMLAttributes.h"
-#include <xml/MXMLContentHandler.h>
-#include <xml/MWBXMLContentHandler.h>
+#include "cxmlattributes.h"
+#include <xml/mxmlcontenthandler.h>
+#include <xml/mwbxmlcontenthandler.h>
 
 
 // CLASS DECLARATION

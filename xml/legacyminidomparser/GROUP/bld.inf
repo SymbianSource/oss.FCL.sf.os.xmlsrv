@@ -25,8 +25,8 @@ PRJ_PLATFORMS
 DEFAULT
 
 // Subproject builds
-#include "../XMLDom/GROUP/bld.inf"
-#include "../XMLParser/GROUP/bld.inf"
-#include "../Rom/bld.inf"
+#include "../xmldom/group/bld.inf"
+#include "../xmlparser/group/bld.inf"
+#include "../rom/bld.inf"
 
 PRJ_MMPFILES

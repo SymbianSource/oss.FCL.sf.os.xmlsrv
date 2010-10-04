@@ -23,7 +23,7 @@
 //  INCLUDES
 #include <e32std.h>
 #include <badesca.h>  
-#include <xml/MXMLAttributes.h>
+#include <xml/mxmlattributes.h>
 
 
 // CLASS DECLARATION

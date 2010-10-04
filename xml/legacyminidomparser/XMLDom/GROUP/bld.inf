@@ -17,23 +17,23 @@ PRJ_PLATFORMS
     DEFAULT
 	
 PRJ_MMPFILES
-    XMLDOM.mmp
+    xmldom.mmp
     
 
 PRJ_EXPORTS
-    ../INC/GMXMLCDataSection.h 				SYMBIAN_OS_LAYER_PLATFORM_EXPORT_PATH(gmxmlcdatasection.h)
-    ../INC/GMXMLCharacterData.h 			SYMBIAN_OS_LAYER_PLATFORM_EXPORT_PATH(gmxmlcharacterdata.h)
-    ../INC/GMXMLComment.h 					SYMBIAN_OS_LAYER_PLATFORM_EXPORT_PATH(gmxmlcomment.h)
-    ../INC/GMXMLDocument.h 					SYMBIAN_OS_LAYER_PLATFORM_EXPORT_PATH(gmxmldocument.h)
-    ../INC/GMxmldomconstants.h 				SYMBIAN_OS_LAYER_PUBLIC_EXPORT_PATH(gmxmldomconstants.h)
-    ../INC/GMXMLDocumentElement.h 			SYMBIAN_OS_LAYER_PLATFORM_EXPORT_PATH(gmxmldocumentelement.h)
-    ../INC/GMXMLElement.h 					SYMBIAN_OS_LAYER_PLATFORM_EXPORT_PATH(gmxmlelement.h)
-    ../INC/GMXMLNode.h 						SYMBIAN_OS_LAYER_PLATFORM_EXPORT_PATH(gmxmlnode.h)
-    ../INC/GMXMLProcessingInstruction.h 	SYMBIAN_OS_LAYER_PLATFORM_EXPORT_PATH(gmxmlprocessinginstruction.h)
-    ../INC/GMXMLText.h 						SYMBIAN_OS_LAYER_PLATFORM_EXPORT_PATH(gmxmltext.h)
+    ../inc/gmxmlcdatasection.h 				SYMBIAN_OS_LAYER_PLATFORM_EXPORT_PATH(gmxmlcdatasection.h)
+    ../inc/gmxmlcharacterData.h 			SYMBIAN_OS_LAYER_PLATFORM_EXPORT_PATH(gmxmlcharacterdata.h)
+    ../inc/gmxmlcomment.h 					SYMBIAN_OS_LAYER_PLATFORM_EXPORT_PATH(gmxmlcomment.h)
+    ../inc/gmxmldocument.h 					SYMBIAN_OS_LAYER_PLATFORM_EXPORT_PATH(gmxmldocument.h)
+    ../inc/gmxmldomconstants.h 				SYMBIAN_OS_LAYER_PUBLIC_EXPORT_PATH(gmxmldomconstants.h)
+    ../inc/gmxmldocumentelement.h 			SYMBIAN_OS_LAYER_PLATFORM_EXPORT_PATH(gmxmldocumentelement.h)
+    ../inc/gmxmlelement.h 					SYMBIAN_OS_LAYER_PLATFORM_EXPORT_PATH(gmxmlelement.h)
+    ../inc/gmxmlnode.h 						SYMBIAN_OS_LAYER_PLATFORM_EXPORT_PATH(gmxmlnode.h)
+    ../inc/gmxmlprocessinginstruction.h 	SYMBIAN_OS_LAYER_PLATFORM_EXPORT_PATH(gmxmlprocessinginstruction.h)
+    ../inc/gmxmltext.h 						SYMBIAN_OS_LAYER_PLATFORM_EXPORT_PATH(gmxmltext.h)
 	#ifndef SYMBIAN_ENABLE_SPLIT_HEADERS 
 #ifdef SYMBIAN_OLD_EXPORT_LOCATION
-	../INC/gmxmldummydtd.h /epoc32/include/gmxmldummydtd.h
+	../inc/gmxmldummydtd.h /epoc32/include/gmxmldummydtd.h
 #endif
 	#endif
 

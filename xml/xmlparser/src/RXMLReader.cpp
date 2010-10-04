@@ -18,8 +18,8 @@
 
 
 // INCLUDE FILES
-#include <xml/RXMLReader.h>
-#include "CXMLReader.h"
+#include <xml/rxmlreader.h>
+#include "cxmlreader.h"
 
 
 

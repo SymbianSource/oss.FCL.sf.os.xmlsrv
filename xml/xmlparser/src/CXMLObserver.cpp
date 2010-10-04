@@ -17,7 +17,7 @@
 
 
 
-#include "CXMLObserver.h"
+#include "cxmlobserver.h"
 
 
 // ============================ MEMBER FUNCTIONS ===============================
