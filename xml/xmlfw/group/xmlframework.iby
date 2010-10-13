@@ -22,6 +22,6 @@ REM XML Framework
 file=ABI_DIR\BUILD_DIR\xmlframework.dll 					system\libs\xmlframework.dll
 
 REM Error strings
-data=MULTI_LINGUIFY(RSC ZRESOURCE\errors\xmlframeworkerr 	resource\errors\xmlframeworkerr)
+data=MULTI_LINGUIFY(RSC ZRESOURCE\Errors\XmlFrameworkErr 	resource\errors\XmlFrameworkErr)
 
 #endif
